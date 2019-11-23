@@ -9,7 +9,7 @@ class GenreAdmin(admin.ModelAdmin):
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    list_display = ('pk','movieCode', 'title','year','description','director','actors','grade','poster_path','youtube_url','rate',)
+    list_display = ('pk','movieCode', 'title','year','description','director','actors','grade','poster_path','youtube_url','rate', 'genre_id')
 
 
 admin.site.register(Rating)
