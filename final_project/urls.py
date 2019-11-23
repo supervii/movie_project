@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from movies.views import movie_upload
 
 urlpatterns = [
+    path('upload-movie/', movie_upload, name='movie_upload'),
     path('admin/', admin.site.urls),
 ]
