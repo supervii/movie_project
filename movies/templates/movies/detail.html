@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}DETAIL OF {{ movie.title }}{% endblock title %}
+
+{% block content %}
+<h1>{{ movie.title }}</h1>
+
+<hr>
+<!-- 리뷰 보이는 곳 -->
+<div class="col-6 mx-auto">
+  <hr>
+  {% for review in reviews %}
+  <div class="list-group">
+    {% if not user.is_authenticated %}
+    <li class="list-group-item list-group-item-action">{{ forloop.revcounter }}: {{ review.content }} | 작성:
+      {{ review.user }}</li>
+    {% else %}
+    <form action="{% url 'movies:review_delete' movie.pk review.pk %}" method="POST">
+      {% csrf_token %}
+      {% if request.user == review.user %}
+      <input type="submit" class="list-group-item list-group-item-action"
+        value="{{ forloop.revcounter }}: {{ review.content }} | 평점: {{ review.score }} || 작성: {{ review.user }}">
+      {% else %}
+      <input type="submit" class="list-group-item list-group-item-action"
+        value="{{ forloop.revcounter }}: {{ review.content }} | 평점: {{ review.score }} || 작성: {{ review.user }}">
+      {% endif %}
+    </form>
+    {% endif %}
+  </div>
+  {% empty %}
+  <p><b>입력된 리뷰가 없습니다.</b></p>
+  {% endfor %}
+  <hr>
+  <!-- 댓글 작성 공간(form) -->
+  {% if user.is_authenticated  %}
+  <form action="{% url 'movies:review_create' movie.pk %}" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form review_form %}
+    <input class="btn btn-secondary" type="submit" value="리뷰 추가">
+  </form>
+  <hr>
+  {% else %}
+  <a class="btn btn-warning" href="{% url 'accounts:login' %}">리뷰를 작성하려면 로그인하세요.</a>
+  <hr>
+  {% endif %}
+  <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
+</div>
+{% endblock %}

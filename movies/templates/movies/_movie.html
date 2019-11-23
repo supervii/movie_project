@@ -1,0 +1,16 @@
+{% load bootstrap4 %}
+<div class="col-3 my-3">
+  <a href="{% url 'movies:detail' movie.pk %}">
+    <img src="{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}">
+  </a>
+    <p class="text-center">
+      <a href="{% url 'movies:like' movie.pk %}">
+        {% if user in movie.like_users.all %}
+          <i class="fas fa-heart fa-lg" style="color: crimson;"></i>
+        {% else %}
+          <i class="fas fa-heart fa-lg" style="color: black;"></i>
+        {% endif %}
+      </a>
+      <b>{{ movie.like_users.all|length }} 명이 이 영화를 좋아합니다.</b>
+    </p>
+</div>
