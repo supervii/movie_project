@@ -7,7 +7,7 @@ app_name = 'accounts'
 urlpatterns = [
     #  관리자 Path
     path('', views.main, name='main'),
-    path('users/', views.list, name='list'),
+    path('user_list/', views.list, name='list'),
     #  유저 Path
     path('signup/', views.signup, name='signup'),
     path('login/', views.login, name='login'),
