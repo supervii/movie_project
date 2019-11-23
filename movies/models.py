@@ -8,20 +8,18 @@ class Genre(models.Model):
         return self.name
 
 
-
 class Movie(models.Model):
     movieCode = models.IntegerField()
     title = models.CharField(max_length=150)
     year = models.IntegerField()
     description = models.TextField()
-    genre = models.ForeignKey(Genre, on_delete=models.SET_NULL, null=True)
+    genre = models.ManyToManyField(Genre, blank=True, null=True)
     director = models.CharField(max_length=45)
     actors = models.TextField(blank=True, null=True)
     grade = models.CharField(max_length=20)
-    poster_path = models.CharField(max_length=200, blank=True, null=True, default='https://')
-    youtube_url = models.CharField(max_length=200, blank=True, null=True, default='https://')
+    poster_path = models.CharField(max_length=200, blank=True, default='https://')
+    youtube_url = models.CharField(max_length=200, blank=True, default='https://')
     rate = models.FloatField(blank=True, null=True)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies', blank=True)
    
     class Meta:
