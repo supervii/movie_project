@@ -24,7 +24,7 @@ def list(request):
         User = get_user_model()
         users = User.objects.all()
         context = {'users': users}
-        return render(request, 'accounts/list.html', context)
+        return render(request, 'accounts/user_list.html', context)
     else:
         return HttpResponse('관리자만 이용할 수 있습니다.')
 
@@ -82,9 +82,9 @@ def follow(request, user_pk):
     User = get_user_model()
     userDetail = get_object_or_404(User, pk=user_pk)
 
-    if request.user not in userDetail.followers.all():
-        userDetail.followers.add(request.user)
+    if request.user not in userDetail.follower.all():
+        userDetail.follower.add(request.user)
     else:
-        userDetail.followers.remove(request.user)
+        userDetail.follower.remove(request.user)
     return redirect('accounts:detail', user_pk)
 

@@ -24,7 +24,7 @@ class UserCustomCreationForm(UserCreationForm):
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('nickname', 'introduction', 'region', 'genre', )
+        fields = ('nickname', 'introduction', 'genre', )
 
 
     def __init__(self, *args, **kwargs):
