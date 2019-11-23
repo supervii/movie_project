@@ -18,7 +18,7 @@ class Movie(models.Model):
     director = models.CharField(max_length=45)
     actors = models.TextField(blank=True, null=True)
     grade = models.CharField(max_length=20)
-    poster_path = models.CharField(max_length=200, blank=True, null=True, default="https://")
+    poster_path = models.CharField(max_length=200, blank=True, null=True, default='https://')
     youtube_url = models.CharField(max_length=200, blank=True, null=True, default='https://')
     rate = models.FloatField(blank=True, null=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
