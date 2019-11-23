@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if not user.is_authenticated %}
+        <a href="{% url 'accounts:signup' %}">회원가입</a>
+        <a href="{% url 'accounts:login' %}">로그인</a>
+    {% else %}
+        <a href="{% url 'accounts:logout' %}">로그아웃</a>
+    {% endif %}
+    {% for user_info in users %}
+        <h3>{{ user_info.username }}</h3>
+        <a href="{% url 'accounts:detail' user_info.pk %}">상세보기</a>
+        <hr>
+    {% endfor %}
+{% endblock %}
