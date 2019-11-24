@@ -26,7 +26,7 @@ def list(request):
         context = {'users': users}
         return render(request, 'accounts/user_list.html', context)
     else:
-        return HttpResponse('관리자만 이용할 수 있습니다.')
+        return HttpResponse('관리자 계정으로 로그인 하세요.')
 
 
 # 2. User들이 접근할 수 있는 CRUD
@@ -45,7 +45,7 @@ def signup(request):
             profile.user = user
             profile.save()
             auth_login(request, user)
-            return redirect('movies:list')
+            return redirect('movies:index')
     else:
         signup_form = UserCustomCreationForm()
         profile_form = ProfileForm()
@@ -58,7 +58,7 @@ def login(request):
         login_form = AuthenticationForm(request, request.POST)
         if login_form.is_valid():
             auth_login(request, login_form.get_user())
-            return redirect('movies:list')
+            return redirect('movies:index')
     else:
         login_form = AuthenticationForm()
     context = {'login_form': login_form}
