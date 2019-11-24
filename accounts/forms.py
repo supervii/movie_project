@@ -1,9 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit
-
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import Profile
 
 class UserCustomCreationForm(UserCreationForm):
@@ -29,3 +26,8 @@ class ProfileForm(forms.ModelForm):
         self.fields['nickname'].widget.attrs.update({'placeholder': '닉네임'})
         self.fields['introduction'].widget.attrs.update({'placeholder': '자기소개', 'class': 'input-field'})
         self.fields['genre'].widget.attrs.update({'placeholder': '선호 장르', 'class': 'input-field'})
+
+class CustomProfileForm(UserChangeForm):
+    class Meta:
+        model = Profile
+        fields = ('nickname', 'introduction', 'genre',)
