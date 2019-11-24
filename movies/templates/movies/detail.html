@@ -5,25 +5,41 @@
 
 {% block content %}
 <h1>{{ movie.title }}</h1>
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col poster">
+      <img src="{{ movie.poster_path }}" class="img" alt="{{ movie.title }}">
+    </div>
+    <div class="col jumbotron">
+      <h4 class="display-4">Hello, world!</h4>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+        featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    </div>
+  </div>
+</div>
 
 <hr>
 <!-- 리뷰 보이는 곳 -->
-<div class="col-6 mx-auto">
+<div class="mx-auto">
   <hr>
-  {% for review in ratings %}
+  {% for rating in ratings %}
   <div class="list-group">
     {% if not user.is_authenticated %}
-    <li class="list-group-item list-group-item-action">{{ forloop.revcounter }}: {{ review.content }} | 작성:
-      {{ review.user }}</li>
+    <li class="list-group-item list-group-item-action">{{ forloop.revcounter }}: {{ rating.content }} | 작성:
+      {{ rating.user }}</li>
     {% else %}
-    <form action="{% url 'movies:review_delete' movie.pk review.pk %}" method="POST">
+    <form action="{% url 'movies:rating_delete' movie.pk rating.pk %}" method="POST">
       {% csrf_token %}
-      {% if request.user == review.user %}
+      {% if request.user == rating.user %}
       <input type="submit" class="list-group-item list-group-item-action"
-        value="{{ forloop.revcounter }}: {{ review.content }} | 평점: {{ review.score }} || 작성: {{ review.user }}">
+        value="{{ forloop.revcounter }}: {{ rating.content }} | 평점: {{ rating.score }} || 작성: {{ rating.user }}">
       {% else %}
       <input type="submit" class="list-group-item list-group-item-action"
-        value="{{ forloop.revcounter }}: {{ review.content }} | 평점: {{ review.score }} || 작성: {{ review.user }}">
+        value="{{ forloop.revcounter }}: {{ rating.content }} | 평점: {{ rating.score }} || 작성: {{ rating.user }}">
       {% endif %}
     </form>
     {% endif %}
@@ -32,18 +48,19 @@
   <p><b>입력된 리뷰가 없습니다.</b></p>
   {% endfor %}
   <hr>
-  <!-- 댓글 작성 공간(form) -->
+  <!-- 리뷰 작성 공간(form) -->
   {% if user.is_authenticated  %}
   <form action="{% url 'movies:rating_create' movie.pk %}" method="POST">
     {% csrf_token %}
-    {% bootstrap_form review_form %}
+    {% bootstrap_form rating_form %}
     <input class="btn btn-secondary" type="submit" value="리뷰 추가">
+    <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
   </form>
   <hr>
   {% else %}
   <a class="btn btn-warning" href="{% url 'accounts:login' %}">리뷰를 작성하려면 로그인하세요.</a>
+  <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
   <hr>
   {% endif %}
-  <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
 </div>
 {% endblock %}
