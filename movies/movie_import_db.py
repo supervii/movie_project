@@ -32,7 +32,7 @@ def movie_upload(request):
             actors=col[7][1:-2].replace("'", "") if col[7] else '',
             poster_path=col[8],
             youtube_url=col[9],
-            rate=col[10]            
+            rate=col[10]
         )
     
     context = {}
