@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import get_user_model
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import HttpResponse
 
@@ -10,7 +11,7 @@ from django.views.decorators.http import require_POST
 
 from movies.models import Movie
 from .models import Profile
-from .forms import UserCustomCreationForm, ProfileForm
+from .forms import UserCustomCreationForm, ProfileForm, CustomProfileForm
 
 
 # 0. 메인 페이지
@@ -50,7 +51,7 @@ def signup(request):
         signup_form = UserCustomCreationForm()
         profile_form = ProfileForm()
     context = {'signup_form': signup_form, 'profile_form': profile_form}
-    return render(request, 'accounts/signup.html', context)
+    return render(request, 'accounts/auth_form.html', context)
 
 # 2-2. 로그인
 def login(request):
@@ -69,7 +70,22 @@ def logout(request):
     auth_logout(request)
     return redirect('accounts:login')
 
-# 2-4. 유저 상세페이지
+# 2-4. 유저 업데이트
+@login_required
+def update(request):
+    if request.method =='POST':
+        profile_form = ProfileForm(request.POST, instance = request.user)
+        if profile_form.is_valid():
+            profile_form.save()
+            return redirect('movies:index')
+    else:
+        profile_form = ProfileForm(instance=request.user)
+    context = {'profile_form': profile_form}
+    return render(request, 'accounts/auth_form.html', context)
+    
+
+
+# 2-5. 유저 상세페이지
 # 찜한 영화 추가하기
 def detail(request, user_pk):
     User = get_user_model()
@@ -77,7 +93,7 @@ def detail(request, user_pk):
     context = {'userDetail': userDetail}
     return render(request, 'accounts/detail.html', context)
 
-# 2-5. 팔로우
+# 2-6. 팔로우
 def follow(request, user_pk):
     User = get_user_model()
     userDetail = get_object_or_404(User, pk=user_pk)

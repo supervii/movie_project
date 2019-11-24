@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if request.resolver_match.url_name == 'signup' %}
+<H1 class='text-center'>Sign Up</H1>
+{% elif request.resolver_match.url_name == 'update' %}
+<H1 class='text-center'>Update</H1>
+{% endif %}
+<hr>
+
+
+<form action="" method="POST" >
+    {% csrf_token %}
+    {{ signup_form.as_p}}
+    {{ profile_form.as_p }}
+    {% if request.resolver_match.url_name == 'signup' %}
+    <button class="btn btn-light" type="submit" name="action" style="width: 100%; margin-top: 30px;">가입하기
+    </button>
+    {% elif request.resolver_match.url_name == 'update' %}
+    <button class="btn btn-light" type="submit" name="action" style="width: 100%; margin-top: 30px;">수정하기
+    </button>
+    {% endif %}
+    
+</form>
+
+{% endblock %}
