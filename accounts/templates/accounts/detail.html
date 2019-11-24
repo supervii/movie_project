@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 
 {% block content %}
 <div class="container">
@@ -23,23 +24,28 @@
         {% else %}
             <p>It's U</p>
         {% endif %}
+            <div class="text-center">
+                <span>Follower {{ userDetail.follower.count }}명</span>
+                <span>| Following {{ userDetail.followings.count }}명</span>
+            </div>
         </div>
         
     </div>
+    {% if userDetail.profile.nickname and userDetail.profile.introduction and userDetail.profile.genre.name %}
     <div class="col-6" style="padding:30px; padding-center: 130px;">
             <h3><span style="font-size: 20px; color:lightgray">Nickname</span> {{ userDetail.profile.nickname }}</h3>
             <span style="font-size: 20px; color:lightgray">introduction</span>
             <h4>{{ userDetail.profile.introduction }}</h4>
             <h3><span style="font-size: 20px; color:lightgray">Favorite Genre</span> {{ userDetail.profile.genre.name }}</h3>
             <br>
-            <span>Follower {{ userDetail.follower.count }}명</span>
-            <span>| Following {{ userDetail.followings.count }}명</span>
         </div>
-</div>
-<!-- <hr style="margin-top: 150px;"> -->
+    {% endif %}
+    
+    </div>
+
 <div style="margin-bottom: 180px;"></div>
 <div class="row">
-    <div class="col s12">
+    <div class="col-sm-6">
         <ul class="tabs" style="height: 70px;">
             <li class="tab col s3"><a class="active" href="#test1"><span class="tab-font">코멘트영화</span></a></li>
             <li class="tab col s3"><a href="#test2"><span class="tab-font">찜한영화</span></a></li>
@@ -49,81 +55,88 @@
     </div>
 </div>
         
-<div id="test1" class="row" style="margin-top: 80px;">
+<div id="test1" class="row mt-3">
    
-    {% for comment in userDetail.comment_set.all %}
-        <div class="col s12 m4 l4 xl2">
-            <div class="card z-depth-0">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+    {% for comment in userDetail.rating_set.all %}
+            <div class="card text-center">
             <div class="card-image" style=" padding-left: 10px; padding-right: 10px;">
                 <img src="{{ comment.movie.poster_path }}" style="border-radius: 15px; height: 350px;">
             </div>
             <div class="card-content" style=" padding-left: 20px; padding-right: 20px;">
                 <span class="card-title">{{ comment.movie.title }}</span>
-                <p style="font-size: 25px;">&nbsp;{{ comment.content }}</p>
-                <div class="btn-small" style="font-size:20px; border-radius: 15px;">{{ comment.score }}</div>
+                <p style="font-size: 15px;">{{ comment.comment }}</p>
+                <div class="btn-small" style="font-size:15px;">제 점수는요: {{ comment.score }}</div>
+                <a href="{% url 'movies:detail' comment.movie.pk %}" class="btn-floating btn-small"><i class="material-icons">보러가기</i></a>
             </div>
             </div>
-        </div>
     {% endfor %}
+        </div>
 </div>
 
-<div id="test2" class="row" style="margin-top: 80px;">
+<div id="test2" class="row mt-3">
     {% for movie in userDetail.like_movies.all %}
-        <div class="col s12 m4 l4 xl2">
-            <div class="card z-depth-0">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+            <div class="card text-center">
             <div class="card-image" style=" padding-left: 10px; padding-right: 10px;">
                 <img src="{{ movie.poster_path }}" style="border-radius: 15px; height: 350px;">
             </div>
             <div class="card-content" style=" padding-left: 20px; padding-right: 20px;">
-                <span class="card-title">{{ movie.title }}</span>
-                <!-- <p>{{ comment.score }}</p> -->
-                <a href="{% url 'movies:detail' movie.pk %}" class="btn-floating btn-small"><i class="material-icons">search</i></a>
+                <span class="card-title">{{ movie.title }}</span><br>
+                <p>평점 : {{ movie.rate }}</p>
+                <a href="{% url 'movies:detail' movie.pk %}" class="btn-floating btn-small"><i class="material-icons">보러가기</i></a>
             </div>
             </div>
         </div>
     {% endfor %}
 </div>
 
-<div id="test3" class="row" style="margin-top: 80px;">
     {% if not userDetail.follower.all %}
-        <h3 style="text-align: center;">No Follower</h3>
+        <h4 class="text-center">나를 팔로윙하는 사람이 없네요..</h4> 
+        
     {% else %}
+        <h4>Followers</h4>
+<div id="test3" class="row mt-3">
         {% for follower in userDetail.follower.all %}
-            <div class="col s12 m4 l4 xl4">
-                <div class="card z-depth-0">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                <div class="card text-center">
                 <div class="card-image" style=" padding-left: 30px; padding-right: 30px;">
-                    <img src="https://images.unsplash.com/photo-1550658511-1ed05e6ac16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=80" style="border-radius: 50%; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1550658511-1ed05e6ac16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=80" style="border-radius: 30%; height: 100px; width: 50%;">
                 </div>
                 <div class="card-content" style=" padding-left: 40px; padding-right: 40px;">
                     <span class="card-title">{{ follower.username }}</span>
-                    <!-- <p>{{ comment.score }}</p> -->
+                   
                     <a href="{% url 'accounts:detail' follower.pk %}" class="btn-floating btn-small waves-effect waves-light red">
                         <i class="material-icons">파도타기</i>
                     </a>
+                
                 </div>
                 </div>
+                <hr>
             </div>
         {% endfor %}
     {% endif %}
 </div>
+<br>
 
-<div id="test4" class="row" style="margin-top: 80px;">
     {% if not userDetail.followings.all %}
-        <h3 style="text-align: center;">No Following</h3>
+        <h4 class="text-center">내가 팔로우하는 사람이 없어요.</h4>
     {% else %}
+        <h4>Following</h4>
+<div id="test4" class="row mt-3">
         {% for following in userDetail.followings.all %}
-            <div class="col s12 m4 l4 xl4">
-                <div class="card z-depth-0">
-                <div class="card-image" style=" padding-left: 30px; padding-right: 30px;">
-                    <img src="https://images.unsplash.com/photo-1550658511-1ed05e6ac16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=80" style="border-radius: 50%; height: 150px;">
-                </div>
-                <div class="card-content" style=" padding-left: 40px; padding-right: 40px;">
-                    <span class="card-title">{{ following.username }}</span>
-                   
-                    <a href="{% url 'accounts:detail' following.pk %}" class="btn-floating btn-small waves-effect waves-light red">
-                        <i class="material-icons">파도타기</i>
-                    </a>
-                </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                <div class="card text-center">
+                    <div class="card-image" style=" padding-left: 30px; padding-right: 30px;">
+                        <img src="https://images.unsplash.com/photo-1550658511-1ed05e6ac16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=80" style="border-radius: 30%; height: 100px; width: 50%;">
+                    </div>
+                    <div class="card-content" style=" padding-left: 40px; padding-right: 40px;">
+                        <span class="card-title">{{ following.username }}</span>
+                    
+                        <a href="{% url 'accounts:detail' following.pk %}" class="btn-floating btn-small waves-effect waves-light red">
+                            <i class="material-icons">파도타기</i>
+                        </a>
+                    </div>
                 </div>
             </div>
         {% endfor %}
