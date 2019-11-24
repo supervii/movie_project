@@ -14,7 +14,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//y4gCnKpDSvkDXzdN45WCIK52tgJ.jpg",
     "youtube_url": "https://www.youtube.com/embed/cfJpcDAyzqE",
     "rate": 8.53,
-    "user": null,
     "like_users": []
   }
 },
@@ -33,7 +32,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//205K07RJ2e7cscv794tGPRTU8uR.jpg",
     "youtube_url": "https://www.youtube.com/embed/L-MGk91Vf8k",
     "rate": 8.03,
-    "user": null,
     "like_users": []
   }
 },
@@ -52,7 +50,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//vHfoYyOgDz1cHpAcky9uNHCPlAt.jpg",
     "youtube_url": "https://www.youtube.com/embed/Gz0ZeY1U4vY",
     "rate": 6.69,
-    "user": null,
     "like_users": []
   }
 },
@@ -71,7 +68,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//nIoDNiWWOtCFdJRi89aFI98cdj0.jpg",
     "youtube_url": "https://www.youtube.com/embed/eE4GPPnG1Mw",
     "rate": 8.62,
-    "user": null,
     "like_users": []
   }
 },
@@ -90,7 +86,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//fxMT7ex1n89UJIPWEO8wtLVbFfw.jpg",
     "youtube_url": "https://www.youtube.com/embed/ZcQ1lini5Rw",
     "rate": 8.6,
-    "user": null,
     "like_users": []
   }
 },
@@ -107,9 +102,8 @@
     "actors": "\uc0e4\ub97c\ub9ac\uc988 \ud14c\ub860, \ud074\ub85c\uc774 \ubaa8\ub808\uce20, \uc624\uc2a4\uce74 \uc544\uc774\uc0ad, \ud540 \uc6b8\ud504\ud558\ub4dc, \ud3fc \ud074\ub808\uba58\ud2f0\uc5d0\ud504",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//fykFaD4flUkSHZsWACnjg9Uw6eR.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/WzoU2ydEbv0",
     "rate": 7.73,
-    "user": null,
     "like_users": []
   }
 },
@@ -128,7 +122,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//1ok4v9dbalAS1AQaplFxbFmC9kb.jpg",
     "youtube_url": "https://www.youtube.com/embed/uPMOTPB9vTY",
     "rate": 8.1,
-    "user": null,
     "like_users": []
   }
 },
@@ -147,7 +140,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//5lcJpPcvSJwKMHYHiSKPQCqO9DF.jpg",
     "youtube_url": "https://www.youtube.com/embed/BvlNBtWnhLY",
     "rate": 7.85,
-    "user": null,
     "like_users": []
   }
 },
@@ -166,7 +158,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//xQexUGD06ZxFMJo9uBwqSOa9CHY.jpg",
     "youtube_url": "https://www.youtube.com/embed/YKV_zjAxe2E",
     "rate": 9.19,
-    "user": null,
     "like_users": []
   }
 },
@@ -185,7 +176,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//wrCwH6WOvXQvVuqcKNUrLDCDxdw.jpg",
     "youtube_url": "https://www.youtube.com/embed/5jKxSmqWyP8",
     "rate": 8.65,
-    "user": null,
     "like_users": []
   }
 },
@@ -204,7 +194,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//btpvGjqLBHgRnobKGlzbBD4jzmf.jpg",
     "youtube_url": "https://www.youtube.com/embed/uhVrmXrhqZY",
     "rate": 7.62,
-    "user": null,
     "like_users": []
   }
 },
@@ -223,7 +212,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//zcXjQEHfwuHrZKzpbrCPGnpPNtk.jpg",
     "youtube_url": "https://www.youtube.com/embed/trqSKPutkPQ",
     "rate": 8.63,
-    "user": null,
     "like_users": []
   }
 },
@@ -242,7 +230,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//dgzWcjIr47ezx9wwji7yf2RCOTp.jpg",
     "youtube_url": "https://www.youtube.com/embed/0zLiVIAUTCA",
     "rate": 7.85,
-    "user": null,
     "like_users": []
   }
 },
@@ -255,13 +242,12 @@
     "year": 2019,
     "description": "\uc77c\ub144\uc5d0 \ub531 \ud55c\ubc88, \uc0b0 \uc0ac\ub78c\ub4e4\uc774 \uadf8\ub9ac\uc6b4 \uc0ac\ub78c\uc744 \ub9cc\ub0a0 \uc218 \uc788\ub294 \u2018\uc8fd\uc740\uc790\uc758 \ub0a0\u2019 \ubd80\ubaa8\ub2d8\uc744 \ucc3e\uace0 \uc2f6\uc740 \u2018\ucf54\ucf54\u2019\ub3c4 \uc81c\ub2e8\uc744 \ub9cc\ub4e4\uc9c0\ub9cc \uc65c\uc778\uc9c0 \ud560\uba38\ub2c8\ub294 \u2018\ucf54\ucf54\u2019\uac00 \ubd80\ubaa8\ub2d8\uc744 \ucc3e\uc9c0 \ubabb\ud558\uac8c \ud55c\ub2e4.  \ud560\uba38\ub2c8\ub97c \uc774\ud574\ud560 \uc218 \uc5c6\ub294 \u2018\ucf54\ucf54\u2019\ub294 \ubd80\ubaa8\ub2d8\uc744 \ucc3e\uae30 \uc704\ud574 \uae08\uc9c0 \ub41c \u2018\ube44\ubc00\uc758 \uc131\u2019\uc73c\ub85c \ubaa8\ud5d8\uc744 \ub5a0\ub098\uace0, \uadf8 \uacf3\uc5d0\uc11c \ubd80\ubaa8\ub2d8\uc758 \ube44\ubc00\uc744 \uc54c\uace0 \uc788\ub294 \uc0ac\uc545\ud55c \uad50\uc218 \u2018\ubab0\ub808\ud2b8\u2019\ub97c \ub9cc\ub098\ub294\ub370\u2026 \ub180\ub78d\uace0 \uc2e0\ube44\ub85c\uc6b4 \ubaa8\ud5d8\uc774 \uae30\ub2e4\ub9ac\uace0 \uc788\ub294 \uc8fd\uc740\uc790\ub4e4\uc758 \uc138\uc0c1! \uacfc\uc5f0 \u2018\ucf54\ucf54\u2019\ub294 \uadf8\ub9ac\uc6b4 \ubd80\ubaa8\ub2d8\uc744 \ub9cc\ub0a0 \uc218 \uc788\uc744\uae4c?",
     "genre": 10,
-    "director": "",
+    "director": "\uce74\ub97c\ub85c\uc2a4 \uad6c\ud2f0\uc5d0\ub808\uc988 \uba54\ub4dc\ub77c\ub178",
     "actors": "",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//qOPRylUBxmT7ah9lmh1NnlRVUv1.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/PmKd0CnAJmE",
     "rate": 5.11,
-    "user": null,
     "like_users": []
   }
 },
@@ -280,7 +266,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//5f1hwyCxTjOUnrT23n6skqQeUD9.jpg",
     "youtube_url": "https://www.youtube.com/embed/aVDBL8k-nJk",
     "rate": 8.76,
-    "user": null,
     "like_users": []
   }
 },
@@ -293,13 +278,12 @@
     "year": 2017,
     "description": "\ubd81\uadf9\uc744 \uc9c0\ud0a4\uace0 \uc0c8\ub85c\uc6b4 \uc655\uc774 \ub41c \u2018\ube45\u2019\uc5d0\uac8c \ub274\uc695\uc758 \ubaa8\ub4e0 \ubb38\uc744 \uc5f4 \uc218 \uc788\ub294 \ub9cc\ub2a5\ud669\uae08\uc5f4\uc1e0\ub97c \uc120\ubb3c\ud55c\ub2e4\ub294 \uc18c\uc2dd\uc774 \uc804\ud574\uc9c4\ub2e4. \u2018\ube45\u2019\uc740 \uadc0\uc694\ubbf8 \u2018\ub808\ubc0d\uc2a4\u2019 \uc0bc\ucd1d\uc0ac, \uadf8\ub9ac\uace0 \uc544\ub4e4 \u2018\ud038\u2019\uacfc \ud568\uaed8 \ub274\uc695\uc73c\ub85c \ub5a0\ub098\uace0, \uc6b0\ub824\uc640 \ub2e4\ub974\uac8c \ubaa8\ub450\ub97c \uac10\ub3d9\uc2dc\ud0a4\ub294 \uc5f0\uc124\uc744 \ud558\uba70 \uad6d\ubbfc \uacf0\uc774 \ub41c\ub2e4. \ud558\uc9c0\ub9cc \uadf8 \ub0a0 \uc800\ub141, \uc740\ud589\uc758 \uae08\uace0\uac00 \ud138\ub9ac\ub294 \uc0ac\uac74\uc774 \ubc1c\uc0dd\ud558\uace0 \ud669\uae08\uc5f4\uc1e0\ub97c \uac00\uc9c0\uace0 \uc788\ub294 \u2018\ube45\u2019\uc774 \ub3c4\ub451\uc73c\ub85c \uc758\uc2ec\ubc1b\ub294\ub2e4. \ud558\ub8e8 \uc544\uce68\uc5d0 \uc601\uc6c5\uc5d0\uc11c \uc545\ub2f9\uc774 \ub41c \u2018\ube45\u2019! \u2018\ube45\u2019\uc740 \uc5b5\uc6b8\ud55c \ub204\uba85\uc744 \ubc97\uae30 \uc704\ud574 \ubd81\uadf9 \uce5c\uad6c\ub4e4\uacfc \ud568\uaed8 \uc9c4\uc9dc \ubc94\uc778\uc744 \ucc3e\uae30 \uc2dc\uc791\ud558\ub294\ub370\u2026",
     "genre": 12,
-    "director": "",
+    "director": "\ub9ac\ucc28\ub4dc \ud540, \ud300 \ub9d0\ud2b8\ube44",
     "actors": "\uc11c\ubc18\uc11d, \uae40\ubcf4\ub098, \uc774\ub2e4\uc740, \ucd5c\uc815\uc724",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//wQuWHhcBZNlU4WqFcMQG1d1cI56.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/2Af8OHgMWSw",
     "rate": 6.83,
-    "user": null,
     "like_users": []
   }
 },
@@ -318,7 +302,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//vylayT2ddcXDcmUJlZdgNp6kdXw.jpg",
     "youtube_url": "https://www.youtube.com/embed/gH6BVcn6Sbg",
     "rate": 7.87,
-    "user": null,
     "like_users": []
   }
 },
@@ -337,7 +320,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//3TgcV7kk9ZPabuk5NxMuge0Z0Kr.jpg",
     "youtube_url": "https://www.youtube.com/embed/6Jqi_Yc9_wk",
     "rate": 5.09,
-    "user": null,
     "like_users": []
   }
 },
@@ -354,9 +336,8 @@
     "actors": "\ud55c\uc73c\ub738, \uc7a5\ub2e4\uc6b4, \uc774\ucc3d\ubbfc, \uc11c\ubc18\uc11d, \ubc15\uc131\uc601, \uae40\ubcf4\ub098, \uace0\uad6c\uc778",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//c5fWzhMLOFrgKiuyTgDZlmS3YPJ.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/lIXFFFY_lDU",
     "rate": 7.65,
-    "user": null,
     "like_users": []
   }
 },
@@ -375,7 +356,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//lmDWUkKhCvhBwLTX0I6ZEiirk7x.jpg",
     "youtube_url": "https://www.youtube.com/embed/iX_9QIw49tM",
     "rate": 8.55,
-    "user": null,
     "like_users": []
   }
 },
@@ -394,7 +374,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//avT0fOGqsu5ctQVhWv3FvWwzxgV.jpg",
     "youtube_url": "https://www.youtube.com/embed/ACPkdwESgfI",
     "rate": 6.7,
-    "user": null,
     "like_users": []
   }
 },
@@ -413,7 +392,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//2s8qdpT1ZZJp06woNC5MG7aRKO.jpg",
     "youtube_url": "https://www.youtube.com/embed/Voy8AhoxY04",
     "rate": 8.17,
-    "user": null,
     "like_users": []
   }
 },
@@ -432,7 +410,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//G7oRsHKAwe1S9yM1IcfcUSRNnb.jpg",
     "youtube_url": "https://www.youtube.com/embed/XdWotCJ6OG8",
     "rate": 8.28,
-    "user": null,
     "like_users": []
   }
 },
@@ -451,7 +428,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//j7eK3iXbM9RyirCwVOJbxmY0rWC.jpg",
     "youtube_url": "https://www.youtube.com/embed/lsEm98ZCPME",
     "rate": 6.26,
-    "user": null,
     "like_users": []
   }
 },
@@ -462,15 +438,14 @@
     "movieCode": 20196380,
     "title": "\ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4",
     "year": 2017,
-    "description": "\uc6b0\ub9ac \uc55e\uc9d1\uc774 \uc0b4\uc544\uc788\ub294 \uad34\ubb3c?!  \uc9c8\ud48d\ub178\ub3c4\uc758 \uc2dc\uae30\uc5d0 \uc811\uc5b4\ub4e0 \uc8fc\uc778\uacf5 \ub514\uc81c\uc774\ub294 \uc694\uc998 \ub4e4\uc5b4 \ubd80\uca4d \uc55e\uc9d1\uc774 \uc218\uc0c1\ud558\ub2e8 \uc0dd\uac01\uc744 \ub5a8\uce60 \uc218 \uc5c6\ub2e4. \uc131\uc9c8 \uace0\uc57d\ud55c \ub124\ubc84\ud06c\ub798\ucee4(\uc2a4\ud2f0\ube0c \ubd80\uc138\ubbf8)\uac00 \uc0ac\ub294 \uadf8\uc9d1 \uadfc\ucc98\uc5d0\ub9cc \uac00\uba74 \uc57c\uad6c\uacf5\uc5d0\uc11c \uc790\uc804\uac70\uae4c\uc9c0 \ubabd\ub545 \uc0ac\ub77c\uc838 \ubc84\ub9ac\uae30 \ub54c\ubb38. \uc2ec\uc9c0\uc5b4 \uc790\uae30 \ubd80\uc778\uc744 \uc0b4\ucc0c\uc6cc\uc11c \uc7a1\uc544\uba39\uc5c8\ub2e8 \uc18c\ubb38\uae4c\uc9c0\u2026  \ud560\ub85c\uc708 \uc804\ub0a0, \ub514\uc81c\uc774\uc640 \ub2e8\uc9dd \uce5c\uad6c \ucc28\uc6b0\ub354\ub294 \uc55e\uc9d1 \uce74\ud398\ud2b8\uac00 \ucc28\uc6b0\ub354\uc758 \ubc30\uad6c\uacf5\uc744 \ub0bc\ub984! \uc0bc\ud0a4\ub294 \uc7a5\uba74\uc744 \ubaa9\uaca9\ud558\uace0, \ud558\ub9c8\ud130\uba74 \uc9d1\ud55c\ud14c \uc7a1\uc544\uba39\ud790 \ubed4\ud588\ub358 \uc0c8\uce68\ub5bc\uae30 \uc81c\ub2c8\uae4c\uc9c0 \uac00\uc138, \uc55e\uc9d1\uc758 \ube44\ubc00\uc744 \ud3ed\ub85c\ud558\ub824 \ud558\uc9c0\ub9cc \uc544\ubb34\ub3c4 \ubbff\uc5b4\uc8fc\uc9c0 \uc54a\uc740 \ucc44 \ud558\ub098 \ub458\uc529 \ud76c\uc0dd\uc790\ub9cc \ub298\uc5b4\uac04\ub2e4.  \uc601\uc6d0\ud788 \uc0ac\ub791\ubc1b\uace0 \uc2f6\uc5c8\ub358 \ub9c8\uc74c\uacfc 45\ub144\uc744 \uc9c0\ucf1c\uc628 \uc0ac\ub791\uc758 \ube44\ubc00\u2026\r \uc774\uc81c \ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4\uc758 \ube44\ubc00\uc774 \ubc1d\ud600\uc9c4\ub2e4!  \ub9c8\uce68\ub0b4 \uc55e\uc9d1\uc774 \uc545\ub839\uc774 \uae43\ub4e0 \uad34\ubb3c\uac19\uc740 \uc9d1, \u2018\ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4\u2019\ub780 \uc0ac\uc2e4\uc744 \uae68\ub2ec\uc740 \uc21c\uac04, \ud560\ub85c\uc708 \ub2ec\ube5b \uc544\ub798 \uae68\uc5b4\ub09c \ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4\uac00 \uac70\ub9ac\ub97c \ub2e5\uce58\ub294\ub300\ub85c \ud718\uc800\uc73c\uba70 \uc9c8\uc8fc\ud558\uae30 \uc2dc\uc791\ud55c\ub2e4. \ubc14\ub85c \uadf8\ub54c \ub514\uc81c\uc774, \ucc60\uc6b0\ub354, \uc81c\ub2c8 \uc55e\uc5d0 \ub098\ud0c0\ub09c \uc758\uc678\uc758 \uc778\ubb3c\uc740 \uc601\uc6d0\ud788 \uc0ac\ub791\ubc1b\uace0 \uc2f6\uc740 \uc695\uc2ec\uacfc 45\ub144\uac04 \uc9c0\ucf1c\uc628 \uc0ac\ub791\uc758 \ube44\ubc00\uc774 \ub2f4\uae34 \ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4\uc758 \uacfc\uac70\ub97c \uc54c\ub824\uc8fc\ub294\ub370\u2026",
+    "description": "\uc6b0\ub9ac \uc55e\uc9d1\uc774 \uc0b4\uc544\uc788\ub294 \uad34\ubb3c?!  \uc9c8\ud48d\ub178\ub3c4\uc758 \uc2dc\uae30\uc5d0 \uc811\uc5b4\ub4e0 \uc8fc\uc778\uacf5 \ub514\uc81c\uc774\ub294 \uc694\uc998 \ub4e4\uc5b4 \ubd80\uca4d \uc55e\uc9d1\uc774 \uc218\uc0c1\ud558\ub2e8 \uc0dd\uac01\uc744 \ub5a8\uce60 \uc218 \uc5c6\ub2e4. \uc131\uc9c8 \uace0\uc57d\ud55c \ub124\ubc84\ud06c\ub798\ucee4(\uc2a4\ud2f0\ube0c \ubd80\uc138\ubbf8)\uac00 \uc0ac\ub294 \uadf8\uc9d1 \uadfc\ucc98\uc5d0\ub9cc \uac00\uba74 \uc57c\uad6c\uacf5\uc5d0\uc11c \uc790\uc804\uac70\uae4c\uc9c0 \ubabd\ub545 \uc0ac\ub77c\uc838 \ubc84\ub9ac\uae30 \ub54c\ubb38. \uc2ec\uc9c0\uc5b4 \uc790\uae30 \ubd80\uc778\uc744 \uc0b4\ucc0c\uc6cc\uc11c \uc7a1\uc544\uba39\uc5c8\ub2e8 \uc18c\ubb38\uae4c\uc9c0\u2026  \ud560\ub85c\uc708 \uc804\ub0a0, \ub514\uc81c\uc774\uc640 \ub2e8\uc9dd \uce5c\uad6c \ucc28\uc6b0\ub354\ub294 \uc55e\uc9d1 \uce74\ud398\ud2b8\uac00 \ucc28\uc6b0\ub354\uc758 \ubc30\uad6c\uacf5\uc744 \ub0bc\ub984! \uc0bc\ud0a4\ub294 \uc7a5\uba74\uc744 \ubaa9\uaca9\ud558\uace0, \ud558\ub9c8\ud130\uba74 \uc9d1\ud55c\ud14c \uc7a1\uc544\uba39\ud790 \ubed4\ud588\ub358 \uc0c8\uce68\ub5bc\uae30 \uc81c\ub2c8\uae4c\uc9c0 \uac00\uc138, \uc55e\uc9d1\uc758 \ube44\ubc00\uc744 \ud3ed\ub85c\ud558\ub824 \ud558\uc9c0\ub9cc \uc544\ubb34\ub3c4 \ubbff\uc5b4\uc8fc\uc9c0 \uc54a\uc740 \ucc44 \ud558\ub098 \ub458\uc529 \ud76c\uc0dd\uc790\ub9cc \ub298\uc5b4\uac04\ub2e4.  \uc601\uc6d0\ud788 \uc0ac\ub791\ubc1b\uace0 \uc2f6\uc5c8\ub358 \ub9c8\uc74c\uacfc 45\ub144\uc744 \uc9c0\ucf1c\uc628 \uc0ac\ub791\uc758 \ube44\ubc00\u2026\r\n \uc774\uc81c \ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4\uc758 \ube44\ubc00\uc774 \ubc1d\ud600\uc9c4\ub2e4!  \ub9c8\uce68\ub0b4 \uc55e\uc9d1\uc774 \uc545\ub839\uc774 \uae43\ub4e0 \uad34\ubb3c\uac19\uc740 \uc9d1, \u2018\ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4\u2019\ub780 \uc0ac\uc2e4\uc744 \uae68\ub2ec\uc740 \uc21c\uac04, \ud560\ub85c\uc708 \ub2ec\ube5b \uc544\ub798 \uae68\uc5b4\ub09c \ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4\uac00 \uac70\ub9ac\ub97c \ub2e5\uce58\ub294\ub300\ub85c \ud718\uc800\uc73c\uba70 \uc9c8\uc8fc\ud558\uae30 \uc2dc\uc791\ud55c\ub2e4. \ubc14\ub85c \uadf8\ub54c \ub514\uc81c\uc774, \ucc60\uc6b0\ub354, \uc81c\ub2c8 \uc55e\uc5d0 \ub098\ud0c0\ub09c \uc758\uc678\uc758 \uc778\ubb3c\uc740 \uc601\uc6d0\ud788 \uc0ac\ub791\ubc1b\uace0 \uc2f6\uc740 \uc695\uc2ec\uacfc 45\ub144\uac04 \uc9c0\ucf1c\uc628 \uc0ac\ub791\uc758 \ube44\ubc00\uc774 \ub2f4\uae34 \ubaac\uc2a4\ud130 \ud558\uc6b0\uc2a4\uc758 \uacfc\uac70\ub97c \uc54c\ub824\uc8fc\ub294\ub370\u2026",
     "genre": 12,
     "director": "\ud53c\ud130 \ub808\ud398\ub2c8\uc624\ud2f0\uc2a4",
     "actors": "",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
-    "poster_path": "https://image.tmdb.org/t/p/w500//dt1XQLQUsoL0iGTiEqBnIrLgjU1.jpg",
-    "youtube_url": "",
+    "poster_path": "https://image.tmdb.org/t/p/w500//jJVSP9YAUYqh5voAgGRhyIa5K6W.jpg",
+    "youtube_url": "https://www.youtube.com/embed/ZVraEwtWi3g",
     "rate": 8.0,
-    "user": null,
     "like_users": []
   }
 },
@@ -487,9 +462,8 @@
     "actors": "\uc815\uc720\uc815, \uae40\uba85\uc900, \ud604\uacbd\uc218, \ud64d\uc2b9\ud6a8, \uc774\uc0c1\ud638, \uc784\ucc44\ud5cc, \uae40\ub2e4\uc62c, \uac15\uc131\uc6b0",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//qmPEQ7nXe8gLybi5y92cZa8qKNb.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/watch?v=Runedk28UIc",
     "rate": 4.19,
-    "user": null,
     "like_users": []
   }
 },
@@ -500,15 +474,14 @@
     "movieCode": 20197691,
     "title": "\uc783\uc5b4\ubc84\ub9b0 \uc138\uacc4\ub97c \ucc3e\uc544\uc11c",
     "year": 2019,
-    "description": "\uc974 \ubca0\ub974\ub290\uc758 \uc138\uacc4\uc801 \ubca0\uc2a4\ud2b8\uc140\ub7ec \u2018\uc9c0\uc800\ud0d0\ud5d8(\uc9c0\uad6c \uc18d \uc5ec\ud589)\u2019\uc744 \uc6d0\uc791\uc73c\ub85c \ud55c \uc2a4\ud399\ud130\ud074 \ub300\uc791!  \u2018\ub0b4\uc154\ub110 \ud2b8\ub808\uc800\u2019 \u2018\uc778\ub514\uc544\ub098 \uc874\uc2a4\u2019 \u2018\ubbf8\uc774\ub77c\u2019... \uadf8\ub9ac\uace0 \uc9c0\uae08 \uc138\uacc4\ub85c\ubd80\ud130 \uc9c0\uad6c \uc911\uc2ec\uc73c\ub85c \ud5a5\ud55c \ub354\uc6b1 \uc704\ud5d8\ud558\uace0 \uc7a5\ub300\ud55c \ubaa8\ud5d8\uc774 \uc2dc\uc791\ub41c\ub2e4!!  \uc138\uacc4\uc758 \ubaa8\ud5d8\uac00\ub4e4\uc774 \uafc8\uafd4 \uc628 \uace0\ub300\uc758 \uc804\uc124..\uc77c \ub144\uc5d0 \ud55c \ubc88 \ud0dc\uc591\uc758 \ube5b\uc774 \uac00\ub9ac\ud0a4\ub294 \uc218\uc218\uaed8\ub07c\uc758 \ub3d9\uad74\uc5d0 \uc9c0\uad6c \ubc11\ubc14\ub2e5 \uae4a\uc740 \uacf3, \uc9c0\uad6c\uc758 \uc911\uc2ec\uc73c\ub85c \uc774\uc5b4\uc9c0\ub294 \uae38\uc774 \uc788\ub2e4. \uadf8\uacf3\uc5d0\ub294 \uc0c1\uc0c1\uc744 \ub6f0\uc5b4\ub118\ub294 \uc138\uacc4\uac00 \uae30\ub2e4\ub9ac\uace0 \uc788\ub294\ub370...",
+    "description": "\uc608\ud2f0, \ube45\ud48b, \uc0ac\uc2a4\ucf70\uce58\ub77c \ubd88\ub9ac\ub294 \uc804\uc124\uc758 \ub3d9\ubb3c. \uc720\uc77c\ud558\uac8c \uc0b4\uc544\ub0a8\uc740 \u2018Mr. \ub9c1\ud06c\u2019\ub294 \uc9c0\uad6c \ubc18 \ubc14\ud034 \ub108\uba38\uc5d0 \uc788\ub294 \uc77c\uba85 \uc783\uc5b4\ubc84\ub9b0 \uc138\uacc4 \u2018\uc0f9\uadf8\ub9b4\ub77c\u2019\uc5d0\uc11c \ub3d9\uc871\uc758 \ud754\uc801\uc774 \ubc1c\uacac\ub410\ub2e4\ub294 \uc0ac\uc2e4\uc744 \uc54c\uac8c \ub41c\ub2e4. \ud55c\ud3b8, \uc790\uce6d \uc138\uacc4 \ucd5c\uace0\uc758 \ud0d0\ud5d8\uac00\ub77c \uc8fc\uc7a5\ud558\ub294 \u2018\ub77c\uc774\uc624\ub12c\u2019. \uc804\uc124\uc758 \ub3d9\ubb3c \u2018\ube45\ud48b\u2019\uc744 \ubaa9\uaca9\ud588\ub2e4\ub294 \ud3b8\uc9c0 \ud55c \ud1b5\uc744 \ubc1b\uace0 \ubd81\uc544\uba54\ub9ac\uce74\ub85c \ud5a5\ud55c\ub2e4. \uadf8\ub9ac\uace0 \uc9c4\uc9dc\ub85c \ub9cc\ub098\uac8c \ub41c \uc804\uc124\uc758 \ub3d9\ubb3c\uc740\u2026 \ubc14\ub85c \u2018Mr. \ub9c1\ud06c\u2019! \uc624\ub79c \uc2dc\uac04 \uc228\uc5b4 \uc0b4\uc544\uc628 \u2018\ub9c1\ud06c\u2019\uc5d0\uac8c\ub294 \uac00\uc871\uc744 \ucc3e\uae30 \uc704\ud574 \ud0d0\ud5d8\uac00 \u2018\ub77c\uc774\uc624\ub12c\u2019\uc758 \ub3c4\uc6c0\uc774 \uc808\uc2e4\ud55c \uc0c1\ud669! \uc6b0\uc5ec\uace1\uc808 \ub05d\uc5d0 \ub458\uc740 \ud568\uaed8 \ubaa8\ud5d8\uc744 \ub5a0\ub098\uac8c \ub418\ub294\ub370\u2026 \ubbf8\uad6d \ucc0d\uace0! \uc720\ub7fd \ub3cc\uace0! \uc544\uc2dc\uc544 \ub118\uc5b4! \ub9c1\ud06c\uc640 \ub77c\uc774\uc624\ub12c\uc758 \uc2a4\ud399\ud130\ud074! \uae00\ub85c\ubc8c \uc5b4\ub4dc\ubca4\ucc98\uac00 \uc2dc\uc791\ub41c\ub2e4!",
     "genre": 12,
     "director": "\ud06c\ub9ac\uc2a4 \ubc84\ud2c0\ub7ec",
     "actors": "\ud734 \uc7ad\ub9e8, \uc870 \uc0d0\ub2e4\ub098, \uc790\ud06c \uac08\ub9ac\ud53c\uc544\ub098\ud0a4\uc2a4, \uc5e0\ub9c8 \ud1b0\uc2a8",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
-    "poster_path": "https://image.tmdb.org/t/p/w500//ub9DfwfRe8SAM4fA3zO3RakK8IA.jpg",
-    "youtube_url": "",
+    "poster_path": "https://image.tmdb.org/t/p/w500//yzvZNEVjmYINTvUF0l3Mp6JhMv4.jpg",
+    "youtube_url": "https://www.youtube.com/embed/YMc6oiIWqIg",
     "rate": 8.34,
-    "user": null,
     "like_users": []
   }
 },
@@ -527,7 +500,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//7HCywDeVq3VIklnS5c3YlXPLspk.jpg",
     "youtube_url": "https://www.youtube.com/embed/DDiIaFpPjxY",
     "rate": 6.12,
-    "user": null,
     "like_users": []
   }
 },
@@ -546,7 +518,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//1F2rDT1oNdvMyXF7gxbGxaXCzrz.jpg",
     "youtube_url": "https://www.youtube.com/embed/dXoAkZ3t9Q8",
     "rate": 7.64,
-    "user": null,
     "like_users": []
   }
 },
@@ -565,7 +536,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//kMFdasG55nPSRZh2OlMqvFxo6o0.jpg",
     "youtube_url": "https://www.youtube.com/embed/FPN3MZEnT5M",
     "rate": 8.29,
-    "user": null,
     "like_users": []
   }
 },
@@ -584,7 +554,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//tKaXyzUDXaWRWj5XC96Ousr9lJV.jpg",
     "youtube_url": "https://www.youtube.com/embed/1OJZSa5258A",
     "rate": 6.44,
-    "user": null,
     "like_users": []
   }
 },
@@ -603,7 +572,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//37M8j1nwMs8wu2H2tMtDjqhTSnd.jpg",
     "youtube_url": "https://www.youtube.com/embed/v8C0VHuUHw0",
     "rate": 7.25,
-    "user": null,
     "like_users": []
   }
 },
@@ -622,7 +590,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//aebY0aGAP7Od5qs3k6PXEVIMwYD.jpg",
     "youtube_url": "https://www.youtube.com/embed/XUzDs59sUXY",
     "rate": 5.35,
-    "user": null,
     "like_users": []
   }
 },
@@ -633,15 +600,14 @@
     "movieCode": 20193807,
     "title": "\uc608\uc2a4\ud130\ub370\uc774",
     "year": 2019,
-    "description": "1990\ub144. \uc5ec\uc12f \uba85\uc758 \uc544\uc774\ub4e4\uc774 \uac11\uc790\uae30 \uc0ac\ub77c\uc9c4\ub2e4. \uac19\uc740 \uc2dc\uae30 \uad6d\ubc29\ubd80\ub294 \ucd5c\uace0\uc758 \uacfc\ud559\uc790\ub4e4\uc744 \ubaa8\uc544 \uadf9\ube44\uc758 \ud504\ub85c\uc81d\ud2b8\ub97c \uc9c4\ud589\uc2dc\ud0a8\ub2e4. \uadf8\ub9ac\uace0 30\ub144 \ub4a4...  2020\ub144, \ud1b5\uc77c \ud55c\ubc18\ub3c4. \uc740\ud1f4 \uacfc\ud559\uc790\ub4e4\ub9cc\uc744 \ub178\ub9b0 \uc5f0\uc1c4 \uc0b4\uc778\uc0ac\uac74\uc774 \ubc1c\uc0dd, \ud604\uc7a5\uc758 \ud754\uc801\ub4e4\uc744 \uc0c5\uc0c5\uc774 \uac10\uc2dd\ud574\ub0b4\ub294 \ucca8\ub2e8\uc7a5\ube44\uc640 \ub0a8\ubd81\uc744 \ub300\ud45c\ud558\ub294 \ucd5c\uace0\uc758 \ud2b9\uc218\uc218\uc0ac\ub300(SI)\uac00 \ud22c\uc785\ub41c\ub2e4. \ud558\uc9c0\ub9cc \uc774\ub97c \uc870\ub871\ud558\ub4ef \ubc94\uc778\uc740 \ud604\uc7a5\ub9c8\ub2e4 \uc790\uc2e0\ub9cc\uc758 \ud39c\ub358\ud2b8\ub97c \ub0a8\uae30\uace0 \uc2ec\uc9c0\uc5b4 SI\uc758 \ub9ac\ub354 \uc11d\uc758 \uc544\ub4e4\ub9c8\uc800 \ub0a9\uce58\ud55c\ub2e4. \ud604\uc7a5\uc5d0\uc11c \ubc94\uc778\uc758 \ubd80\ud558\ub97c \uc0ac\uc0b4\ud558\ub294 \uc11d. \uadf8\ub7ec\ub098 \uadf8\uc758 \uc637 \uc18d\uc5d0 \uc548\uaca8 \uc788\ub358 \uc790\uc2e0\uc758 \uc544\ub4e4\ub9c8\uc800 \uc8fd\uc774\ub294\ub370...  \ud55c\ud3b8, \uc778\ud130\uc2dc\ud2f0 \ud55c\ubcf5\ud310\uc5d0\uc11c \uacbd\ucc30\uc758 \uc218\ub1cc\ubd80\uc778 \uacbd\ucc30\uccad\uc7a5\uc774 \uc0bc\uc5c4\ud55c \uacbd\ud638 \uc18d\uc5d0 \ub0a9\uce58\ub41c\ub2e4. \ud604\uc7a5\uc5d0 \ub0a8\uaca8\uc9c4 \ubc94\uc778\uc758 \ud39c\ub358\ud2b8. \uccad\uc7a5\uc758 \ub538\uc778 \ubc94\uc8c4\uc2ec\ub9ac\ubd84\uc11d\uad00 \ud76c\uc218\uac00 \uc218\uc0ac\ud300\uc5d0 \ud569\ub958\ud558\uace0 \uc11d\uc740 \uadf8\ub140\uac00 \uc790\uc2e0\uacfc \uac19\uc740 \ub450\ud1b5\uc744 \uc553\uace0 \uc788\uc73c\uba70 \ub450 \uc0ac\ub78c \ubaa8\ub450 \uc5b4\ub9b0 \uc2dc\uc808\uc758 \uae30\uc5b5\uc744 \uc783\uc5b4\ubc84\ub838\ub2e4\ub294 \uac83\uc744 \uc54c\uac8c \ub418\ub294\ub370... \uadf8\ub9ac\uace0 \ub3cc\uc5f0 \uc11d\uc5d0\uac8c \ub4dc\ub294 \uc758\uc2ec. \ubc94\uc778\uc740 \uc790\uc2e0\uacfc \ud76c\uc218\ub97c \ub9cc\ub098\uac8c \ud558\uae30 \uc704\ud574 \uc774 \ubaa8\ub4e0 \ubc94\uc8c4\ub97c \ubc8c\uc778 \uac83\uc740 \uc544\ub2d0\uae4c? \uc11d\uacfc \ud76c\uc218\uc758 \uc9c0\uc6cc\uc9c4 \uae30\uc5b5, \uace8\ub9ac\uc557\uc758 \uac00\uacf5\ud560 \uc0b4\uc778\ub2a5\ub825, \uc787\ub530\ub978 \uacfc\ud559\uc790\ub4e4\uc758 \uc8fd\uc74c. \uc774 \ubaa8\ub4e0 \uc758\ubb38\uc758 \ud328\uc2a4\uc6cc\ub4dc\ub294 \ubc14\ub85c \u2018yesterday'...",
+    "description": "\ud558\ub8e8\ud558\ub8e8 \ud798\uacb9\uac8c \uc74c\uc545\uc744 \ud558\ub358 \ubb34\uba85 \ubba4\uc9c0\uc158 \uc7ad. \ubaa8\ub4e0 \uac83\uc744 \ud3ec\uae30\ud558\ub824\ub358 \uc21c\uac04, \uc804\uc138\uacc4\uac00 \ub3d9\uc2dc\uc5d0 \uc815\uc804\uc774 \ub41c\ub2e4. \ub2e4\uc74c \ub0a0 \uc138\uc0c1\uc5d0\uc120 \ube44\ud2c0\uc988\uac00 \uc0ac\ub77c\uc9c0\uace0, \uc624\uc9c1 \uc7ad\ub9cc\uc774 \uadf8\ub4e4\uc758 \uc74c\uc545\uc744 \uae30\uc5b5\ud558\uac8c \ub41c\ub2e4. \ud2b9\ubcc4\ud55c \uae30\ud68c\ub97c \ub9cc\ub09c \uc7ad\uc740 \uc138\uacc4\uc801\uc778 \uc2a4\ud0c0\uac00 \ub420 \uc6b4\uba85\uc5d0 \uc130\ub294\ub370\u2026",
     "genre": 3,
     "director": "\ub300\ub2c8 \ubcf4\uc77c",
     "actors": "\ud788\uba54\uc26c \ud30c\ud154, \ub9b4\ub9ac \uc81c\uc784\uc2a4, \ucf00\uc774\ud2b8 \ub9e5\ud0a4\ub10c, \uc5d0\ub4dc \uc2dc\ub7f0, \uc81c\uc784\uc2a4 \ucf54\ub4e0, \uc544\ub098 \ub514 \uc544\ub974\ub9c8\uc2a4",
     "grade": "12\uc138\uc774\uc0c1\uad00\ub78c\uac00",
-    "poster_path": "https://image.tmdb.org/t/p/w500//c5arIh7rb08kSW9XjHOrG8DBEbs.jpg",
-    "youtube_url": "",
+    "poster_path": "https://image.tmdb.org/t/p/w500//pmiFyESTXQXivV9cN6mFCPKv4A.jpg",
+    "youtube_url": "https://www.youtube.com/embed/qD6FDkUXSZQ",
     "rate": 6.51,
-    "user": null,
     "like_users": []
   }
 },
@@ -660,7 +626,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//kl0HnWS6DuVX9A6RfUXo4ixBB6i.jpg",
     "youtube_url": "https://www.youtube.com/embed/mmQPdXo_PLI",
     "rate": 7.57,
-    "user": null,
     "like_users": []
   }
 },
@@ -671,15 +636,14 @@
     "movieCode": 20195968,
     "title": "\ub354 \ub8f8",
     "year": 2019,
-    "description": "",
+    "description": "\ub9d0\ud558\ub294 \ub300\ub85c \uc6d0\ud558\ub294 \ub300\ub85c \ub2e4 \ub4e4\uc5b4\uc8fc\ub294 \u2018\ube44\ubc00\uc758 \ubc29\u2019\uc774 \uc788\ub2e4. \ub3c8, \ub2e4\uc774\uc544\ubaac\ub4dc, \ucd5c\uace0\uae09 \uc0f4\ud398\uc778, \ubc18 \uace0\ud750 \uac78\uc791\u2026 \uc6d0\ud55c\ub2e4\uba74 \uc544\uae30\uae4c\uc9c0\ub3c4. \uc6d0\ud558\ub294 \uac83\uc740 \ubb50\ub4e0 \ub4e4\uc5b4\uc900\ub2e4. \ub2e8, \uc18c\uc6d0\uc740 \uc2e0\uc911\ud558\uac8c \ube4c \uac83! \uadf8\ub9ac\uace0 \uaddc\uce59\uc744 \ubc18\ub4dc\uc2dc \uc9c0\ud0ac \uac83!",
     "genre": 5,
     "director": "\ud06c\ub9ac\uc2a4\ud2f0\uc559 \ubcfc\ud06c\ub9cc",
     "actors": "\uc62c\uac00 \ucfe0\ub9b4\ub80c\ucf54",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
-    "poster_path": "https://image.tmdb.org/t/p/w500//aUC39cFC2KO8CJ0EV0ijIJRr3PT.jpg",
-    "youtube_url": "",
+    "poster_path": "https://image.tmdb.org/t/p/w500//1u65UVWnH5lLrasD0Se48fND6g8.jpg",
+    "youtube_url": "https://www.youtube.com/embed/aHcy3A9WmME",
     "rate": 7.69,
-    "user": null,
     "like_users": []
   }
 },
@@ -690,15 +654,14 @@
     "movieCode": 20193821,
     "title": "\uadf9\uc7a5\ud310 \ud5ec\ub85c\uce74\ubd07 : \ub2ec\ub098\ub77c\ub97c \uad6c\ud574\uc918!",
     "year": 2019,
-    "description": "",
+    "description": "\ud3c9\ud654\ub85c\uc6e0\ub358 \uc9c0\uad6c\uc5d0\ub294 \ud0c0\uc6cc\ud06c\ub808\uc778, \uc6b0\uc8fc\uc815\uac70\uc7a5\uc774 \uc0ac\ub77c\uc9c0\uace0,\r\n\ub2ec\uc758 \ub4b7\uba74\uc5d0\uc11c \uc0b4\ub358 \ud1a0\ub07c\uc871 \ub9c8\uc744\uc740 \uc678\uacc4 \ub85c\ubd07\uc758 \uacf5\uaca9\uc73c\ub85c \uc704\uae30\uc5d0 \ucc98\ud558\uac8c \ub41c\ub2e4.\r\n\uc774 \ubaa8\ub4e0 \uac83\uc740 \ubc14\ub85c \uc9c0\uad6c\ub97c \uc815\ubcf5\ud558\ub824\ub294 \uce58\uc62c\ub77c \uc678\uacc4\uc778\ub4e4\uc758 \uacf5\uaca9\uc774\uc5c8\ub358 \uac83!\r\n\r\n\ud3c9\ud654\ub97c \uc218\ud638\ud558\ub294 \ucc28\ud0c4\uacfc \uce74\ubd07\ub4e4\uc740 \ub2ec\uc744 \ub118\uc5b4 \uc9c0\uad6c\uae4c\uc9c0 \ud63c\ub780\uc5d0 \ube60\ub728\ub9b0\r\n\uce58\uc62c\ub77c \uc678\uacc4 \uad70\ub2e8\uc5d0 \ub9de\uc11c\uae30 \uc704\ud574 \ub2ec\ub098\ub77c\ub85c \ub5a0\ub098\uac8c \ub418\ub294\ub370\u2026!\r\n\r\n\uc9c0\uad6c\uc640 \ub2ec\uc744 \uad6c\ud558\uae30 \uc704\ud55c \r\n\uce74\ubd07\uacfc \ud1a0\ub07c\uc871\ub4e4\uc758 \uc9c0\uc0c1\ucd5c\ub300 \uc5f0\ud569\uc791\uc804\uc774 \uc2dc\uc791\ub41c\ub2e4!",
     "genre": 12,
     "director": "\ucd5c\uc2e0\uaddc",
     "actors": "\uc774\uc9c0\ud604, \uae40\uc6a9\uc900, \uc591\uc815\ud654, \uc870\uacbd\uc774, \uc0ac\ubb38\uc601, \uc5c4\uc0c1\ud604, \ubbfc\uc544, \uae40\uc0c1\ubc31, \uae40\ub450\uc6a9, \uc2dc\uc601\uc900, \uc774\ud604",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
-    "poster_path": "",
-    "youtube_url": "",
+    "poster_path": "http://img.movist.com/?img=/x00/05/18/03_p1.jpg",
+    "youtube_url": "https://www.youtube.com/embed/ACBOqZuGvgo",
     "rate": 7.5,
-    "user": null,
     "like_users": []
   }
 },
@@ -717,7 +680,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//kkkS7NYPY4QZcZY6vfkAx0vjJRa.jpg",
     "youtube_url": "https://www.youtube.com/embed/CBxQdsfreSU",
     "rate": 6.22,
-    "user": null,
     "like_users": []
   }
 },
@@ -736,7 +698,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//kwCvv1QYjooAqIOBWf7pOrRSmrt.jpg",
     "youtube_url": "https://www.youtube.com/embed/M2_7wzCXun8",
     "rate": 8.3,
-    "user": null,
     "like_users": []
   }
 },
@@ -755,7 +716,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//caDME6PhhRrIbIMg31TUXrWu3sR.jpg",
     "youtube_url": "https://www.youtube.com/embed/oZx04hjEZCE",
     "rate": 8.89,
-    "user": null,
     "like_users": []
   }
 },
@@ -774,7 +734,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//rt8yDvXSnk9CMDJeNYh9lv6kPMt.jpg",
     "youtube_url": "https://www.youtube.com/embed/YfEfNRW9oEQ",
     "rate": 6.09,
-    "user": null,
     "like_users": []
   }
 },
@@ -785,15 +744,14 @@
     "movieCode": 20194045,
     "title": "\uadf9\uc7a5\ud310 \ubc18\uc9c0\uc758 \ube44\ubc00\uc77c\uae30",
     "year": 2019,
-    "description": "",
+    "description": "\uc624\ub298\uc758 \uc77c\uae30\r\n\r\n\uc694\uc998 \ube44\uac00 \uc624\ub294 \ub0a0\uc774\uba74 \ubc29\uc6b8 \uc18c\ub9ac\uc640 \ud568\uaed8\r\n\uce5c\uad6c\ub4e4\uc774 \ud558\ub098 \ub458 \uc529 \uc0ac\ub77c\uc9c0\uae30 \uc2dc\uc791\ud588\ub2e4.\r\n\uadf8\ub7f0\ub370\u2026 \uc6b0\ub9ac \uc544\ube60\ub3c4 \uc0ac\ub77c\uc84c\ub2e4! \u3160_\u3160\r\n\r\n\ubca0\ud504 \u2018\uc751\uc2ec\uc774\u2019 \u2018\ub0e0\ub0e0\uc774\u2019\uc640 \uc544\ube60\ub97c \ucc3e\ub358 \uadf8\ub54c,\r\n\ubbf8\uc2a4\ud130\ub9ac\ud55c \ube75 \uc7a5\uc218\uac00 \ub098\ud0c0\ub098 \uc21c\uc2dd\uac04\uc5d0 \uc774\uc0c1\ud55c \uc138\uacc4\ub85c \ube68\ub824 \ub4e4\uc5b4\uc654\ub2e4!\r\n\r\n\uc544\uc774\uc2a4\ud06c\ub9bc \ub3d9\uc0b0\uacfc \ucd08\ucf5c\ub9bf \ub3d9\uad74\uc774 \uc788\uace0\r\n\uc288\ud06c\ub9bc \ub300\ub9c8\uc655\uacfc \ubc14\uac8c\ud2b8 \ubcd1\uc0ac\ub4e4\uc774 \uc9c0\ud0a4\ub294\r\n\ub2ec\ucf64\ud558\uace0 \uc218\uc0c1\ud55c \uc5ec\uae30\ub294 \ub3c4\ub300\uccb4 \uc5b4\ub514\uc9c0!?",
     "genre": 12,
     "director": "\ud55c\uc2b9\uc6b0",
     "actors": "\ubc29\uc5f0\uc9c0, \uae40\uc120\ud61c, \uc870\uacbd\uc774, \ucc44\ubbfc\uc9c0, \uc870\uc9c4\uc219, \ud64d\ubc94\uae30",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
-    "poster_path": "",
-    "youtube_url": "",
+    "poster_path": "http://img.movist.com/?img=/x00/05/17/95_p1.jpg",
+    "youtube_url": "https://www.youtube.com/embed/1XTXXKE4ujs",
     "rate": 9.01,
-    "user": null,
     "like_users": []
   }
 },
@@ -812,7 +770,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//vr11CuzFEdNyjIZxVt4bQ9p6iyf.jpg",
     "youtube_url": "https://www.youtube.com/embed/8qg9A_vUH38",
     "rate": 7.83,
-    "user": null,
     "like_users": []
   }
 },
@@ -831,7 +788,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//3EphHAIU36cIeFxHAwjdET3ibDp.jpg",
     "youtube_url": "https://www.youtube.com/embed/mZEhR68Y8N0",
     "rate": 6.81,
-    "user": null,
     "like_users": []
   }
 },
@@ -842,15 +798,14 @@
     "movieCode": 20193665,
     "title": "47\ubbf8\ud130 2",
     "year": 2019,
-    "description": "",
+    "description": "\ubb3c\uc5d0 \uc7a0\uae34 \uace0\ub300 \ub9c8\uc57c\uc758 \uc218\uc911\ub3c4\uc2dc '\uc2dc\ubc1c\ubc14'\ub97c \ud5a5\ud574 \uc9dc\ub9bf\ud55c \ub3d9\uad74 \ub2e4\uc774\ube59\uc5d0 \ub098\uc120 '\ubbf8\uc544'\uc640 \uce5c\uad6c\ub4e4\uc740 \uc608\uae30\uce58 \ubabb\ud55c \uc0ac\uace0\ub85c \ubbf8\ub85c \uac19\uc740 \ub3d9\uad74 \uc18d\uc5d0 \uac07\ud600 \ud5e4\ub9e4\ub358 \uc911 \uc624\ub79c \uc2dc\uac04 \uad76\uc8fc\ub9b0 \ube14\ub77c\uc778\ub4dc \uc0e4\ud06c\uc640 \ub9de\ub2e5\ub728\ub9ac\uac8c \ub41c\ub2e4. \uc0b0\uc18c\ub3c4, \ud0c8\ucd9c\uad6c\ub3c4 \uc5c6\ub294 \uce60\ud751 \uac19\uc740 \uc5b4\ub460 \uc18d\uc5d0 \uac07\ud78c \uc774\ub4e4\uc740 \ub208 \ubcf4\ub2e4 \uc608\ubbfc\ud55c \uc81c3\uc758 \uac10\uac01\uc73c\ub85c \uc881\ud600\uc624\ub294 \uc0c1\uc5b4\ub5bc\ub97c \ud53c\ud574 \ubaa9\uc228\uc744 \uac74 \uadf9\ud55c\uc758 \uc228\ubc14\uaf2d\uc9c8\uc744 \uc2dc\uc791\ud558\ub294\ub370...",
     "genre": 2,
     "director": "\uc694\ud558\ub124\uc2a4 \ub85c\ubc84\uce20",
     "actors": "\uc18c\ud53c \ub12c\ub9ac\uc2a4, \ucf54\ub9b0 \ud3ed\uc2a4, \ube0c\ub9ac\uc548\ub290 \uc96c, \uc2dc\uc2a4\ud2f4 \ub85c\uc988 \uc2a4\ud0e4\ub860",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
-    "poster_path": "",
-    "youtube_url": "",
+    "poster_path": "https://image.tmdb.org/t/p/w500//yLfkkyEl3kfqj3jBln1m1zXnv9V.jpg",
+    "youtube_url": "https://www.youtube.com/embed/oZp5E6nhXLM",
     "rate": 7.01,
-    "user": null,
     "like_users": []
   }
 },
@@ -869,7 +824,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//ua8YWgZ1kN3H6pnQ1U45I4QkFVA.jpg",
     "youtube_url": "https://www.youtube.com/embed/m1A8CPG9HKM",
     "rate": 7.9,
-    "user": null,
     "like_users": []
   }
 },
@@ -888,7 +842,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//eeSXArYcWGI0ubSrQ45XelaGx2V.jpg",
     "youtube_url": "https://www.youtube.com/embed/szy3x7H-L1I",
     "rate": 9.37,
-    "user": null,
     "like_users": []
   }
 },
@@ -907,7 +860,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//5rPt1T9RdjF7SoKI8AxmK3p38lr.jpg",
     "youtube_url": "https://www.youtube.com/embed/lja6Xj8AYXo",
     "rate": 6.36,
-    "user": null,
     "like_users": []
   }
 },
@@ -918,15 +870,14 @@
     "movieCode": 20194384,
     "title": "\uc548\ub098",
     "year": 2018,
-    "description": "\uc1a1\ud61c\uad50\ub97c \uc911\uc2ec\uc73c\ub85c \uba87\uba87 \uc5ec\uc131 \uce90\ub9ad\ud130\ub4e4\uc774 \ub9cc\ub4e4\uc5b4\uac00\ub294 \uc774\uc57c\uae30",
+    "description": "\ubaa8\uc2a4\ud06c\ubc14 \uc2dc\uc7a5\uc5d0\uc11c \ub9c8\ud2b8\ub8cc\uc2dc\uce74\ub97c \ud310\ub9e4\ud558\ub358 \uc548\ub098(\uc0ac\uc0e4 \ub8e8\uc2a4)\ub294 \ud30c\ub9ac\uc758 \ubaa8\ub378 \uc5d0\uc774\uc804\ud2b8\ub85c\ubd80\ud130 \uc2a4\uce74\uc6b0\ud2b8 \uc81c\uc758\ub97c \ubc1b\ub294\ub2e4. \uc6b0\uc5f0\ud55c \uae30\ud68c\ub85c \ud30c\ub9ac\uc5d0\uc11c \ubaa8\ub378 \ud65c\ub3d9\uc744 \ud558\uba70 \uc0c8\ub85c\uc6b4 \uc0dd\ud65c\uc5d0 \uc801\uc751\ud558\ub294 \ub4ef\ud55c \uc548\ub098. \ud558\uc9c0\ub9cc \uc774 \ubaa8\ub4e0 \uacfc\uc815\uc740 \uc18c\ub828 \ube44\ubc00\uacbd\ucc30 KGB\uc758 \uc9c0\ud718 \uc544\ub798 \ucca0\uc800\ud788 \uacc4\ud68d\ub41c \uc77c\uc774\uba70, \uc548\ub098 \uc5ed\uc2dc \uac01\uc885 \ud6c8\ub828\uacfc \ud14c\uc2a4\ud2b8\ub97c \uac70\uce5c KGB \uc815\uc608 \uc694\uc6d0\uc774\ub2e4. \uc774\uc911\uc0dd\ud65c\uc744 \ud558\uba70 KGB\uc5d0\uc11c \ub0b4\ub824\uc8fc\ub294 \uc784\ubb34\ub97c \ud558\ub098\uc529 \uc218\ud589\ud574\uac00\ub294 \uc548\ub098\uc758 \ubaa9\ud45c\ub294 \uc624\uc9c1 \ud558\ub098, \uc790\uc720\ub85c\uc6b4 \uc0b6\uc774\ub2e4. \uc790\uc720\ub97c \uc704\ud574 \uace0\uad70\ubd84\ud22c\ud558\ub294 \uc548\ub098 \uc55e\uc5d0 \ubbf8\uad6d CIA \uc694\uc6d0 \ub808\ub108\ub4dc(\ud0ac\ub9ac\uc5b8 \uba38\ud53c)\uac00 \ub4f1\uc7a5\ud558\uba70 \uc5ec\ub7ec \uac00\uc9c0 \uc0ac\uac74\uacfc \uad00\uacc4\uc5d0 \uc5bd\ud788\ub294\ub370...",
     "genre": 8,
     "director": "\ub93d \ubca0\uc1a1",
     "actors": "\uc0ac\uc0e4 \ub8e8\uc2a4, \ud0ac\ub9ac\uc5b8 \uba38\ud53c, \ub8e8\ud06c \uc5d0\ubc18\uc2a4, \ud5ec\ub80c \ubbf8\ub80c",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
-    "poster_path": "https://image.tmdb.org/t/p/w500/None",
-    "youtube_url": "",
+    "poster_path": "https://image.tmdb.org/t/p/w500//A5HzidYQQrxuLqgM06MEemjm0Qc.jpg",
+    "youtube_url": "https://www.youtube.com/embed/xLtxhdgnOjI",
     "rate": 0.0,
-    "user": null,
     "like_users": []
   }
 },
@@ -943,9 +894,8 @@
     "actors": "\ubca0\ub124\ub515\ud2b8 \ucef4\ubc84\ubc30\uce58, \ub9c8\uc774\ud074 \uc100\ub10c, \ub2c8\ucf5c\ub77c\uc2a4 \ud640\ud2b8, \ud1b0 \ud640\ub79c\ub4dc, \uce90\uc11c\ub9b0 \uc6cc\ud130\uc2a4\ud134",
     "grade": "12\uc138\uc774\uc0c1\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//b4UcwvmpPy9YUEP6A3bNfh84XI8.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/9FjTzJImf84",
     "rate": 7.78,
-    "user": null,
     "like_users": []
   }
 },
@@ -964,7 +914,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//3yZ54uGQ4HxEbpNVO565mU1xagp.jpg",
     "youtube_url": "https://www.youtube.com/embed/f8KJe8VOwmU",
     "rate": 9.23,
-    "user": null,
     "like_users": []
   }
 },
@@ -983,7 +932,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//v0Ae8a4qKR9WX4NdM6YNPBV8nm7.jpg",
     "youtube_url": "https://www.youtube.com/embed/mR6hDNeB6yc",
     "rate": 7.47,
-    "user": null,
     "like_users": []
   }
 },
@@ -1002,7 +950,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//wiqA4SaY4ndT0TD75CDz4cEKfe3.jpg",
     "youtube_url": "https://www.youtube.com/embed/PFulOSUTtG8",
     "rate": 8.78,
-    "user": null,
     "like_users": []
   }
 },
@@ -1013,15 +960,14 @@
     "movieCode": 20191604,
     "title": "\uc560\ud504\ud130",
     "year": 2019,
-    "description": "",
+    "description": "\uccab \ub04c\ub9bc\r\n\ub300\ud559 \uc785\ud559 \ud6c4 \uccab \ud30c\ud2f0\uc5d0 \ucd08\ub300 \ubc1b\uac8c \ub41c \uc2e0\uc785\uc0dd \u2018\ud14c\uc0ac\u2019\ub294\r\n\uc9c4\uc2e4\uac8c\uc784\uc744 \ud558\ub358 \uc911 \ud0a4\uc2a4 \ubc8c\uce59\uc5d0 \uac78\ub9ac\uace0 \ub9cc\ub2e4.\r\n\uc0c1\ub300\ub294 \ud559\uad50\uc5d0\uc11c \uc720\uba85\ud55c \ubc18\ud56d\uc544 \u2018\ud558\ub518\u2019.\r\n\ud0a4\uc2a4\ub97c \uc55e\ub454 0.1\ucd08 \uc804, \ubaa8\ub450\uac00 \uc8fc\ubaa9\ud558\ub294 \uadf8 \uc21c\uac04\r\n\u2018\ud14c\uc0ac\u2019\ub294 \u2018\ud558\ub518\u2019\uc758 \uc785\uc220\uc744 \uac70\uc808\ud558\uace0 \ub9cc\ub2e4.\r\n\r\n\uccab \uc0ac\ub791\r\n\uac15\ub82c\ud588\ub358 \uccab \ub9cc\ub0a8 \uc774\ud6c4, \ub9c8\uce58 \uc0c8\ub85c\uc6b4 \uc138\uc0c1\uc744 \ubc1c\uacac\ud55c \ub4ef\r\n\ud55c\ubc88\ub3c4 \uacbd\ud5d8\ud55c \uc801 \uc5c6\ub358 \uac10\uc815\uc5d0 \ub208\uc744 \ub728\uac8c \ub41c \ub450 \uc0ac\ub78c.\r\n\u2018\ud558\ub518\u2019\uc740 \uc790\uc2e0\uc758 \ube44\ubc00 \uc7a5\uc18c\ub85c \u2018\ud14c\uc0ac\u2019\ub97c \ucd08\ub300\ud558\uace0\r\n\uc774\uc81c \ub450 \uc0ac\ub78c\uc740 \uc11c\ub85c\ub97c \ubaa8\ub974\uae30 \uc804\uc73c\ub85c \uc808\ub300 \ub418\ub3cc\uc544 \uac08 \uc218 \uc5c6\uc74c\uc744 \uc54c\uac8c \ub418\ub294\ub370\u2026 \r\n\uccab \uacbd\ud5d8 \uadf8\ub9ac\uace0 <\uc560\ud504\ud130>",
     "genre": 3,
     "director": "\uc81c\ub2c8 \uac8c\uc774\uc9c0",
     "actors": "\ud788\uc5b4\ub85c \ud30c\uc778\uc988 \ud2f0\ud540, \uc870\uc138\ud540 \ub7ad\ud3ec\ub4dc, \uc140\ub9c8 \ube14\ub808\uc5b4, \uc81c\ub2c8\ud37c \ube4c\uc988, \ud53c\ud130 \uac24\ub7ec\uac70, \ud53c\uc544 \ubbf8\uc544",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//yFLIAWYSB87toA8znkCrEXwKLO3.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/eRjt8wzDLS0",
     "rate": 7.21,
-    "user": null,
     "like_users": []
   }
 },
@@ -1040,7 +986,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//491m2wG5uNzF253woglS7S8F7g2.jpg",
     "youtube_url": "https://www.youtube.com/embed/ndH9btsh-XE",
     "rate": 4.77,
-    "user": null,
     "like_users": []
   }
 },
@@ -1059,7 +1004,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//mIYX1mfBqX9SsDB6k10AFAiRp2Z.jpg",
     "youtube_url": "https://www.youtube.com/embed/7kTIXO18Hrc",
     "rate": 6.89,
-    "user": null,
     "like_users": []
   }
 },
@@ -1075,10 +1019,9 @@
     "director": "\ub51c\ub7f0 \ube0c\ub77c\uc6b4",
     "actors": "\uc18c\uc5f0, \uc7a5\ubbfc\ud601, \uc548\uc7a5\ud601, \uc548\uc18c\uc774, \ubcc0\uc601\ud76c, \ud64d\uc9c4\uc6b1, \uc815\uc7ac\ud5cc, \ucd5c\ub355\ud76c, \uc624\uc778\uc131, \uc81c\ub2c8\ud37c \uac00\ub108, \ubc00\ub77c \ucfe0\ub2c8\uc2a4, \ucf04 \uc815, \ube0c\ub9ac\uc544\ub098 \ub374\uc2a4\ud0a4, \ucf00\ub09c \ud1b0\uc2a8, \uc874 \uc62c\ub9ac\ubc84, \ucf04 \ud5c8\ub4dc\uc2a8 \ucea0\ubca8, \ub178\ubc84\ud2b8 \ub9ac\uc624 \ubc84\uce20, \ub9e4\ud29c \ube0c\ub85c\ub370\ub9ad",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
-    "poster_path": "https://image.tmdb.org/t/p/w500/None",
-    "youtube_url": "",
+    "poster_path": "https://image.tmdb.org/t/p/w500//d2Q9Tw9pjNLtCbmtOPSc2EgvtN9.jpg",
+    "youtube_url": "https://www.youtube.com/embed/vYm7mYd0SgE",
     "rate": 8.41,
-    "user": null,
     "like_users": []
   }
 },
@@ -1097,7 +1040,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//cELHkolvQLCDGXiuZLJ2XzvynCt.jpg",
     "youtube_url": "https://www.youtube.com/embed/KrM3vS5sy2w",
     "rate": 9.38,
-    "user": null,
     "like_users": []
   }
 },
@@ -1114,9 +1056,8 @@
     "actors": "\uae40\ub0a8\uc900, \uae40\uc11d\uc9c4, \ubbfc\uc724\uae30, \uc815\ud638\uc11d, \ubc15\uc9c0\ubbfc, \uae40\ud0dc\ud615, \uc804\uc815\uad6d",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//oCxZ2zcGNY6g1ihXEJNDfnmnqRj.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/_K_nEC7umDs",
     "rate": 9.14,
-    "user": null,
     "like_users": []
   }
 },
@@ -1135,7 +1076,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//qlBePshN1ujPwm27JzT6bP6XVeR.jpg",
     "youtube_url": "https://www.youtube.com/embed/WkQ8AJWohIU",
     "rate": 8.27,
-    "user": null,
     "like_users": []
   }
 },
@@ -1154,7 +1094,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//8RyxjzIaxQFTjJ58rhOc98h4Tu6.jpg",
     "youtube_url": "https://www.youtube.com/embed/u2GKRbXgbrY",
     "rate": 8.46,
-    "user": null,
     "like_users": []
   }
 },
@@ -1173,7 +1112,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//aozMNCQXAtsxoMwCPD5W64zagSI.jpg",
     "youtube_url": "https://www.youtube.com/embed/PUfIRF0sxmA",
     "rate": 8.84,
-    "user": null,
     "like_users": []
   }
 },
@@ -1192,7 +1130,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//2Gj1tF7IaK7kMizDZA7RunJOzNR.jpg",
     "youtube_url": "https://www.youtube.com/embed/uLcBglb9Pg8",
     "rate": 3.36,
-    "user": null,
     "like_users": []
   }
 },
@@ -1211,7 +1148,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//742vR63T1AcXzYwHypQpzZd89vh.jpg",
     "youtube_url": "https://www.youtube.com/embed/naYHg7lcS1Q",
     "rate": 8.33,
-    "user": null,
     "like_users": []
   }
 },
@@ -1230,7 +1166,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//v92Q42DJdvXUJmGzulgITWvYgIW.jpg",
     "youtube_url": "https://www.youtube.com/embed/nFRJpMhoGIo",
     "rate": 4.9,
-    "user": null,
     "like_users": []
   }
 },
@@ -1249,7 +1184,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//rGiFaSGVq7rfl0O19u9pJwP5cb0.jpg",
     "youtube_url": "https://www.youtube.com/embed/ksJ2nOYnUrc",
     "rate": 7.99,
-    "user": null,
     "like_users": []
   }
 },
@@ -1268,7 +1202,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//1yzeZgUaiZfCBdze7y0HcWxVUHS.jpg",
     "youtube_url": "https://www.youtube.com/embed/PjsXhr2LPOY",
     "rate": 9.05,
-    "user": null,
     "like_users": []
   }
 },
@@ -1287,7 +1220,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//tcmj4YQ6p79OD8ECpRAbV8Yjk0c.jpg",
     "youtube_url": "https://www.youtube.com/embed/F1xhDf1hX5w",
     "rate": 8.47,
-    "user": null,
     "like_users": []
   }
 },
@@ -1306,7 +1238,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//sJ50ieSoFwt7uFdFUVjnsnUDUfD.jpg",
     "youtube_url": "https://www.youtube.com/embed/2sG-N_RBNp0",
     "rate": 5.62,
-    "user": null,
     "like_users": []
   }
 },
@@ -1325,7 +1256,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//xetvg8s8a3CNCPFg8Rzbp6W3t39.jpg",
     "youtube_url": "https://www.youtube.com/embed/ipo9XfaxUpU",
     "rate": 6.38,
-    "user": null,
     "like_users": []
   }
 },
@@ -1342,9 +1272,8 @@
     "actors": "\uc2a4\ud0e0\ub9ac \ud22c\uce58, \ubbf8\ub780\ub2e4 \uc624\ud1a0",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//jwSkEzdjznEd2LHeRtKwf3eOIUf.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/0qPAra5vTac",
     "rate": 5.45,
-    "user": null,
     "like_users": []
   }
 },
@@ -1363,7 +1292,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//e0uQlGBDFobKqr5BCtN9dAUvtT3.jpg",
     "youtube_url": "https://www.youtube.com/embed/t1I6Ot7ZCpI",
     "rate": 3.9,
-    "user": null,
     "like_users": []
   }
 },
@@ -1382,7 +1310,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//bAaeuzr7vzf8EWbhVAyXVIMhXZa.jpg",
     "youtube_url": "https://www.youtube.com/embed/YawqI9djwec",
     "rate": 6.59,
-    "user": null,
     "like_users": []
   }
 },
@@ -1401,7 +1328,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//5riD6QkCFAo0FiKbD2oIHg7ijSj.jpg",
     "youtube_url": "https://www.youtube.com/embed/abmpELhAOqs",
     "rate": 6.25,
-    "user": null,
     "like_users": []
   }
 },
@@ -1420,7 +1346,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//judgsR2sH5kie1mTW94LWaebWLK.jpg",
     "youtube_url": "https://www.youtube.com/embed/lcoOPX6jSP0",
     "rate": 8.04,
-    "user": null,
     "like_users": []
   }
 },
@@ -1439,7 +1364,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//nrbNZrQKBtRXnip97sD2585wV7e.jpg",
     "youtube_url": "https://www.youtube.com/embed/xMuWhpfR1YA",
     "rate": 7.57,
-    "user": null,
     "like_users": []
   }
 },
@@ -1456,9 +1380,8 @@
     "actors": "",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//w0IRQoYIr7iuNE3f4vPEIkkchEc.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/JNNIpF3YSgQ",
     "rate": 8.71,
-    "user": null,
     "like_users": []
   }
 },
@@ -1477,7 +1400,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//sMcKRhmkahd6axTvdzKkpkVIm0R.jpg",
     "youtube_url": "https://www.youtube.com/embed/8jYvFq_oAbk",
     "rate": 5.22,
-    "user": null,
     "like_users": []
   }
 },
@@ -1496,7 +1418,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//bmrE4AGHLSutkM1ge0HepC0i6Bp.jpg",
     "youtube_url": "https://www.youtube.com/embed/N1SXsWNz8pE",
     "rate": 6.79,
-    "user": null,
     "like_users": []
   }
 },
@@ -1515,7 +1436,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//amRKyf8JBXCAvvp5VQ6TJK8ypOT.jpg",
     "youtube_url": "https://www.youtube.com/embed/BUKUCm3_z-Q",
     "rate": 5.12,
-    "user": null,
     "like_users": []
   }
 },
@@ -1532,9 +1452,8 @@
     "actors": "\ub9c8\ud06c \ud574\ubc00, \uc624\ube0c\ub9ac \ud50c\ub77c\uc790, \uac00\ube0c\ub9ac\uc5d8 \ubca0\uc774\ud2b8\uba3c, \ube0c\ub77c\uc774\uc5b8 \ud0c0\uc774\ub9ac \ud5e8\ub9ac",
     "grade": "\uccad\uc18c\ub144\uad00\ub78c\ubd88\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//tzzISeHwvV7WtJjZyzL0xAhQXwi.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/xd5tQBu3-dw",
     "rate": 6.75,
-    "user": null,
     "like_users": []
   }
 },
@@ -1553,7 +1472,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//rNRfYkuRvM0z1RWHPbc2I8HCdvd.jpg",
     "youtube_url": "https://www.youtube.com/embed/PzpZ4aHMXVg",
     "rate": 5.99,
-    "user": null,
     "like_users": []
   }
 },
@@ -1572,7 +1490,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//vo2CgNiWNU1536d0cu7sPjdQyva.jpg",
     "youtube_url": "https://www.youtube.com/embed/2jawM4Mv55Y",
     "rate": 8.9,
-    "user": null,
     "like_users": []
   }
 },
@@ -1591,7 +1508,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//mKEQFkZvDEbGuWPqFMWcBTi2e1M.jpg",
     "youtube_url": "https://www.youtube.com/embed/8LLmvVSnYiw",
     "rate": 9.26,
-    "user": null,
     "like_users": []
   }
 },
@@ -1608,9 +1524,8 @@
     "actors": "\ube0c\ub77c\uc774\uc5b8 \ud06c\ub79c\uc2a4\ud1a4, \ucf00\ube48 \ud558\ud2b8, \ub2c8\ucf5c \ud0a4\ub4dc\uba3c",
     "grade": "12\uc138\uc774\uc0c1\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//oV56xSKDvWMz3pqE1jftiiiJlAB.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/hyF-GRgYnAo",
     "rate": 8.62,
-    "user": null,
     "like_users": []
   }
 },
@@ -1629,7 +1544,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//jC0r9TAgkLwk8pY8MqxyexPyhNB.jpg",
     "youtube_url": "https://www.youtube.com/embed/9HSy7n-wA40",
     "rate": 8.06,
-    "user": null,
     "like_users": []
   }
 },
@@ -1648,7 +1562,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//n78LK2t1uQP68Ud0VXHRe0HmKOp.jpg",
     "youtube_url": "https://www.youtube.com/embed/8-LUH0OJKgg",
     "rate": 9.38,
-    "user": null,
     "like_users": []
   }
 },
@@ -1667,7 +1580,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//az4OVqXbFVaHoZlktcm7oCm0LZo.jpg",
     "youtube_url": "https://www.youtube.com/embed/3q6QDLpaG18",
     "rate": 7.89,
-    "user": null,
     "like_users": []
   }
 },
@@ -1686,7 +1598,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//ge8zQ874jsZBcsYxn7yV5EMHV10.jpg",
     "youtube_url": "https://www.youtube.com/embed/WaLOMVyhhw4",
     "rate": 6.94,
-    "user": null,
     "like_users": []
   }
 },
@@ -1703,9 +1614,8 @@
     "actors": "\uc7a5\ubcd1\uad00, \uae40\uc18c\ud76c, \uae40\ubcf4\ub098, \uc11c\ubc18\uc11d, \uac15\uc740\uc560, \uc774\ucc3d\ubbfc, \uae40\uacbd\ud76c, \ubbfc\uc544",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//7VuWlWAxmkPQfbkMl82RHXWbRyu.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/PfCB4-fHQJs",
     "rate": 7.96,
-    "user": null,
     "like_users": []
   }
 },
@@ -1724,7 +1634,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//3jvbaQCPJNkZM7Aqjf5YLftO77Y.jpg",
     "youtube_url": "https://www.youtube.com/embed/fUAlPgp0ZU8",
     "rate": 5.01,
-    "user": null,
     "like_users": []
   }
 },
@@ -1743,7 +1652,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//v1sfULur2KiJIPGiXjGTDWNWxG.jpg",
     "youtube_url": "https://www.youtube.com/embed/3-DwodqeR0c",
     "rate": 7.0,
-    "user": null,
     "like_users": []
   }
 },
@@ -1762,7 +1670,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//tBjIL4jBbHstVvWvCXV7AjZaggR.jpg",
     "youtube_url": "https://www.youtube.com/embed/T_35Dkz9al8",
     "rate": 9.02,
-    "user": null,
     "like_users": []
   }
 },
@@ -1779,9 +1686,8 @@
     "actors": "\uc774\uad00\ud76c, \uc624\uc740\uc8fc, \uc774\uc18c\uc5f0",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//z7S7SqsSgdx8IprKs2T7LqoDHCF.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/oWb9xXhUBx0",
     "rate": 9.27,
-    "user": null,
     "like_users": []
   }
 },
@@ -1798,9 +1704,8 @@
     "actors": "\uc7ad\uc2a8 A. \ub358, \uc5d8\ub9ac\uc790\ubca0\uc2a4 \ubc45\ud06c\uc2a4, \ub370\uc774\ube57 \ub374\ub9e8",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//rqgFqbYeth6TilCvh697rvCqWku.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/kHbdTR0pWHA",
     "rate": 4.9,
-    "user": null,
     "like_users": []
   }
 },
@@ -1819,7 +1724,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//7RGciFoNF8E5kA6dGDFABW7qK1Z.jpg",
     "youtube_url": "https://www.youtube.com/embed/AsrZkNhXVfw",
     "rate": 0.0,
-    "user": null,
     "like_users": []
   }
 },
@@ -1838,7 +1742,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//8Vb7PJ2aUzel5iQ6R2Jxe4MTWac.jpg",
     "youtube_url": "https://www.youtube.com/embed/iY50AnMvuio",
     "rate": 8.09,
-    "user": null,
     "like_users": []
   }
 },
@@ -1857,7 +1760,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//4LvhaLpA2pQAPQGVEUjc0vhEXGe.jpg",
     "youtube_url": "https://www.youtube.com/embed/m6FNMV_FnIs",
     "rate": 8.91,
-    "user": null,
     "like_users": []
   }
 },
@@ -1876,7 +1778,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//3iy8XN5nlCewKP9YGlNEuHOo8dq.jpg",
     "youtube_url": "https://www.youtube.com/embed/Tk2wVhOV5NA",
     "rate": 9.28,
-    "user": null,
     "like_users": []
   }
 },
@@ -1893,9 +1794,8 @@
     "actors": "\ub370\ube0c \ud30c\ud154, \uc544\ubbf8 \ud574\uba38, \ub098\uc790\ub2cc \ubcf4\ub2c8\uc544\ub514, \uc81c\uc774\uc2a8 \uc544\uc774\uc0ad\uc2a4, \uc544\ub204\ud31c \ucee4",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//h9AOgs7GKNJLdvoNPkmJOFB3I7H.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/cgPJIwpEZak",
     "rate": 9.09,
-    "user": null,
     "like_users": []
   }
 },
@@ -1912,9 +1812,8 @@
     "actors": "\ub2e4\ucf54\ud0c0 \uc874\uc2a8, \ud2f8\ub2e4 \uc2a4\uc708\ud2bc, \ubbf8\uc544 \uace0\uc2a4, \ud074\ub85c\uc774 \ubaa8\ub808\uce20",
     "grade": "\uccad\uc18c\ub144\uad00\ub78c\ubd88\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//qsQ4eqNWP6oKKiKp8QKyIDf7HLC.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/Ho0H2WA1DX8",
     "rate": 6.86,
-    "user": null,
     "like_users": []
   }
 },
@@ -1931,9 +1830,8 @@
     "actors": "\ucf08\ub9ac \ud074\ub77d\uc2a8, \ub2c9 \uc870\ub098\uc2a4, \uc790\ub12c \ubaa8\ub124, \ud54f\ubd88",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//wJX6SLX40kMBMf2yk1iXTtqaVTs.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/B2QmII39ong",
     "rate": 9.09,
-    "user": null,
     "like_users": []
   }
 },
@@ -1952,7 +1850,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//oJVp2sHOqcpF4ha9QMHlos39Ebp.jpg",
     "youtube_url": "https://www.youtube.com/embed/WdpSxZpr9og",
     "rate": 8.34,
-    "user": null,
     "like_users": []
   }
 },
@@ -1971,7 +1868,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//qrLLjnPAqP4nrYW7mX0clSUptiW.jpg",
     "youtube_url": "https://www.youtube.com/embed/bEm3rC3swg8",
     "rate": 0.0,
-    "user": null,
     "like_users": []
   }
 },
@@ -1990,7 +1886,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//jWd9tWuoDPN561r7vp4ekngEe7f.jpg",
     "youtube_url": "https://www.youtube.com/embed/n1Xz13zlWWw",
     "rate": 6.75,
-    "user": null,
     "like_users": []
   }
 },
@@ -2007,9 +1902,8 @@
     "actors": "\uc774\ubc14\ub098 \ubc14\ucfe0\uc5d0\ub85c, \ub354\uadf8 \uc874\uc2a4, \uc138\ub974\uc9c0 \ub85c\ud398\uc988",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//152dNZttshE1erlIK5GPzTvbQUR.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/rl4wJGwUQCs",
     "rate": 7.91,
-    "user": null,
     "like_users": []
   }
 },
@@ -2026,9 +1920,8 @@
     "actors": "",
     "grade": "\uc804\uccb4\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//uC5zU5Prxp2qNCkEbJQ6YRrdZCc.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/PDo3lAtzfsQ",
     "rate": 8.74,
-    "user": null,
     "like_users": []
   }
 },
@@ -2047,7 +1940,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//8kllbCOM38idMWXzsk6mMzpbcsC.jpg",
     "youtube_url": "https://www.youtube.com/embed/5AJVjhMYkBE",
     "rate": 6.83,
-    "user": null,
     "like_users": []
   }
 },
@@ -2066,7 +1958,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//84ybyWeNn8HC7Lu1BxvJlXx1nea.jpg",
     "youtube_url": "https://www.youtube.com/embed/2r6FaDvHnb0",
     "rate": 8.31,
-    "user": null,
     "like_users": []
   }
 },
@@ -2085,7 +1976,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//li1v9SNnU63b0i5lj1Os8ulmkrg.jpg",
     "youtube_url": "https://www.youtube.com/embed/_lHjdy-97m8",
     "rate": 8.8,
-    "user": null,
     "like_users": []
   }
 },
@@ -2104,7 +1994,6 @@
     "poster_path": "https://image.tmdb.org/t/p/w500//4aW4qAmWEmQjN3wWT9spMhjvM2B.jpg",
     "youtube_url": "https://www.youtube.com/embed/dbCoJpk7_dA",
     "rate": 4.88,
-    "user": null,
     "like_users": []
   }
 },
@@ -2121,9 +2010,8 @@
     "actors": "\ud06c\ub9ac\uc2a4\ucc2c \ubca0\uc77c, \uc5d0\uc774\ubbf8 \uc544\ub2f4\uc2a4, \uc2a4\ud2f0\ube0c \uce74\ub810, \ud0c0\uc77c\ub7ec \ud398\ub9ac, \uc0d8 \ub85d\uc6f0",
     "grade": "15\uc138\uc774\uc0c1\uad00\ub78c\uac00",
     "poster_path": "https://image.tmdb.org/t/p/w500//vn8akeiW9Ex4bilkMK9gVWSnCqO.jpg",
-    "youtube_url": "",
+    "youtube_url": "https://www.youtube.com/embed/aSGFt6w0wok",
     "rate": 0.0,
-    "user": null,
     "like_users": []
   }
 }
