@@ -1,21 +1,38 @@
 {% extends 'base.html' %}
+{% load socialaccount%}
+{% load static %}
+{% load bootstrap4 %}
 
-
+{% block style %}
+<style>
+.login_btn {
+    width: 300px;
+    height: 45px;
+}
+</style>
+{% endblock style %}
 
 {% block content %}
-
-
-
-
-
+<h1>Login</h1><hr>
 <div class="parent-login">
-    <div class="child-login">
+    <div class="child-login" style="text-align: center;">
         <form id="loginform" method="POST">
             {% csrf_token %}
-            {{ login_form }}
-            <button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%;">로그인   
+            {% bootstrap_form login_form %}<br>
+            <br>
+            <button class="btn btn-light" type="submit" name="action" style="width: 300px;">로그인   
             </button>
         </form>
+        
+        <a href="{% provider_login_url 'kakao' %}">
+        <img src="{% static 'accounts/images/kakao_btn.png' %}" class="login_btn" alt="kakao">
+        </a> <br>
+        <a href="{% provider_login_url 'naver' %}"> 
+        <img src="{% static 'accounts/images/naver_btn.png' %}" class="login_btn" alt="naver">
+        </a> <br>
+        <a href="{% provider_login_url 'google' %}">
+        <img src="{% static 'accounts/images/google_btn.png' %}" class="login_btn" style="width=302px; height=50px;" alt="google">
+        </a> <br>
         <br>
         <p style="text-align: center;">회원이 아니라면 <a id="a-signup" href="{% url 'accounts:signup' %}"><b>지금 가입하세요.</b></a></p>
     </div>

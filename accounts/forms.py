@@ -13,9 +13,6 @@ class UserCustomCreationForm(UserCreationForm):
      
     def __init__(self, *args, **kwargs):
         super(UserCustomCreationForm, self).__init__(*args, **kwargs)
-        for key, field in self.fields.items():
-            field.label=''
-            field.help_text=''
         self.fields['username'].widget.attrs.update({'placeholder': '사용자 이름'})
         self.fields['email'].widget.attrs.update({'placeholder': '이메일 주소'})
         self.fields['password1'].widget.attrs.update({'placeholder': '비밀번호'})
@@ -29,9 +26,6 @@ class ProfileForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(ProfileForm, self).__init__(*args, **kwargs)
-        for key, field in self.fields.items():
-            field.label=''
-            field.help_text=''
         self.fields['nickname'].widget.attrs.update({'placeholder': '닉네임'})
         self.fields['introduction'].widget.attrs.update({'placeholder': '자기소개', 'class': 'input-field'})
         self.fields['genre'].widget.attrs.update({'placeholder': '선호 장르', 'class': 'input-field'})
