@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container" style="margin-top: 150px;">
+<div class="container">
     <div class="row">
         
         <div class="profile col s4" style="border-radius: 50%; text-align: center; padding: 50px;">
@@ -21,7 +21,7 @@
             팔로우
             {% endif %}
         {% else %}
-            <i class="large material-icons">It's U</i>
+            <p>It's U</p>
         {% endif %}
         </div>
         
@@ -59,7 +59,6 @@
             </div>
             <div class="card-content" style=" padding-left: 20px; padding-right: 20px;">
                 <span class="card-title">{{ comment.movie.title }}</span>
-                <!-- <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">search</i></a> -->
                 <p style="font-size: 25px;">&nbsp;{{ comment.content }}</p>
                 <div class="btn-small" style="font-size:20px; border-radius: 15px;">{{ comment.score }}</div>
             </div>
@@ -78,7 +77,7 @@
             <div class="card-content" style=" padding-left: 20px; padding-right: 20px;">
                 <span class="card-title">{{ movie.title }}</span>
                 <!-- <p>{{ comment.score }}</p> -->
-                <a href="{% url 'movies:movie_detail' movie.pk %}" class="btn-floating btn-small"><i class="material-icons">search</i></a>
+                <a href="{% url 'movies:detail' movie.pk %}" class="btn-floating btn-small"><i class="material-icons">search</i></a>
             </div>
             </div>
         </div>

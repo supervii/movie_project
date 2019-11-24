@@ -20,6 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     # path('upload-movie/', movie_upload, name='movie_upload'),
     path('accounts/', include('accounts.urls')),
+    path('accounts/', include('allauth.urls')),
     path('movies/', include('movies.urls')),
     path('admin/', admin.site.urls),
 ]

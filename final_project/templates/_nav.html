@@ -22,7 +22,7 @@
   {% elif user.is_authenticated %}
   <!-- 로그인 한 일반 사용자 -->
   <a class="navbar-brand" href="{% url 'movies:index' %}">
-    Hello! {{ user.username }}
+    Movie Monster {{ user.username }}
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -73,3 +73,4 @@
   </div>
   {% endif %}
 </nav>
+
