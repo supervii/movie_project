@@ -5,8 +5,8 @@
 <div class="container">
     <div class="row">
 
-        <div class="col s4" style="border-radius: 50%; text-align: center; padding: 50px;">
-            <h1>{{ userDetail.username }}</h1>
+        <div class="col s4 font5" style="border-radius: 50%; text-align: center; padding: 50px;">
+            <h1 class="font3">{{ userDetail.username }}</h1>
             <img src="https://www.gentlemonster.com/img/19/symbol.gif" alt="symbol" style="height=50px; width:50px;"><br>
             {% if user != userDetail %}
             {% if user in userDetail.follower.all %}
@@ -35,36 +35,42 @@
     <div class="row">
         {% if userDetail.nickname and userDetail.introduction and userDetail.genre.name %}
         <div class="col-6" style="padding:30px; padding-center: 130px;">
-            <h3><span style="font-size: 20px; color:gray">닉네임</span></h3>
-            <h4>{{ userDetail.nickname }}</h4>
-            <h3><span style="font-size: 20px; color:gray">자기소개</span></h3>
-            <h4>{{ userDetail.introduction }}</h4>
-            <h3><span style="font-size: 20px; color:gray">선호 장르</span></h3>
-            <h4>{{ userDetail.genre.name }}</h4>
+            <h3 class="font6"><span style="font-size: 20px; color:gray">닉네임</span></h3>
+            <h4 class="font5">{{ userDetail.nickname }}</h4>
+            <h3 class="font6"><span style="font-size: 20px; color:gray">자기소개</span></h3>
+            <h4 class="font5">{{ userDetail.introduction }}</h4>
+            <h3 class="font6"><span style="font-size: 20px; color:gray">선호 장르</span></h3>
+            <h4 class="font5">{{ userDetail.genre.name }}</h4>
             <br>
         </div>
         {% endif %}
-        <div class="col-6 mt-4">
+        <div class="col-6 mt-4 font5">
             <ul class="tabs">
                 <ul class="tab col s3"><a class="active" href="#arr1">
-                        <h5 class="tab-font">내가 쓴 리뷰</h5>
+                        <h5 class="tab-font text-secondary">{{ userDetail.nickname }}가 쓴 리뷰</h5>
                     </a></ul>
                 <ul class="tab col s3"><a href="#arr2">
-                        <h5 class="tab-font">좋아요를 표시한 영화</h5>
+                        <h5 class="tab-font text-secondary">좋아요를 표시한 영화</h5>
                     </a></ul>
                 <ul class="tab col s3"><a href="#arr3">
-                        <h5 class="tab-font">팔로워 보기</h5>
+                        <h5 class="tab-font text-secondary">팔로워 보기</h5>
                     </a></ul>
                 <ul class="tab col s3"><a href="#arr4">
-                        <h5 class="tab-font">팔로윙하는 사람</h5>
+                        <h5 class="tab-font text-secondary">팔로윙하는 사람</h5>
                     </a></ul>
+            
+            {% if user == userDetail %}
+            <a href="{% url 'accounts:update' %}">
+            <button type="button" class="btn btn-dark btn-md mt-3 ml-3">유저 정보 수정</button>
+            </a>
+            {% endif %}
             </ul>
         </div>
 
     </div>
 </div>
-<p class="title is-4 has-text-white mt-5" id="arr1">작성한 리뷰</p>
-<div class="row mt-3">
+<p class="title is-4 has-text-white mt-5 font5" id="arr1">{{ userDetail.nickname }}가 작성한 리뷰</p>
+<div class="row mt-3 font5">
     {% if userDetail.rating_set.all %}
     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
         {% for comment in userDetail.rating_set.all %}
@@ -74,8 +80,8 @@
             </div>
             <div class="card-content" style=" padding-left: 20px; padding-right: 20px;">
                 <span class="card-title">{{ comment.movie.title }}</span>
-                <p style="font-size: 15px;">{{ comment.comment }}</p>
-                <div class="btn-small" style="font-size:15px;">제 점수는요: {{ comment.score }}</div>
+                <p style="font-size: 15px;">리뷰 내용 : {{ comment.comment }}</p>
+                <div class="btn-small" style="font-size:15px;">제 점수는요 : {{ comment.score }}</div>
                 <a href="{% url 'movies:detail' comment.movie.pk %}" class="btn-floating btn-small"><i
                         class="material-icons">보러가기</i></a>
             </div>
@@ -86,8 +92,8 @@
         {% endif %}
     </div>
 </div>
-<div class="container">
-    <p class="title is-4 has-text-white mt-5" id="arr1">내가 좋아한 영화</p>
+<div class="font5">
+    <p class="title is-4 has-text-white mt-5 " id="arr1">{{ userDetail.nickname }}가 좋아한 영화</p>
     <div id="arr2" class="row mt-3  ">
         {% if userDetail.like_movies.all %}
         {% for movie in userDetail.like_movies.all %}
@@ -111,12 +117,12 @@
     </div>
 </div>
 
-    <div class="follower">
+    <div class="follower font5">
         {% if not userDetail.follower.all %}
-        <p class="title is-4 has-text-white mt-5 text-center" id="arr3">나를 팔로윙하는 사람이 없네요..</p>
+        <p class="title is-4 has-text-white mt-5 text-center" id="arr3">{{ userDetail.nickname }}를 팔로윙하는 사람이 없네요..</p>
 
         {% else %}
-        <p class="title is-4 has-text-white mt-5" id="arr3">나를 일촌으로 맺은 사람</p>
+        <p class="title is-4 has-text-white mt-5" id="arr3">{{ userDetail.nickname }}를 일촌으로 맺은 사람</p>
 
         <div class="row mt-3">
             {% for follower in userDetail.follower.all %}
@@ -146,11 +152,11 @@
 
 
 
-    <div class="container">
+    <div class="container font5">
         {% if not userDetail.followings.all %}
-        <p class="title is-4 has-text-white mt-5 text-center" id="arr4">내가 팔로우하는 사람이 없어요.</p>
+        <p class="title is-4 has-text-white mt-5 text-center" id="arr4">{{ userDetail.nickname }}가 팔로우하는 사람이 없어요.</p>
         {% else %}
-        <p class="title is-4 has-text-white mt-5" id="arr4">내가 맺은 일촌</p>
+        <p class="title is-4 has-text-white mt-5" id="arr4">{{ userDetail.nickname }}가 맺은 일촌</p>
         <div class="row mt-3">
             {% for following in userDetail.followings.all %}
             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">

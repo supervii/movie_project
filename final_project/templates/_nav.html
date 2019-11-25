@@ -1,5 +1,5 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   {% if user.is_superuser %}
   <!-- 관리자 -->
   <a class="navbar-brand" href="{% url 'movies:index' %}">
