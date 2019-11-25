@@ -6,6 +6,10 @@ from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
 from .models import Movie, Rating
 from .forms import MovieForm, RatingForm
 
+import requests
+from bs4 import BeautifulSoup
+
+
 # Create your views here.
 def index(request):
     movies = Movie.objects.all()
@@ -114,3 +118,12 @@ def like(request, movie_pk):
         return JsonResponse(context)
     else:
         return HttpResponseBadRequest()
+
+def now_p_mv(request):
+    url = "view-source:http://ticket2.movie.daum.net/Movie/MovieRankList.aspx"
+    htmlContent = requests.get(url, verify=False)
+    data = htmlContent.text
+    print("data",data)
+    jsonD = json.dumps(htmlContent.text)
+    jsonL = json.loads(jsonD)
+
