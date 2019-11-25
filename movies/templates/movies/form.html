@@ -3,9 +3,9 @@
 
 {% block title %}
   {% if request.resolver_match.url_name == 'create' %}
-    <h1>영화 정보 생성</h1>
+  관리자 | 영화 정보 생성
   {% else %}
-    <h1>영화 정보 수정</h1>
+  관리자 | 영화 정보 수정
   {% endif %}
 {% endblock title %}
 
@@ -28,5 +28,4 @@
   <hr>
   <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>    
   
-  {% endif %}
 {% endblock %}

@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 
 {% block content %}
 {% if request.resolver_match.url_name == 'signup' %}
-<H1 class='text-center font1'>Sign Up</H1>
+<h1 class='text-center font1'>Sign Up</h1>
 {% elif request.resolver_match.url_name == 'update' %}
-<H1 class='text-center font1'>Update</H1>
+<h1 class='text-center font1'>Update</h1>
 {% endif %}
 <hr>
 
 
-<form action="" method="POST" >
+<form action="" method="POST">
     {% csrf_token %}
-    {{ signup_form.as_p}}
-    {{ profile_form.as_p }}
+    {% bootstrap_form form layout="horizontal" %}
     {% if request.resolver_match.url_name == 'signup' %}
     <button class="btn btn-light font5" type="submit" name="action" style="width: 100%; margin-top: 30px;">가입하기
     </button>

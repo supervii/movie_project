@@ -13,4 +13,6 @@ class MovieAdmin(admin.ModelAdmin):
     'director', 'actors', 'grade', 'poster_path', 'youtube_url', 'rate', 'genre_id')
 
 
-admin.site.register(Rating)
+@admin.register(Rating)
+class RatingAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'score', 'movie_id', 'user_id',)

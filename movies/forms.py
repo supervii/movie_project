@@ -1,5 +1,5 @@
 from django import forms
-from .models import Movie, Genre, Rating
+from .models import Movie, Genre, Rating, GRADE_CHOICES
 
 
 class MovieForm(forms.ModelForm):
@@ -26,7 +26,8 @@ class MovieForm(forms.ModelForm):
             }
         )
     )
-    genre = forms.ModelMultipleChoiceField(queryset=Genre.objects.all())
+    genre = forms.ModelChoiceField(queryset=Genre.objects.all(), widget=forms.Select())
+    
     director = forms.CharField(
         label='감독',
         max_length=45,
@@ -37,16 +38,8 @@ class MovieForm(forms.ModelForm):
             }
         )
     )
-    grade = forms.CharField(
-        label='영화관람등급',
-        max_length=20,
-        widget=forms.TextInput(
-            attrs={
-                'class': 'movie-grade',
-                'placeholder': '관람등급을 입력하세요. (예: "전체관람가", "12세이상관람가" 등 띄어쓰기 없이)',
-            }
-        )
-    )
+    grade = forms.ChoiceField(choices=GRADE_CHOICES)
+    
     actors = forms.CharField(
         label='영화출연배우',
         required=False,

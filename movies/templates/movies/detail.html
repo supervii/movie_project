@@ -3,33 +3,60 @@
 
 {% block title %}DETAIL OF {{ movie.title }}{% endblock title %}
 
+{% block style %}
+<style>
+  #utube {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+
+  #utube #contentFrame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+{% endblock style %}
+
 {% block content %}
 <h1 class="d-inline">{{ movie.title }} <small>({{ movie.year }})</small></h1>
 {% if user.is_superuser  %}
 <a href="{% url 'movies:update' movie.pk %}" class="btn btn-primary d-inline">영화 정보 수정</a>
+<form action="" method="POST">
+  {% csrf_token %}
+</form>
 {% endif %}
 <hr>
 
 <div class="container">
   <div class="row">
-    <div class="col-6 poster text-center mb-3">
-      <img src="{{ movie.poster_path }}" class="img" alt="{{ movie.title }}">
+    <div class="col-sm poster text-center mb-3">
+      <img src="{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}">
     </div>
 
-    <div class="col-6 jumbotron">
-      <h4 class="display-4">Hello, world!</h4>
+    <div class="col-sm jumbotron bg-white">
+      <div class="grade">
+        <h5>{{ movie.grade }}</h5>
+        <hr>
+      </div>
+      <h4>개요</h4>
       <p class="lead">{{ movie.description }}</p>
       <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <div class="row">
+        <div class="col-6 genre">
+          <h5>장르</h5>
+          <p>{{ movie.genre }}</p>
+        </div>
+        .col-6 
+      </div>
     </div>
-
     <div id="utube" class="mx-auto">
-      <iframe src="{{ movie.youtube_url }}" id="contentFrame" name="contentFrame" marginwidth="0" marginheight="0"
-        frameborder="0" width="100%" height="100%" scrolling="no"
+      <iframe src="{{ movie.youtube_url }}" id="contentFrame" scrolling="no"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <script>
         function init() {
-          var doc = document.getElementById('utube');
+          const doc = document.getElementById('utube');
           if (doc.offsetHeight == 0) {} else {
             pageheight = doc.offsetHeight
             parent.document.getElementById("contentFrame").height = pageheight + "px"
@@ -40,79 +67,48 @@
         }
       </script>
     </div>
-
   </div>
+
 </div>
 
 <hr>
 <!-- 리뷰 보이는 곳 -->
 <div class="mx-auto">
-  {% for rating in ratings %}
-  <div class="list-group">
-    {% if not user.is_authenticated %}
-    <!-- 일반 사용자 -->
-    <li class="list-group-item list-group-item-action">작성: {{ rating.user }} | {{ rating.comment }} | 평점:
-      {{ rating.score }}</li>
-    {% else %}
-    <!-- 로그인 사용자 중 작성자인 경우 -->
-    {% if request.user == rating.user %}
-    <li class="list-group-item list-group-item-action">작성: {{ rating.user }} | {{ rating.comment }} | 평점:
-      {{ rating.score }} <span class="del-btn" data-id="{{ rating.pk }}">🗑️</span></li>
-    {% else %}
-    <!-- 로그인 사용자이지만 작성자가 아닌 경우 -->
-    <li class="list-group-item list-group-item-action">작성: {{ rating.user }} | {{ rating.comment }} | 평점:
-      {{ rating.score }}</li>
-    {% endif %}
-    {% endif %}
-  </div>
-  {% empty %}
-  <p><b>입력된 리뷰가 없습니다.</b></p>
-  {% endfor %}
-  <hr>
-  <!-- 리뷰 작성 공간(form) -->
-  {% if user.is_authenticated  %}
-  <form action="{% url 'movies:rating_create' movie.pk %}" method="POST">
-    {% csrf_token %}
-    {% bootstrap_form rating_form %}
-    <input class="btn btn-secondary" type="submit" value="리뷰 추가">
-    <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
-  </form>
-  <hr>
+<hr>
+{% for rating in ratings %}
+<div class="list-group">
+  {% if not user.is_authenticated %}
+  <div class="list-group-item list-group-item-action"
+      value="작성: {{ rating.user }} || {{ rating.comment }} || 평점: {{ rating.score }}"></div>
   {% else %}
-  <a class="btn btn-warning" href="{% url 'accounts:login' %}">리뷰를 작성하려면 로그인하세요.</a>
-  <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
-  <hr>
+  <form action="{% url 'movies:rating_delete' movie.pk rating.pk %}" method="POST">
+    {% csrf_token %}
+    {% if request.user == rating.user %}
+     <input type="submit" class="list-group-item list-group-item-action"
+       value="작성: {{ rating.user }} || {{ rating.comment }} || 평점: {{ rating.score }}"> <i class="btn btn-outline-white far fa-trash-alt"></i>
+    {% else %}
+     <input type="submit" class="list-group-item list-group-item-action"
+      value="작성: {{ rating.user }} || {{ rating.comment }} || 평점: {{ rating.score }}">
+    {% endif %}
+  </form>
   {% endif %}
 </div>
-<script>
-  // 1. 영화마다 좋아요 버튼이 있으니 모두 선택해야 한다.
-  const deletebtn = document.querySelectorAll('.del-btn')
-
-  // 2. forEach 를 사용해서 각각의 좋아요 버튼을 클릭
-  deletebtn.forEach(button => {
-    button.addEventListener('click', function (event) {
-      console.log(event)
-      // event.taget.dataset.id 의 value 는 data-id 값이 들어 있다.
-      const movieURL = event.path[7]['URL']
-      console.log(movieURL)
-      const rateId = event.target.dataset.id
-      // 개별 영화에 좋아요 요청을 보낸다.
-      axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
-      axios.defaults.xsrfCookieName = 'csrftoken'
-      axios.defaults.xsrfHeaderName = 'X-CSRFToken'
-      axios.post(`${movieURL}ratings/${rateId}/delete/`)
-        .then(response => {
-          // console.log(response)
-
-          // document.querySelector(`#like-count-${movieId}`).innerText = response.data.count
-          // if (response.data.liked) {
-          //  event.target.style.color = 'crimson'
-          // } else {
-          //  event.target.style.color = 'black'
-          // }
-        })
-        .catch(error => console.log(error))
-    })
-  })
-</script>
-{% endblock %}
+{% empty %}
+<p><b>입력된 리뷰가 없습니다.</b></p>
+{% endfor %}
+<hr>
+<!-- 댓글 작성 공간(form) -->
+{% if user.is_authenticated  %}
+<form action="{% url 'movies:rating_create' movie.pk %}" method="POST">
+  {% csrf_token %}
+  {% bootstrap_form rating_form %}
+  <input class="btn btn-secondary" type="submit" value="리뷰 추가">
+</form>
+<hr>
+{% else %}
+<a class="btn btn-warning" href="{% url 'accounts:login' %}">리뷰를 작성하려면 로그인하세요.</a>
+<hr>
+{% endif %}
+<a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
+</div>
+{% endblock  %}
