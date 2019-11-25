@@ -1,7 +1,9 @@
+{% load static %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
   {% if user.is_superuser %}
   <!-- 관리자 -->
   <a class="navbar-brand" href="{% url 'movies:index' %}">
+  <img style="height=30px; width:30px;" src="{% static 'accounts/images/logo.png' %}" alt="logo">
     관리자 입니다.
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -21,8 +23,9 @@
 
   {% elif user.is_authenticated %}
   <!-- 로그인 한 일반 사용자 -->
-  <a class="navbar-brand" href="{% url 'movies:index' %}">
-    Movie Monster {{ user.username }}
+
+  <a class="navbar-brand font3" href="{% url 'movies:index' %}"><img style="height=30px; width:30px;" src="{% static 'accounts/images/logo.png' %}" alt="logo">
+    MOVIE EIVOM | {{ user.nickname }}
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -42,8 +45,9 @@
 
   {% else %}
   <!-- 로그인하지 않은 사용자 -->
-  <a class="navbar-brand" href="{% url 'movies:index' %}">
-    Hello! STRANGER!
+  <a class="navbar-brand font3" href="{% url 'movies:index' %}">
+  <img style="height=30px; width:30px;" src="{% static 'accounts/images/logo.png' %}" alt="logo">
+    HEY STRANGER!
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
