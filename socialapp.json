@@ -1,0 +1,44 @@
+[
+{
+  "model": "socialaccount.socialapp",
+  "pk": 1,
+  "fields": {
+    "provider": "google",
+    "name": "Google Login",
+    "client_id": "660802510507-gsa0343b6s4q4ok8s43vkghiu2m1vpn2.apps.googleusercontent.com",
+    "secret": "wRYl3KdcK7Dz9wk8oIbGnnVO",
+    "key": "",
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "socialaccount.socialapp",
+  "pk": 2,
+  "fields": {
+    "provider": "kakao",
+    "name": "Kakao Login",
+    "client_id": "4cf11d1b52a82f1c89a714b8d70f75d8",
+    "secret": "4540fa1c937ee034e730df1c7735ee99",
+    "key": "",
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "socialaccount.socialapp",
+  "pk": 3,
+  "fields": {
+    "provider": "naver",
+    "name": "Naver Login",
+    "client_id": "iQTFt5BmAiipK7iKcWR7",
+    "secret": "LwiVeMTEAS",
+    "key": "",
+    "sites": [
+      1
+    ]
+  }
+}
+]

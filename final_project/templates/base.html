@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +11,48 @@
   {% block style %}{% endblock style %}
   <script src="https://kit.fontawesome.com/8fb1a5fc3b.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Archivo+Black|Francois+One|Hammersmith+One|Krona+One|Nanum+Gothic:700|Noto+Serif+KR:400,600,700&display=swap&subset=korean"
+    rel="stylesheet">
   {% bootstrap_css %}
+  <style>
+    .font1 {
+      font-family: 'Francois One', sans-serif;
+    }
+    
+    .font2 {
+      font-family: 'Archivo Black', sans-serif;
+    }
+    
+    .font3 {
+      font-family: 'Hammersmith One', sans-serif;
+    }
+    
+    .font4 {
+      font-family: 'Krona One', sans-serif;
+    }
+    
+    .font5 {
+      font-family: 'Nanum Gothic', sans-serif;
+    }
+    
+    .font6 {
+      font-family: 'Noto Serif KR', serif;
+    }
+    
+  </style>
 </head>
+
 <body>
-  
+
   {% include '_nav.html' %}
 
   <div class="container">
     {% block content %}
     {% endblock %}
   </div>
-  
+
   {% bootstrap_javascript jquery='full' %}
 </body>
+
 </html>

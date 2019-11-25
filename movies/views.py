@@ -12,6 +12,10 @@ def index(request):
     context = {'movies': movies, }
     return render(request, 'movies/index.html', context)
 
+def main(request):
+    movies = Movie.objects.all()
+    context = {'movies': movies, }
+    return render(request, 'movies/main.html', context)
 
 @login_required
 @require_http_methods(['GET', 'POST'])
