@@ -5,10 +5,11 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
 from django.views.decorators.http import require_POST
 
 from movies.models import Movie
+from .models import User
 from .forms import UserCustomCreationForm, CustomProfileForm
 
 
@@ -34,14 +35,14 @@ def signup(request):
     if request.user.is_authenticated:
         return redirect('movies:index')
     if request.method == 'POST':
-        signup_form = UserCustomCreationForm(request.POST)
-        if signup_form.is_valid():
-            user = signup_form.save()
+        form = UserCustomCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
             auth_login(request, user)
             return redirect('movies:index')
     else:
-        signup_form = UserCustomCreationForm()
-    context = {'signup_form': signup_form,}
+        form = UserCustomCreationForm()
+    context = {'form': form,}
     return render(request, 'accounts/auth_form.html', context)
 
 
@@ -68,13 +69,13 @@ def logout(request):
 @login_required
 def update(request):
     if request.method == 'POST':
-        profile_form = CustomProfileForm(request.POST, instance=request.user)
-        if profile_form.is_valid():
-            profile_form.save()
+        form = CustomProfileForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
             return redirect('movies:index')
     else:
-        profile_form = CustomProfileForm(instance=request.user)
-    context = {'profile_form': profile_form}
+        form = CustomProfileForm(instance=request.user)
+    context = {'form': form}
     return render(request, 'accounts/auth_form.html', context)
 
 
@@ -87,10 +88,19 @@ def detail(request, user_pk):
 
     
 # 2-6. 팔로우
+@login_required
 def follow(request, user_pk):
-    userDetail = get_object_or_404(get_user_model(), pk=user_pk)
-    if request.user not in userDetail.follower.all():
-        userDetail.follower.add(request.user)
+    if request.is_ajax():
+        userDetail = get_object_or_404(User, pk=user_pk)
+        # if request.user in userDetail.follower.all():
+        if userDetail.follower.filter(pk=request.user.pk).exists():
+            userDetail.follower.remove(request.user)
+            followed = False
+        else:
+            userDetail.follower.add(request.user)
+            followed = True
+        context = {'followed': followed, 'count': userDetail.follower.count(),}
+        return JsonResponse(context)
     else:
-        userDetail.follower.remove(request.user)
-    return redirect('accounts:detail', user_pk)
+        return HttpResponseBadRequest()
+        # return redirect('accounts:detail', user_pk)

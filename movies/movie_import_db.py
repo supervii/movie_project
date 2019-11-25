@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .models import Movie, Genre
 
 # Create your views here.
+# CSV 로 받은 영화 정보를 django DB 로 import 하기 위한 별도 view 페이지 구성
 def movie_upload(request):
     movies = Movie.objects.all()
     template = 'movie_upload.html'

@@ -1,0 +1,33 @@
+<script>
+  // 1. 영화마다 좋아요 버튼이 있으니 모두 선택해야 한다.
+  const likebuttons = document.querySelectorAll('.like-btn')
+
+  // 2. forEach 를 사용해서 각각의 좋아요 버튼을 클릭
+  likebuttons.forEach(button => {
+    button.addEventListener('click', function (event) {
+      // console.log(event)
+      // event.taget.dataset.id 의 value 는 data-id 값이 들어 있다.
+      const movieId = event.target.dataset.id
+      // 개별 영화에 좋아요 요청을 보낸다.
+      axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+      axios.defaults.xsrfCookieName = 'csrftoken'
+      axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+      {% if user.is_authenticated %}
+      axios.post(`/movies/${movieId}/like/`)
+        .then(response => {
+          // console.log(response)
+          document.querySelector(`#like-count-${movieId}`).innerText = response.data.count
+          if (response.data.liked) {
+            event.target.style.color = 'crimson'
+          } else {
+            event.target.style.color = 'black'
+          }
+        })
+        .catch(error => console.log(error))
+        {% else %}
+      alert('좋아요를 하고 싶다면 로그인하세요.')
+      {% endif %}
+    })
+  })
+  
+</script>
