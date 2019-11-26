@@ -18,32 +18,39 @@ class Genre(models.Model):
 
 
 GRADE_CHOICES = (
-    ('전체관람가', '전체관람가'), ('12세관람가', '12세관람가'),
-    ('15세관람가', '15세관람가'), ('청소년관람불가', '청소년관람불가'),
+    ('전체관람가', '전체관람가'), ('12세이상관람가', '12세이상관람가'),
+    ('15세이상관람가', '15세이상관람가'), ('청소년관람불가', '청소년관람불가'),
 )
+
+
+class NowPlaying20(models.Model):
+    title = models.CharField(max_length=150)
+    code = models.CharField(max_length=20)
+    image = models.CharField(max_length=300)
 
 
 class Movie(models.Model):
     movieCode = models.IntegerField()
     title = models.CharField(max_length=150)
     year = models.IntegerField()
+    release_date = models.CharField(max_length=50)
     description = models.TextField()
     genre = models.ForeignKey(Genre, choices=GENRE_CHOICES, on_delete=models.SET_NULL, null=True)
     director = models.CharField(max_length=45)
     actors = models.TextField(blank=True, null=True)
-    grade = models.CharField(max_length=20, choices=GRADE_CHOICES)
+    grade = models.CharField(max_length=20,choices=GRADE_CHOICES)
     poster_path = models.CharField(max_length=200, blank=True, null=True, default='https://')
+    backdrop_path = models.CharField(max_length=200, blank=True, null=True, default='https://')    
     youtube_url = models.CharField(max_length=200, blank=True, null=True, default='https://')
     rate = models.FloatField(blank=True, null=True)
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies', blank=True)
    
     class Meta:
-        ordering = ('-pk',)
+        ordering = ('pk',)
 
     def __str__(self):
         return self.title
 
-        
 
 class Rating(models.Model):
     comment = models.TextField()

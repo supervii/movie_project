@@ -3,14 +3,21 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST, require_http_methods
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
-from .models import Movie, Rating
+from .models import NowPlaying20, Movie, Rating
 from .forms import MovieForm, RatingForm
 
 import requests
+import csv, io
 from bs4 import BeautifulSoup
 
 
 # Create your views here.
+def now_playing(request):
+    nowplays = NowPlaying20.objects.all()
+    context = {'nowplays': nowplays}
+    return render(request, 'movies/main.html', context)
+
+
 def index(request):
     movies = Movie.objects.all()
     context = {'movies': movies, }
@@ -21,6 +28,7 @@ def main(request):
     context = {'movies': movies, }
     return render(request, 'movies/main.html', context)
 
+
 @login_required
 @require_http_methods(['GET', 'POST'])
 def create(request):
@@ -29,7 +37,6 @@ def create(request):
             form = MovieForm(request.POST)
             if form.is_valid():
                 form.save()
-
         else:
             form = MovieForm()
         context = {'form': form,}
@@ -101,6 +108,24 @@ def rating_delete(request, movie_pk, rating_pk):
             rating.delete()
         return redirect('movies:detail', movie_pk)
 
+@login_required
+def rating_update(request, rating_pk, movie_pk):
+    rating = get_object_or_404(Rating, pk=rating_pk)
+    if request.user == rating.user:
+        if request.method == 'POST':
+            form = RatingForm(request.POST, instance=rating)
+            if form.is_valid():
+                form.save()
+                return redirect('movies:detail', movie_pk)
+        else:
+            form = RatingForm(instance=rating)
+        context = {
+            'form': form,
+        }
+        return render(request, 'movies/form.html', context)
+    else:
+        return redirect('movies:detail', movie_pk)
+
 
 @login_required
 def like(request, movie_pk):
@@ -116,3 +141,105 @@ def like(request, movie_pk):
         return JsonResponse(context)
     else:
         return HttpResponseBadRequest()
+
+
+def get_movie_upload(request):
+    movies = Movie.objects.all()
+    nowplays = NowPlaying20.objects.all()
+    template = 'movie_upload.html'
+    prompt = {
+        'order': 'movieCode, title, year, release_date, description, genre, director, grade, actors, poster_path, backdrop_path, youtube_url, rate',
+        'movies': movies,
+        # 'nowplays': nowplays,
+    }
+    if request.method == 'GET':
+        return render(request, template, prompt)
+    
+    csv_file = request.FILES['file']
+
+    data_set = csv_file.read().decode('UTF-8')
+
+    io_string = io.StringIO(data_set)
+    next(io_string)
+    # print(data_set)
+    for col in csv.reader(io_string):
+        _, created = Movie.objects.update_or_create(
+            movieCode=col[0],
+            title=col[1],
+            year=col[2],
+            release_date=col[3],
+            description=col[4],
+            genre_id=col[5],
+            director=col[6],
+            grade=col[7],
+            actors=col[8][1:-2].replace("'", "") if col[8] else '',
+            poster_path=col[9],
+            backdrop_path=col[10],
+            youtube_url=col[11],
+            rate=col[12]
+        )
+    # for col in csv.reader(io_string):
+    #     nowplays = NowPlaying20.objects.all()
+    #     for e in nowplays:
+    #         if col[1] == e.title:
+    #             _, created = NowPlaying20.objects.update_or_create(
+    #                 title=e.title,
+    #                 code=e.code,
+    #                 image=col[10],
+    #             )
+    
+    context = {}
+    return render(request, template, context)
+
+
+def find_movie(request):
+    query = request.GET.get('search_title')
+    if query:
+        title_movies = Movie.objects.filter(title__icontains=query)
+        filtered_movies = Movie.objects.filter(description__icontains=query)
+        d_movies = filtered_movies - title_movies
+        context = {
+            "title_movies" : title_movies,
+            "d_movies" : d_movies
+        }
+        return render(request,'movies/search.html',context)
+    else:
+        return redirect('movies:index', 0)
+
+
+
+def get_nowplaying(request):
+    nowplays = NowPlaying20.objects.all()
+    template = 'movie_upload.html'
+    # prompt = {
+    #     'order': 'np_title, code',
+    #     'movies': nowplays,
+    # }
+    prompt = {
+        'order': 'movieCode, title, year, release_date, description, genre, director, grade, actors, poster_path, backdrop_path, youtube_url, rate',
+        'movies': nowplays,
+    }
+    if request.method == 'GET':
+        return render(request, template, prompt)
+    
+    csv_file = request.FILES['file']
+
+    data_set = csv_file.read().decode('UTF-8')
+
+    io_string = io.StringIO(data_set)
+    next(io_string)
+    # for col in csv.reader(io_string):
+    #     _, created = NowPlaying20.objects.update_or_create(
+    #         title=col[0],
+    #         code=col[1],
+    #     )
+    for col in csv.reader(io_string):
+        for e in nowplays:
+            if e.title == col[1]:
+                print(e.title)
+                created = NowPlaying20.objects.filter(pk=e.id).update(image=col[10])
+                print(e.image)
+        
+            
+    context = {}
+    return render(request, template, context)
