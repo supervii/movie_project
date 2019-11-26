@@ -1,78 +1,93 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 
-{% block title %}{{ user.nickname }}의 Detail{% endblock title %}
-
+{% block title %}{{ userDetail.nickname }}의 DETAIL{% endblock title %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
 
-        <div class="col s4 font5" style="border-radius: 50%; text-align: center; padding: 50px;">
-            <h1 class="font3">{{ userDetail.username }}</h1>
-            <img src="https://www.gentlemonster.com/img/19/symbol.gif" alt="symbol" style="height=50px; width:50px;"><br>
-            {% if user != userDetail %}
-            {% if user in userDetail.follower.all %}
-            <a href="{% url 'accounts:follow' userDetail.pk %}">
-                <i class="large material-icons">-</i>
-            </a>
-            <br>
-            언팔로우
-            {% else %}
-            <a href="{% url 'accounts:follow' userDetail.pk %}">
-                <i class="large material-icons">+</i>
-            </a>
-            <br>
-            팔로우
-            {% endif %}
+<div class="row">
+    <div class="col s4" style="border-radius: 50%; text-align: center; padding: 50px;">
+        <h1>{{ userDetail.username }}</h1>
+        <img src="https://www.gentlemonster.com/img/19/symbol.gif" alt="symbol" style="height=50px; width:50px;"><br>
+        {% if user.is_authenticated %}
+            {% if user.pk != userDetail.pk %}
+                {% if user in userDetail.follower.all %}
+                    <i class="fas fa-user-plus fa-lg follow-btn" style="color: crimson;" data-id="{{ userDetail.pk }}"></i>
+                {% else %}
+                    <i class="fas fa-user-plus fa-lg follow-btn" style="color: black;" data-id="{{ userDetail.pk }}"></i>
+                {% endif %}
             {% else %}
             <p>It's U</p>
             {% endif %}
-            <div class="text-center">
-                <span>Follower {{ userDetail.follower.count }}명</span>
-                <span>| Following {{ userDetail.followings.count }}명</span>
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        {% if userDetail.nickname and userDetail.introduction and userDetail.genre.name %}
-        <div class="col-6" style="padding:30px; padding-center: 130px;">
-            <h3 class="font6"><span style="font-size: 20px; color:gray">닉네임</span></h3>
-            <h4 class="font5">{{ userDetail.nickname }}</h4>
-            <h3 class="font6"><span style="font-size: 20px; color:gray">자기소개</span></h3>
-            <h4 class="font5">{{ userDetail.introduction }}</h4>
-            <h3 class="font6"><span style="font-size: 20px; color:gray">선호 장르</span></h3>
-            <h4 class="font5">{{ userDetail.genre.name }}</h4>
-            <br>
-        </div>
         {% endif %}
-        <div class="col-6 mt-4 font5">
-            <ul class="tabs">
-                <ul class="tab col s3"><a class="active" href="#arr1">
-                        <h5 class="tab-font text-secondary">{{ userDetail.nickname }}가 작성한 리뷰</h5>
-                    </a></ul>
-                <ul class="tab col s3"><a href="#arr2">
-                        <h5 class="tab-font text-secondary">좋아요를 표시한 영화</h5>
-                    </a></ul>
-                <ul class="tab col s3"><a href="#arr3">
-                        <h5 class="tab-font text-secondary">팔로워 보기</h5>
-                    </a></ul>
-                <ul class="tab col s3"><a href="#arr4">
-                        <h5 class="tab-font text-secondary">팔로윙하는 사람</h5>
-                    </a></ul>
-            
-            {% if user == userDetail %}
-            <a href="{% url 'accounts:update' %}">
-            <button type="button" class="btn btn-dark btn-md mt-3 ml-3">유저 정보 수정</button>
-            </a>
-            {% endif %}
-            </ul>
+        <div class="text-center">
+            Follower <span id="follow-count-{{ userDetail.pk }}">{{ userDetail.follower.all|length }}</span> 명
+            <span>| Following {{ userDetail.followings.all|length }}명</span>
         </div>
-
     </div>
 </div>
-<p class="title is-4 has-text-white mt-5 font5" id="arr1">{{ userDetail.nickname }}가 작성한 리뷰</p>
+
+<div class="row">
+    {% if userDetail.nickname and userDetail.introduction and userDetail.genre.name %}
+    <div class="col-6" style="padding:30px; padding-center: 130px;">
+        <h3 class="font6"><span style="font-size: 20px; color:gray">닉네임</span></h3>
+        <h4 class="font5">{{ userDetail.nickname }}</h4>
+        <h3 class="font6"><span style="font-size: 20px; color:gray">자기소개</span></h3>
+        <h4 class="font5">{{ userDetail.introduction }}</h4>
+        <h3 class="font6"><span style="font-size: 20px; color:gray">선호 장르</span></h3>
+        <h4 class="font5">{{ userDetail.genre.name }}</h4>
+        <br>
+    </div>
+    {% endif %}
+    <div class="col-6 mt-4 font5">
+        <ul class="tabs">
+            <ul class="tab col s3"><a href="#arr2">
+                    <h5 class="tab-font text-secondary">좋아요를 표시한 영화</h5>
+                </a></ul>
+            <ul class="tab col s3"><a class="active" href="#arr1">
+                    <h5 class="tab-font text-secondary">{{ userDetail.nickname }}가 쓴 리뷰</h5>
+                </a></ul>
+            <ul class="tab col s3"><a href="#arr3">
+                    <h5 class="tab-font text-secondary">팔로워 보기</h5>
+                </a></ul>
+            <ul class="tab col s3"><a href="#arr4">
+                    <h5 class="tab-font text-secondary">팔로윙하는 사람</h5>
+                </a></ul>
+
+            {% if user == userDetail %}
+            <a href="{% url 'accounts:update' %}">
+                <button type="button" class="btn btn-dark btn-md mt-3 ml-3">유저 정보 수정</button>
+            </a>
+            {% endif %}
+        </ul>
+    </div>
+
+</div>
+
+<p class="title is-4 has-text-white mt-5 font5" id="arr2">{{ userDetail.nickname }}가 좋아한 영화</p>
+<div class="row mt-3 font5 ">
+    {% if userDetail.like_movies.all %}
+    {% for movie in userDetail.like_movies.all %}
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+        <div class="card text-center">
+            <div class="card-image" style=" padding-left: 10px; padding-right: 10px;">
+                <img src="{{ movie.poster_path }}" style="border-radius: 15px; height: 350px;">
+            </div>
+            <div class="card-content" style=" padding-left: 20px; padding-right: 20px;">
+                <span class="card-title">{{ movie.title }}</span><br>
+                <p>평점 : {{ movie.rate }}</p>
+                <a href="{% url 'movies:detail' movie.pk %}" class="btn-floating btn-small">
+                    <i class="material-icons">보러가기</i></a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <li style="list-type: none;">아직 좋아하는 영화가 없습니다. 좋아요를 눌러주세요!</li>
+    {% endif %}
+</div>
+
+<p class="title is-4 has-text-white mt-5 font5" id="arr1">{{ userDetail.nickname }} 가 작성한 리뷰</p>
 <div class="row mt-3 font5">
     {% if userDetail.rating_set.all %}
     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
@@ -95,92 +110,102 @@
         {% endif %}
     </div>
 </div>
-<div class="font5">
-    <p class="title is-4 has-text-white mt-5 " id="arr1">{{ userDetail.nickname }}가 좋아한 영화</p>
-    <div id="arr2" class="row mt-3  ">
-        {% if userDetail.like_movies.all %}
-        {% for movie in userDetail.like_movies.all %}
+
+
+
+<div class="container font5">
+    {% if not userDetail.follower.all %}
+    <p class="title is-4 has-text-white mt-5 text-center" id="arr3">{{ userDetail.nickname }}를 팔로윙하는 사람이 없네요..</p>
+
+    {% else %}
+    <p class="title is-4 has-text-white mt-5" id="arr3">{{ userDetail.nickname }}를 일촌으로 맺은 사람</p>
+
+    <div class="row mt-3">
+        {% for follower in userDetail.follower.all %}
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
             <div class="card text-center">
-                <div class="card-image" style=" padding-left: 10px; padding-right: 10px;">
-                    <img src="{{ movie.poster_path }}" style="border-radius: 15px; height: 350px;">
+                <div class="card-image" style=" padding-left: 30px; padding-right: 30px;">
+                    <img src="https://images.unsplash.com/photo-1550658511-1ed05e6ac16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=80"
+                        style="border-radius: 30%; height: 100px; width: 50%;">
                 </div>
-                <div class="card-content" style=" padding-left: 20px; padding-right: 20px;">
-                    <span class="card-title">{{ movie.title }}</span><br>
-                    <p>평점 : {{ movie.rate }}</p>
-                    <a href="{% url 'movies:detail' movie.pk %}" class="btn-floating btn-small">
-                     <i class="material-icons">보러가기</i></a>
+                <div class="card-content" style=" padding-left: 40px; padding-right: 40px;">
+                    <span class="card-title">{{ follower.username }}</span>
+
+                    <a href="{% url 'accounts:detail' follower.pk %}"
+                        class="btn-floating btn-small waves-effect waves-light red">
+                        <i class="material-icons">파도타기</i>
+                    </a>
+
+                </div>
+            </div>
+            <hr>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+<br>
+
+
+
+<div class="container font5">
+    {% if not userDetail.followings.all %}
+    <p class="title is-4 has-text-white mt-5 text-center" id="arr4">{{ userDetail.nickname }}가 팔로우하는 사람이 없어요.</p>
+    {% else %}
+    <p class="title is-4 has-text-white mt-5" id="arr4">{{ userDetail.nickname }}가 맺은 일촌</p>
+    <div class="row mt-3">
+        {% for following in userDetail.followings.all %}
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+            <div class="card text-center">
+                <div class="card-image" style=" padding-left: 30px; padding-right: 30px;">
+                    <img src="https://images.unsplash.com/photo-1550658511-1ed05e6ac16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=80"
+                        style="border-radius: 30%; height: 100px; width: 50%;">
+                </div>
+                <div class="card-content" style=" padding-left: 40px; padding-right: 40px;">
+                    <span class="card-title">{{ following.username }}</span>
+
+                    <a href="{% url 'accounts:detail' following.pk %}"
+                        class="btn-floating btn-small waves-effect waves-light red">
+                        <i class="material-icons">파도타기</i>
+                    </a>
                 </div>
             </div>
         </div>
         {% endfor %}
-        {% else %}
-        <li style="list-type: none;">아직 좋아하는 영화가 없습니다. 좋아요를 눌러주세요!</li>
         {% endif %}
     </div>
 </div>
-
-    <div class="follower font5">
-        {% if not userDetail.follower.all %}
-        <p class="title is-4 has-text-white mt-5 text-center" id="arr3">{{ userDetail.nickname }}를 팔로윙하는 사람이 없네요..</p>
-
-        {% else %}
-        <p class="title is-4 has-text-white mt-5" id="arr3">{{ userDetail.nickname }}를 일촌으로 맺은 사람</p>
-
-        <div class="row mt-3">
-            {% for follower in userDetail.follower.all %}
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                <div class="card text-center">
-                    <div class="card-image" style=" padding-left: 30px; padding-right: 30px;">
-                        <img src="https://images.unsplash.com/photo-1550658511-1ed05e6ac16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=80"
-                            style="border-radius: 30%; height: 100px; width: 50%;">
-                    </div>
-                    <div class="card-content" style=" padding-left: 40px; padding-right: 40px;">
-                        <span class="card-title">{{ follower.username }}</span>
-
-                        <a href="{% url 'accounts:detail' follower.pk %}"
-                            class="btn-floating btn-small waves-effect waves-light red">
-                            <i class="material-icons">파도타기</i>
-                        </a>
-
-                    </div>
-                </div>
-                <hr>
-            </div>
-            {% endfor %}
-            {% endif %}
-        </div>
-    </div>
-    <br>
-
-
-
-    <div class="container font5">
-        {% if not userDetail.followings.all %}
-        <p class="title is-4 has-text-white mt-5 text-center" id="arr4">{{ userDetail.nickname }}가 팔로우하는 사람이 없어요.</p>
-        {% else %}
-        <p class="title is-4 has-text-white mt-5" id="arr4">{{ userDetail.nickname }}가 맺은 일촌</p>
-        <div class="row mt-3">
-            {% for following in userDetail.followings.all %}
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                <div class="card text-center">
-                    <div class="card-image" style=" padding-left: 30px; padding-right: 30px;">
-                        <img src="https://images.unsplash.com/photo-1550658511-1ed05e6ac16c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=80"
-                            style="border-radius: 30%; height: 100px; width: 50%;">
-                    </div>
-                    <div class="card-content" style=" padding-left: 40px; padding-right: 40px;">
-                        <span class="card-title">{{ following.username }}</span>
-
-                        <a href="{% url 'accounts:detail' following.pk %}"
-                            class="btn-floating btn-small waves-effect waves-light red">
-                            <i class="material-icons">파도타기</i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-            {% endif %}
-        </div>
-    </div>
 </div>
+
+<script>
+    // 1. 개인마다 팔로우 버튼이 있으니 모두 선택해야 한다.
+    const followbtns = document.querySelectorAll('.follow-btn')
+
+    // 2. forEach 를 사용해서 각각의 팔로운 버튼을 클릭
+    followbtns.forEach(button => {
+    button.addEventListener('click', function (event) {
+        //console.log(event)
+        const userId = event.target.dataset.id
+        axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+        axios.defaults.xsrfCookieName = 'csrftoken'
+        axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+        //{% if user.is_authenticated %}
+        axios.post(`/accounts/${userId}/follow/`)
+            .then(response => {
+                console.log(response)
+                document.querySelector(`#follow-count-${userId}`).innerText = response.data.count
+                if (response.data.followed) {
+                    event.target.style.color = 'crimson'
+                } else {
+                    event.target.style.color = 'black'
+                }
+                })
+            .catch(error => console.log(error))
+        //{% else %}
+        //alert('팔로우를 하고 싶다면 로그인하세요.')
+        //{% endif %}
+        
+    })
+    })
+</script>
 {% endblock %}
