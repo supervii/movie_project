@@ -48,10 +48,8 @@ def update(request, movie_pk):
             if form.is_valid():
                 form.save()
                 return redirect('movies:detail', movie_pk)
-            else:
-                form = MovieForm(instance=movie)
         else:
-            return redirect('movies:index')
+            form = MovieForm(instance=movie)
         # 1. POST 방식일 때 오는 FORM: 검증에 실패한 form - 오류메시지도 포함된 상태
         # 2. GET 방식일 때 오는 FORM: 초기화된 form
         context = {'form': form, 'movie': movie,}
@@ -118,12 +116,3 @@ def like(request, movie_pk):
         return JsonResponse(context)
     else:
         return HttpResponseBadRequest()
-
-def now_p_mv(request):
-    url = "view-source:http://ticket2.movie.daum.net/Movie/MovieRankList.aspx"
-    htmlContent = requests.get(url, verify=False)
-    data = htmlContent.text
-    print("data",data)
-    jsonD = json.dumps(htmlContent.text)
-    jsonL = json.loads(jsonD)
-
