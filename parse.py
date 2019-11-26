@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import json
+import json, csv
 import os, re
 
 ## python파일의 위치
@@ -16,27 +16,32 @@ my_poster = soup.select(
     'a > span.thumb_poster > img'
 )
 
-data = []
 res = []
-
+data = {}
 for title in my_titles:
     res.append(title.get('href'))
-for i in res:
-    i = i[-10:]
-    data.append(i)
-# print(data)
-res = []
-for poster in my_poster:
-    res.append(poster.get('src'))
-# print(res)
-
-N = len(data)
-codes = {}
-for x in range(N):
-    codes[data[x]] = res[x]
-
-# print(codes)
+    for i in res:
+        
+        i = i[-10:]
+        txt = title.text
+        txt = txt.replace('\r\n                                                ','')
+        datum = {
+            txt: {
+                'np_title': txt,
+                'code': i,
+            }
+        }
+        data.update(datum)
+print(data)
 
 
-with open(os.path.join(BASE_DIR, 'result.json'), 'w+') as json_file:
-    json.dump(codes, json_file)
+# with open(os.path.join(BASE_DIR, 'result.json'), 'w+') as json_file:
+#     json.dump(data, json_file)
+
+with open(os.path.join(BASE_DIR, 'result.csv'), 'w', encoding='UTF-8', newline='') as f:
+    fieldnames = ['np_title','code']
+    write = csv.DictWriter(f, fieldnames=fieldnames)
+    write.writeheader()
+    for dat in data.values():
+        # print(dat)
+        write.writerow(dat)
