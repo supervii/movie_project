@@ -1,17 +1,17 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
   {% if user.is_superuser %}
   <!-- 관리자 -->
   <a class="navbar-brand" href="{% url 'movies:index' %}">
   <img style="height=30px; width:30px;" src="{% static 'accounts/images/logo.png' %}" alt="logo">
-    관리자 입니다.
+      관리자
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav font5">
       <li class="nav-item">
         <a class="nav-link" href="{% url 'movies:create' %}">영화 정보 생성</a>
       </li>
@@ -32,7 +32,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav font5">
       <li class="nav-item">
         <a class="nav-link" href="{% url 'accounts:detail' user.pk %}">내 프로필</a>
       </li>
@@ -65,4 +65,3 @@
   </div>
   {% endif %}
 </nav>
-

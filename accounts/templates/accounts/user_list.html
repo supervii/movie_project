@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block title %}전체 사용자 보기{% endblock title %}
 
+{% block content %}
+<h1>전체 사용자 보기</h1>
 {% for user_info in users %}
 <div class="row">
     <div class="col-sm-6 mt-1">
