@@ -107,7 +107,7 @@ for i in range(len(movieCodes)):
             movieKey = mdb['results'][0]['key']
             youtube_url = f'https://www.youtube.com/embed/{movieKey}'
     rate = naverData['userRating']
-    
+    naver_img = naverData['image']
     if len(info['directors']) != 0:
         director = info['directors'][0]['peopleNm']
     else:
@@ -131,6 +131,7 @@ for i in range(len(movieCodes)):
                     'grade': grade,
                     'actors': actors,
                     'poster_path': poster_path,
+                    'naver_img': naver_img,
                     'youtube_url': youtube_url,
                     'rate': rate
         }
@@ -138,7 +139,7 @@ for i in range(len(movieCodes)):
     movies.update(movieInfo)
     
 with open('movieDetail.csv', 'w', encoding='UTF-8', newline='') as f:
-    fieldnames = ['movieCode', 'title', 'year', 'description', 'genre', 'director', 'grade', 'actors', 'poster_path', 'youtube_url', 'rate']
+    fieldnames = ['movieCode', 'title', 'year', 'description', 'genre', 'director', 'grade', 'actors', 'poster_path', 'naver_img', 'youtube_url', 'rate']
     write = csv.DictWriter(f, fieldnames=fieldnames)
     write.writeheader()
     for mov in movies.values():

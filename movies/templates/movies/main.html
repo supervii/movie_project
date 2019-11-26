@@ -1,422 +1,66 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load static %}
-{% block style %}
+
+{% block title %}MOVIE EIVOM{% endblock title %}
 
 {% block content %}
-
-<div class="container">
-
-  <script>
-    function clickStop(e) {
-      e.stoppropagation();
-    }
-  </script>
-
-  <div class="main_wrap kr">
-    <div class="main_sections">
-      <div style="position: relative;">
-        <div class="main_image-wrap">
-          <div class="main_image">
-            <img class="main_image__img" src="https://www.gentlemonster.com/img/main-191104/BANNER_01_PC.jpg"
-              data-pc-src="https://www.gentlemonster.com/img/main-191104/BANNER_01_PC.jpg"
-              data-mobile-src="https://www.gentlemonster.com/img/main-191104/BANNER_01_MO_final.jpg"> />
-          </div>
-          <div class="main_visual_text">
-            <div class="main_visual_title">
-              <span>현재 상영중인 영화 </span>
-            </div>
-            <div class="main_visual_label">
-              오늘은 이 영화 어떠신가요?
-            </div>
-            <div class="main_btn main_visual_btn">
-            https://ticket2.movie.daum.net/Movie/MovieMain.aspx?M_ID=M000075354#seq=2
-              <a class="btn_style_white_border" href="https://www.gentlemonster.com/stories/gentlemonster2020/"
-                onclick="clickStop">
-                자세히 보기
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="main_section_symbol">
-          <img src="https://www.gentlemonster.com/img/19/symbol.gif" alt="" />
+<div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="..." class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </div>
       </div>
-
-      <div class="main_section product_review_section">
-        <p class="main_section_title font_title">
-          2020 뉴 플랫바 시리즈를 만나보세요
-        </p>
-        <div class="carousel_items">
-          <div class="carousel_item">
-            <div class="new_product_swiper new_product_swiper1 swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="new_product_item">
-                    <div class="new_product_item_inner">
-                      <div class="new_product_part new_product_left_part">
-                        <div class="new_product_part_text">
-                          <p class="new_product_name font_title">
-                            마이 마 01 </p>
-                          <p class="new_product_desc">
-                            부드러운 곡선의 사각 안구가 특징인 스퀘어 형태의 플랫바 선글라스 </p>
-                          <div class="main_btn" onclick="clickStop">
-                            <a class="btn_style_black_border"
-                              href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572395402">
-                              쇼핑하기 </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="new_product_part new_product_right_part" onclick="clickStop">
-                        <div class="new_product_modelshot">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572395402"><img
-                              src="https://www.gentlemonster.com/img/main-191104/FLATBA_SERIES/flatba-series_01_myma01.jpg"
-                              alt="" /></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="new_product_item">
-                    <div class="new_product_item_inner">
-                      <div class="new_product_part new_product_left_part">
-                        <div class="new_product_part_text">
-                          <p class="new_product_name font_title">
-                            허 01 </p>
-                          <p class="new_product_desc">
-                            안구 양쪽이 자연스럽게 올라간 디자인의 오버사이즈 플랫바 선글라스 </p>
-                          <div class="main_btn" onclick="clickStop">
-                            <a class="btn_style_black_border"
-                              href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572394578">
-                              쇼핑하기 </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="new_product_part new_product_right_part" onclick="clickStop">
-                        <div class="new_product_modelshot">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572394578"><img
-                              src="https://www.gentlemonster.com/img/main-191104/FLATBA_SERIES/flatba-series_03_her01_final.jpg"
-                              alt="" /></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="new_product_item">
-                    <div class="new_product_item_inner">
-                      <div class="new_product_part new_product_left_part">
-                        <div class="new_product_part_text">
-                          <p class="new_product_name font_title">
-                            랭 01 </p>
-                          <p class="new_product_desc">
-                            세로 폭이 짧고 곡선이 강조된 라운드 형태의 플랫바 선글라스 </p>
-                          <div class="main_btn" onclick="clickStop">
-                            <a class="btn_style_black_border"
-                              href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572394839">
-                              쇼핑하기 </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="new_product_part new_product_right_part" onclick="clickStop">
-                        <div class="new_product_modelshot">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572394839"><img
-                              src="https://www.gentlemonster.com/img/main-191104/FLATBA_SERIES/flatba-series_04_lang01.jpg"
-                              alt="" /></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="new_product_item">
-                    <div class="new_product_item_inner">
-                      <div class="new_product_part new_product_left_part">
-                        <div class="new_product_part_text">
-                          <p class="new_product_name font_title">
-                            솔로 01 </p>
-                          <p class="new_product_desc">
-                            오버사이즈 둥근 안구의 볼륨감이 특징인 라운드 형태의 플랫바 선글라스 </p>
-                          <div class="main_btn" onclick="clickStop">
-                            <a class="btn_style_black_border"
-                              href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572395603">
-                              쇼핑하기 </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="new_product_part new_product_right_part" onclick="clickStop">
-                        <div class="new_product_modelshot">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572395603"><img
-                              src="https://www.gentlemonster.com/img/main-191104/FLATBA_SERIES/flatba-series_05_solo01.jpg"
-                              alt="" /></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="new_product_item">
-                    <div class="new_product_item_inner">
-                      <div class="new_product_part new_product_left_part">
-                        <div class="new_product_part_text">
-                          <p class="new_product_name font_title">
-                            드리머 17 01 </p>
-                          <p class="new_product_desc">
-                            곡선과 직선이 대담하게 어우러진 스퀘어 형태의 플랫바 선글라스 </p>
-                          <div class="main_btn" onclick="clickStop">
-                            <a class="btn_style_black_border"
-                              href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572393878">
-                              쇼핑하기 </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="new_product_part new_product_right_part" onclick="clickStop">
-                        <div class="new_product_modelshot">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572393878"><img
-                              src="https://www.gentlemonster.com/img/main-191104/FLATBA_SERIES/flatba-series_06_dreamer17.jpg"
-                              alt="" /></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main_swiper_pagination swiper-pagination"></div>
-              <div class="main_swiper_btn swiper-button-next">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                  <path d="M.798 6.78h17.24l-2.354 3.945.464.531 6.498-5.405-6.498-5.37-.464.53 2.354 3.912H.798z">
-                  </path>
-                </svg>
-
-              </div>
-              <div class="main_swiper_btn swiper-button-prev">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22.202 5.22H4.962l2.354-3.945-.464-.531L.354 6.149l6.498 5.37.464-.53-2.354-3.912h17.24z">
-                  </path>
-                </svg>
-              </div>
-
-            </div>
-          </div>
-
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-
       </div>
-
-      <div class="main_image-wrap main_section main_visual_section center_video_wrap"
-        onclick="location.href='https://www.gentlemonster.com/stories/gentlemonster2020/'">
-        <div class="main_image">
-          <img class="main_image__img" src="https://www.gentlemonster.com/img/main-191104/BANNER_02_PC.jpg"
-            data-pc-src="https://www.gentlemonster.com/img/main-191104/BANNER_02_PC.jpg"
-            data-mobile-src="https://www.gentlemonster.com/img/main-191104/BANNER_02_MO.jpg"> />
-        </div>
-
-        <div class="main_visual_text">
-          <div class="main_visual_title">
-            2020 <span>티-옵티컬 시리즈</span>
-          </div>
-          <div class="main_visual_label">
-            풀 ‘티타늄(Titanium)’ 소재로 제작된 젠틀몬스터의 새로운 안경 시리즈
-          </div>
-          <div class="main_btn main_visual_btn">
-            <a href="https://www.gentlemonster.com/shop/ver1_list.php?ca_id=i0" class="btn_style_white_border">
-              안경 구매하기
-            </a>
-            <a href="https://www.gentlemonster.com/stories/gentlemonster2020/" class="btn_style_white_border">
-              자세히 보기
-            </a>
-          </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
         </div>
       </div>
     </div>
-    <div class="main_section product_review_section">
-      <div class="carousel_items">
-        <div class="carousel_item">
-          <div class="new_product_swiper new_product_swiper2 swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="new_product_item">
-                  <div class="new_product_item_inner">
-                    <div class="new_product_part new_product_left_part">
-                      <div class="new_product_modelshot">
-                        <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572400464"
-                          onclick="clickStop"><img class="swiper-lazy"
-                            src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/TOPTICAL-series_01_HAVANAB4.jpg"
-                            alt="" /></a>
-                      </div>
-                    </div>
-                    <div class="new_product_part new_product_right_part">
-                      <div class="new_product_part_text">
-                        <div class="new_product_img">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572400464"
-                            onclick="clickStop"><img class="swiper-lazy"
-                              src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/product/TOPTICAL-series_01_HAVANAB4.jpg"
-                              alt="" /></a>
-                        </div>
-                        <p class="new_product_name font_title">하바나 B4</p>
-                        <p class="new_product_desc">메탈림을 감싸고 있는 안구 윗쪽의 아세테이트가 특징인 하금테 프레임</p>
-                        <div class="main_btn">
-                          <a class="btn_style_black_border"
-                            href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572400464"
-                            onclick="clickStop">
-                            쇼핑하기 </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="new_product_item">
-                  <div class="new_product_item_inner">
-                    <div class="new_product_part new_product_left_part">
-                      <div class="new_product_modelshot">
-                        <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572401712"
-                          onclick="clickStop"><img class="swiper-lazy"
-                            src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/TOPTICAL-series_02_TOM21A02_final.jpg"
-                            alt="" /></a>
-                      </div>
-                    </div>
-                    <div class="new_product_part new_product_right_part">
-                      <div class="new_product_part_text">
-                        <div class="new_product_img">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572401712"
-                            onclick="clickStop"><img class="swiper-lazy"
-                              src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/product/TOPTICAL-series_02_TOM21A02.jpg"
-                              alt="" /></a>
-                        </div>
-                        <p class="new_product_name font_title">톰 21 A02</p>
-                        <p class="new_product_desc">클래식한 라운드 형태의 안구와 템플의 인그레이빙 디테일이 특징인 티타늄 프레임 안경</p>
-                        <div class="main_btn">
-                          <a class="btn_style_black_border"
-                            href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572401712"
-                            onclick="clickStop">
-                            쇼핑하기 </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="new_product_item">
-                  <div class="new_product_item_inner">
-                    <div class="new_product_part new_product_left_part">
-                      <div class="new_product_modelshot">
-                        <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572396236"
-                          onclick="clickStop"><img class="swiper-lazy"
-                            src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/TOPTICAL-series_03_GATTA001.jpg"
-                            alt="" /></a>
-                      </div>
-                    </div>
-                    <div class="new_product_part new_product_right_part">
-                      <div class="new_product_part_text">
-                        <div class="new_product_img">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572396236"
-                            onclick="clickStop"><img class="swiper-lazy"
-                              src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/product/TOPTICAL-series_03_GATTA01.jpg"
-                              alt="" /></a>
-                        </div>
-                        <p class="new_product_name font_title">가타 01</p>
-                        <p class="new_product_desc">하금테 프레임을 재치있게 재해석한 티타늄 콤비 프레임 안경</p>
-                        <div class="main_btn">
-                          <a class="btn_style_black_border"
-                            href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572396236"
-                            onclick="clickStop">
-                            쇼핑하기 </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="new_product_item">
-                  <div class="new_product_item_inner">
-                    <div class="new_product_part new_product_left_part">
-                      <div class="new_product_modelshot">
-                        <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572400735"
-                          onclick="clickStop"><img class="swiper-lazy"
-                            src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/TOPTICAL-series_04_WESTCOAST01.jpg"
-                            alt="" /></a>
-                      </div>
-                    </div>
-                    <div class="new_product_part new_product_right_part">
-                      <div class="new_product_part_text">
-                        <div class="new_product_img">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572400735"
-                            onclick="clickStop"><img class="swiper-lazy"
-                              src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/product/TOPTICAL-series_04_WESTCOAST01.jpg"
-                              alt="" /></a>
-                        </div>
-                        <p class="new_product_name font_title">웨스트 코스트 01</p>
-                        <p class="new_product_desc">스퀘어 형태의 아세테이트 티타늄 콤비 프레임 안경</p>
-                        <div class="main_btn">
-                          <a class="btn_style_black_border"
-                            href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572400735"
-                            onclick="clickStop">
-                            쇼핑하기 </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="new_product_item">
-                  <div class="new_product_item_inner">
-                    <div class="new_product_part new_product_left_part">
-                      <div class="new_product_modelshot">
-                        <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572402174"
-                          onclick="clickStop"><img class="swiper-lazy"
-                            src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/TOPTICAL-series_05_TOM22A02_final.jpg"
-                            alt="" /></a>
-                      </div>
-                    </div>
-                    <div class="new_product_part new_product_right_part">
-                      <div class="new_product_part_text">
-                        <div class="new_product_img">
-                          <a href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572402174"
-                            onclick="clickStop"><img class="swiper-lazy"
-                              src="https://www.gentlemonster.com/img/main-191104/TOPTICAL_SERIES/product/TOPTICAL-series_05_TOM22A02.jpg"
-                              alt="" /></a>
-                        </div>
-                        <p class="new_product_name font_title">톰 22 A02</p>
-                        <p class="new_product_desc">부드러운 곡선의 사각 안구가 특징인 티타늄 프레임 안경</p>
-                        <div class="main_btn">
-                          <a class="btn_style_black_border"
-                            href="https://www.gentlemonster.com/shop/ver1_detail.php?it_id=1572402174"
-                            onclick="clickStop">
-                            쇼핑하기 </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="main_swiper_pagination swiper-pagination"></div>
-            <div class="main_swiper_btn swiper-button-next">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <path d="M.798 6.78h17.24l-2.354 3.945.464.531 6.498-5.405-6.498-5.37-.464.53 2.354 3.912H.798z">
-                </path>
-              </svg>
-
-            </div>
-            <div class="main_swiper_btn swiper-button-prev">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.202 5.22H4.962l2.354-3.945-.464-.531L.354 6.149l6.498 5.37.464-.53-2.354-3.912h17.24z">
-                </path>
-              </svg>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 </div>
 
-      {% endblock  %}
+
+
+
+
+
+ <div class="main_visual_text">
+    <div class="main_visual_title">
+      <span>현재 상영중인 영화 </span>
+    </div>
+    <div class="main_visual_label">
+      오늘은 이 영화 어떠신가요?
+    </div>
+    <div class="main_btn main_visual_btn">
+    <!-- 다음 영화 빠른예매; M000075354 영화 코드 -->
+    https://ticket2.movie.daum.net/Movie/MovieMain.aspx?M_ID=M000075354#seq=2
+
+
+{% endblock %}

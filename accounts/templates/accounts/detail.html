@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 
+{% block title %}{{ user.nickname }}의 Detail{% endblock title %}
+
+
 {% block content %}
 <div class="container">
     <div class="row">
@@ -47,7 +50,7 @@
         <div class="col-6 mt-4 font5">
             <ul class="tabs">
                 <ul class="tab col s3"><a class="active" href="#arr1">
-                        <h5 class="tab-font text-secondary">{{ userDetail.nickname }}가 쓴 리뷰</h5>
+                        <h5 class="tab-font text-secondary">{{ userDetail.nickname }}가 작성한 리뷰</h5>
                     </a></ul>
                 <ul class="tab col s3"><a href="#arr2">
                         <h5 class="tab-font text-secondary">좋아요를 표시한 영화</h5>

@@ -6,7 +6,7 @@ app_name = 'accounts'
 
 urlpatterns = [
     #  관리자
-    path('user_list/', views.list, name='list'),
+    path('', views.list, name='list'),
     #  유저
     path('signup/', views.signup, name='signup'),
     path('login/', views.login, name='login'),
