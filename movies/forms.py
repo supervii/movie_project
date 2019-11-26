@@ -14,7 +14,13 @@ class MovieForm(forms.ModelForm):
             }
         )
     )
-    year = forms.IntegerField()
+    year = forms.IntegerField(
+        label='제작년도'
+    )
+    release_date = forms.CharField(
+        label='개봉일',
+        max_length='50'
+    )
     description = forms.CharField(
         label='영화 줄거리',
         widget=forms.Textarea(
@@ -26,7 +32,11 @@ class MovieForm(forms.ModelForm):
             }
         )
     )
-    genre = forms.ModelChoiceField(queryset=Genre.objects.all(), widget=forms.Select())
+    genre = forms.ModelChoiceField(
+        label='장르',
+        queryset=Genre.objects.all(),
+        widget=forms.Select()
+    )
     
     director = forms.CharField(
         label='감독',
@@ -38,7 +48,10 @@ class MovieForm(forms.ModelForm):
             }
         )
     )
-    grade = forms.ChoiceField(choices=GRADE_CHOICES)
+    grade = forms.ChoiceField(
+        label='관람등급',
+        choices=GRADE_CHOICES
+    )
     
     actors = forms.CharField(
         label='영화출연배우',
@@ -61,6 +74,17 @@ class MovieForm(forms.ModelForm):
             }
         )
     )
+    backdrop_path = forms.CharField(
+        label='영화 배경 URL',
+        max_length=200,
+        required=False,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'movie-backdrop',
+                'placeholder': '영화 배경 이미지 주소를 입력하세요.',
+            }
+        )
+    )
     youtube_url = forms.CharField(
         label='Youtube URL',
         max_length=200,
@@ -72,7 +96,11 @@ class MovieForm(forms.ModelForm):
             }
         )
     )
-    rate = forms.FloatField(max_value=10.0, min_value=0.0)
+    rate = forms.FloatField(
+        label='평점',
+        max_value=10.0,
+        min_value=0.0
+    )
 
     class Meta:
         model = Movie

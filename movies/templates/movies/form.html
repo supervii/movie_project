@@ -3,9 +3,9 @@
 
 {% block title %}
   {% if request.resolver_match.url_name == 'create' %}
-  관리자 | 영화 정보 생성
+    관리자 | 영화 정보 생성
   {% else %}
-  관리자 | 영화 정보 수정
+    관리자 | 영화 정보 수정
   {% endif %}
 {% endblock title %}
 
@@ -15,7 +15,7 @@
   {% else %}
     <h1>영화 정보 수정</h1>
   {% endif %}
-
+  <hr>
   <form action="" method="POST">
     {% csrf_token %}
     {% bootstrap_form form layout="horizontal" %}

@@ -18,9 +18,10 @@ kobis_movie_url = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/sea
 naver_url = 'https://openapi.naver.com/v1/search/movie.json'
 tmdb_url = 'https://api.themoviedb.org/3/search/movie'
 
+
 # result = {}			
-# for i in range(30):
-#     daytime = datetime(2019, 11, 16) - timedelta(weeks=i)
+# for i in range(50):
+#     daytime = datetime(2019, 11, 26) - timedelta(weeks=i)
 #     targetDt = daytime.strftime('%Y%m%d')
 
 #     kobis_boxoffice_api_url = f'{kobis_base_url}key={key}&targetDt={targetDt}'
@@ -49,6 +50,7 @@ tmdb_url = 'https://api.themoviedb.org/3/search/movie'
 #        writer.writerow(value)
 
 
+
 # 개별 영화 정보 정리하기
 movies = {}
 movieCodes = []
@@ -70,7 +72,7 @@ for i in range(len(movieCodes)):
     kobis = requests.get(kobis_full_url).json()
     info = kobis['movieInfoResult']['movieInfo']
     #naverData: 네이버 영화 데이터
-    pprint(naver)
+    # pprint(naver)
     naverData = naver['items'][0]
     # pprint(naverData)
     movieCode = info['movieCd']
@@ -106,8 +108,18 @@ for i in range(len(movieCodes)):
             # pprint(mdb['results'][0]['key'])
             movieKey = mdb['results'][0]['key']
             youtube_url = f'https://www.youtube.com/embed/{movieKey}'
+
     rate = naverData['userRating']
-    naver_img = naverData['image']
+
+    if tmdb['results'] == []:
+        backdrop_path = None
+        release_date = None
+    else:
+        backdrop_key = tmdb['results'][0]['backdrop_path']
+        backdrop_path = f'https://image.tmdb.org/t/p/w500/{backdrop_key}'
+        release_date = tmdb['results'][0]['release_date']
+
+    
     if len(info['directors']) != 0:
         director = info['directors'][0]['peopleNm']
     else:
@@ -125,21 +137,23 @@ for i in range(len(movieCodes)):
                     'movieCode': movieCode,
                     'title': title,
                     'year': year,
+                    'release_date': release_date,
                     'description': description,
                     'genre': genre,
                     'director': director,
                     'grade': grade,
                     'actors': actors,
                     'poster_path': poster_path,
-                    'naver_img': naver_img,
+                    'backdrop_path': backdrop_path,
                     'youtube_url': youtube_url,
                     'rate': rate
         }
     }
     movies.update(movieInfo)
-    
+    print(title)
+
 with open('movieDetail.csv', 'w', encoding='UTF-8', newline='') as f:
-    fieldnames = ['movieCode', 'title', 'year', 'description', 'genre', 'director', 'grade', 'actors', 'poster_path', 'naver_img', 'youtube_url', 'rate']
+    fieldnames = ['movieCode', 'title', 'year', 'release_date', 'description', 'genre', 'director', 'grade', 'actors', 'poster_path', 'backdrop_path', 'youtube_url', 'rate']
     write = csv.DictWriter(f, fieldnames=fieldnames)
     write.writeheader()
     for mov in movies.values():

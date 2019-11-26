@@ -196,8 +196,10 @@
                 document.querySelector(`#follow-count-${userId}`).innerText = response.data.count
                 if (response.data.followed) {
                     event.target.style.color = 'crimson'
+                    event.target.className = 'fas fa-user-minus fa-lg follow-btn'
                 } else {
                     event.target.style.color = 'black'
+                    event.target.className = 'fas fa-user-plus fa-lg follow-btn'
                 }
                 })
             .catch(error => console.log(error))
