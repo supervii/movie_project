@@ -1,5 +1,5 @@
 <script>
-  var swiper = new Swiper('.swiper-container', {
+  var swiper1 = new Swiper('.swiper1', {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -16,17 +16,18 @@
     },
   });
   
-  var swiper2 = new Swiper('.s2', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
+  
+  var swiper2 = new Swiper('.swiper2', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
         rotate: 50,
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows: true,
-    },
-  });
+        slideShadows : true,
+      },
+    });
 </script>
