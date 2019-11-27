@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST, require_http_methods
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
-from .models import NowPlaying20, Movie, Rating
+from .models import NowPlaying20, Movie, Rating, RandYoutube
 from .forms import MovieForm, RatingForm
 
 import requests
@@ -14,7 +14,8 @@ from bs4 import BeautifulSoup
 # Create your views here.
 def now_playing(request):
     nowplays = NowPlaying20.objects.all()
-    context = {'nowplays': nowplays}
+    utubes = RandYoutube.objects.all()
+    context = {'nowplays': nowplays, 'utubes': utubes,}
     return render(request, 'movies/main.html', context)
 
 
@@ -22,6 +23,7 @@ def index(request):
     movies = Movie.objects.all()
     context = {'movies': movies, }
     return render(request, 'movies/index.html', context)
+
 
 def main(request):
     movies = Movie.objects.all()
@@ -158,6 +160,38 @@ def find_movie(request):
         return redirect('movies:index', 0)
 
 
+def search(request):
+    movies = Movie.objects.all()
+    users = User.objects.all()
+    genres = Genre.objects.all()
+    movies_list = []
+    users_list = []
+    genres_list = []
+    g_pk = 0
+    search = request.GET.get("search")
+    print(search)
+    for genre in genres:
+        if search in genre.name:
+            g_pk = genre.pk
+            break
+    for movie in movies:
+        if search in movie.title:
+            movies_list.append(movie)
+        if movie.genres.all().filter(pk=g_pk):
+            genres_list.append(movie)
+    for user in users:
+        if search in user.username:
+            users_list.append(user)
+    context = {
+        "movies" : movies_list,
+        "users" : users_list,
+        "genres" : genres_list 
+    }
+    # print("들어왔당")
+    return render(request, 'movies/search.html', context)
+
+
+# 아래부터는 DB에 넣을 것
 def get_movie_upload(request):
     movies = Movie.objects.all()
     nowplays = NowPlaying20.objects.all()
@@ -200,15 +234,20 @@ def get_movie_upload(request):
 
 def get_nowplaying(request):
     nowplays = NowPlaying20.objects.all()
+    # utubes = RandYoutube.objects.all()
     template = 'movie_upload.html'
     # prompt = {
     #     'order': 'np_title, code',
     #     'movies': nowplays,
     # }
-    prompt = {
-        'order': 'movieCode, title, year, release_date, description, genre, director, grade, actors, poster_path, backdrop_path, youtube_url, rate',
-        'movies': nowplays,
-    }
+    # prompt = {
+    #     'order': 'movieCode, title, year, release_date, description, genre, director, grade, actors, poster_path, backdrop_path, youtube_url, rate',
+    #     'movies': nowplays,
+    # }
+    # prompt = {
+    #     'order': 'you_code',
+    #     'movies': utubes,
+    # }
     if request.method == 'GET':
         return render(request, template, prompt)
     
@@ -223,12 +262,16 @@ def get_nowplaying(request):
     #         title=col[0],
     #         code=col[1],
     #     )
-    for col in csv.reader(io_string):
-        for e in nowplays:
-            if e.title == col[1]:
-                print(e.title)
-                created = NowPlaying20.objects.filter(pk=e.id).update(image=col[10])
-                print(e.image)
+    # for col in csv.reader(io_string):
+    #     for e in nowplays:
+    #         if e.title == col[1]:
+    #             print(e.title)
+    #             created = NowPlaying20.objects.filter(pk=e.id).update(image=col[10])
+    #             print(e.image)
+    # for col in csv.reader(io_string):
+    #     _, created = RandYoutube.objects.update_or_create(
+    #         code=col[0],
+    #     )
         
             
     context = {}

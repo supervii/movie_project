@@ -15,10 +15,9 @@
     {% if nowplay.image %}
     <!-- <div class="swiper-slide js-imgSizeSame"
       style="background:url('{{ nowplay.image }}') no-repeat; width: 500px; height: 300px; background-size: 500px 300px;"> -->
-    <div class="swiper-slide js-imgSizeSame" style="position: relative; height: 100vh;">
-      <div class="main-img" style="position: absolute; height: 100%;
-   width: 100%; z-index:1;">
-        <img src="{{ nowplay.image }}" alt="{{ nowplay.title }}">
+    <div class="swiper-slide js-imgSizeSame" style="position: relative; max-width: 100%; height: auto;">
+      <div class="main-img" style="position: absolute; z-index:1; max-width: 100%; height: auto;">
+        <img src="{{ nowplay.image }}" alt="{{ nowplay.title }}" style="max-width: 100%; height: auto;">
       </div>
       <div class="content" style="position: absolute; top: 50%; left: 50%;">
         <h2>{{ nowplay.title }}</h2>
@@ -29,8 +28,6 @@
     {% endif %}
     {% endfor %}
   </div>
-  <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
   <!-- Add Arrows -->
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
