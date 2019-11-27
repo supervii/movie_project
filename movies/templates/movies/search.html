@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}SEARCH{% endblock title %}
+
+{% block content %}
+<h1 class="text-center mb-5">영화 검색</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col category d-flex flex-wrap justify-content-around">
+        {% for genre in genres %}
+          <button type="button" class="font5 btn btn-secondary btn-sm mb-5 mr-1" style="padding: 5px;" 
+          onclick="location.href='{% url 'movies:search_by_genre' genre.pk %}'">{{ genre.name }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  {% if request.resolver_match.url_name == 'search' %}
+    {% for movie in results %}
+      {% include 'movies/_movie.html' %}
+    {% empty %}
+      <h3 class="text-center">{{ message }}</h3>
+    {% endfor %}
+  {% elif request.resolver_match.url_name == 'search_by_genre' %}
+    {% for movie in movies_by_genre %}
+      {% include 'movies/_movie.html' %}
+    {% empty %}
+      <h3 class="text-center">{{ message }}</h3>
+    {% endfor %}
+  {% endif %}
+  </div>
+{% include './_scripts.html' %}
+{% endblock  %}
