@@ -63,3 +63,10 @@ class Rating(models.Model):
 
     def __str__(self):
         return f'({self.user}|{self.movie}) {self.comment}'
+
+
+class RandYoutube(models.Model):
+    code = models.CharField(max_length=20)
+
+    class Meta:
+        ordering = ('pk',)

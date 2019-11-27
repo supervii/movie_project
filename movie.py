@@ -94,7 +94,7 @@ for i in range(len(movieCodes)):
         poster_path = None
     else:
         poster_key = tmdb['results'][0]['poster_path']
-        poster_path = f'https://image.tmdb.org/t/p/w500/{poster_key}'
+        poster_path = f'https://image.tmdb.org/t/p/w780/{poster_key}'
     
     if tmdb['results'] == []:
         youtube_url = None
@@ -116,7 +116,7 @@ for i in range(len(movieCodes)):
         release_date = None
     else:
         backdrop_key = tmdb['results'][0]['backdrop_path']
-        backdrop_path = f'https://image.tmdb.org/t/p/w500/{backdrop_key}'
+        backdrop_path = f'https://image.tmdb.org/t/p/original/{backdrop_key}'
         release_date = tmdb['results'][0]['release_date']
 
     

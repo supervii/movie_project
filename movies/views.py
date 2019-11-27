@@ -143,6 +143,21 @@ def like(request, movie_pk):
         return HttpResponseBadRequest()
 
 
+def find_movie(request):
+    query = request.GET.get('search_title')
+    if query:
+        title_movies = Movie.objects.filter(title__icontains=query)
+        filtered_movies = Movie.objects.filter(description__icontains=query)
+        d_movies = filtered_movies - title_movies
+        context = {
+            "title_movies" : title_movies,
+            "d_movies" : d_movies
+        }
+        return render(request,'movies/search.html',context)
+    else:
+        return redirect('movies:index', 0)
+
+
 def get_movie_upload(request):
     movies = Movie.objects.all()
     nowplays = NowPlaying20.objects.all()
@@ -178,34 +193,9 @@ def get_movie_upload(request):
             youtube_url=col[11],
             rate=col[12]
         )
-    # for col in csv.reader(io_string):
-    #     nowplays = NowPlaying20.objects.all()
-    #     for e in nowplays:
-    #         if col[1] == e.title:
-    #             _, created = NowPlaying20.objects.update_or_create(
-    #                 title=e.title,
-    #                 code=e.code,
-    #                 image=col[10],
-    #             )
     
     context = {}
     return render(request, template, context)
-
-
-def find_movie(request):
-    query = request.GET.get('search_title')
-    if query:
-        title_movies = Movie.objects.filter(title__icontains=query)
-        filtered_movies = Movie.objects.filter(description__icontains=query)
-        d_movies = filtered_movies - title_movies
-        context = {
-            "title_movies" : title_movies,
-            "d_movies" : d_movies
-        }
-        return render(request,'movies/search.html',context)
-    else:
-        return redirect('movies:index', 0)
-
 
 
 def get_nowplaying(request):
