@@ -1,0 +1,182 @@
+[
+{
+  "model": "movies.nowplaying20",
+  "pk": 1,
+  "fields": {
+    "title": "\uaca8\uc6b8\uc655\uad6d 2",
+    "code": "M000072586",
+    "image": "https://image.tmdb.org/t/p/original//xJWPZIYOEFIjZpBL7SVBGnzRYXp.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 2,
+  "fields": {
+    "title": "\ube14\ub799\uba38\ub2c8",
+    "code": "M000075354",
+    "image": "https://image.tmdb.org/t/p/original//bwghN0FilQ73W3mA7AgiqjZ8FVY.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 3,
+  "fields": {
+    "title": "\uc2e0\uc758 \ud55c \uc218: \uadc0\uc218\ud3b8",
+    "code": "M000070828",
+    "image": "https://image.tmdb.org/t/p/original//2z1JWJ4P4PuBHITxwvzVBE1DmCQ.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 4,
+  "fields": {
+    "title": "82\ub144\uc0dd \uae40\uc9c0\uc601",
+    "code": "M000065484",
+    "image": "https://image.tmdb.org/t/p/original//gBF3mCeA9ThhFyJBsmzm4XJ1yTR.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 5,
+  "fields": {
+    "title": "\ud130\ubbf8\ub124\uc774\ud130: \ub2e4\ud06c \ud398\uc774\ud2b8",
+    "code": "M000073790",
+    "image": "https://image.tmdb.org/t/p/original//riTANvQ8GKmQbgtC1ps3OfkU43A.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 6,
+  "fields": {
+    "title": "\uc724\ud76c\uc5d0\uac8c",
+    "code": "M000072287",
+    "image": "https://image.tmdb.org/t/p/original//raVnVsmdBz5Y42nqPrpR8mm1qk5.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 7,
+  "fields": {
+    "title": "\uc5d4\uc824 \ud574\uc988 \ud3f4\ub978",
+    "code": "M000074987",
+    "image": "https://image.tmdb.org/t/p/original//k2WyDw2NTUIWnuEs5gT7wgrCQg6.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 8,
+  "fields": {
+    "title": "\uc544\uc774\ub9ac\uc2dc\ub9e8",
+    "code": "M000075503",
+    "image": ""
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 9,
+  "fields": {
+    "title": "\ub0a0\uc528\uc758 \uc544\uc774",
+    "code": "M000073235",
+    "image": "https://image.tmdb.org/t/p/original//ize3ZieqSy0TCWljmVoEiy8fSFS.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 10,
+  "fields": {
+    "title": "\ub300\ud1b5\ub839\uc758 7\uc2dc\uac04",
+    "code": "M000075316",
+    "image": ""
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 11,
+  "fields": {
+    "title": "\ub098\ub97c \ucc3e\uc544\uc918",
+    "code": "M000069275",
+    "image": ""
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 12,
+  "fields": {
+    "title": "\uc5b4\uc81c \uc77c\uc740 \ubaa8\ub450 \uad1c\ucc2e\uc544",
+    "code": "M000075455",
+    "image": ""
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 13,
+  "fields": {
+    "title": "\uc880\ube44\ub79c\ub4dc: \ub354\ube14 \ud0ed",
+    "code": "M000075381",
+    "image": "https://image.tmdb.org/t/p/original//jCCdt0e8Xe9ttvevD4S3TSMNdH.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 14,
+  "fields": {
+    "title": "\ud5e4\ub85c\ub2c8\ubaa8",
+    "code": "M000075351",
+    "image": ""
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 15,
+  "fields": {
+    "title": "\uc5bc\uad74\uc5c6\ub294 \ubcf4\uc2a4",
+    "code": "M000075216",
+    "image": "https://image.tmdb.org/t/p/original//jwWRY5lxFxDqhQA3KDaLQgsak8v.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 16,
+  "fields": {
+    "title": "\uc0bd\uc9c8",
+    "code": "M000075456",
+    "image": ""
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 17,
+  "fields": {
+    "title": "\uc870\ucee4 ",
+    "code": "M000075112",
+    "image": ""
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 18,
+  "fields": {
+    "title": "\uc544\ub2f4\uc2a4 \ud328\ubc00\ub9ac",
+    "code": "M000075314",
+    "image": "https://image.tmdb.org/t/p/original//ur4NTeFGZmQ6Hz5uEkAMgPI3WRg.jpg"
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 19,
+  "fields": {
+    "title": "\ud504\ub780\uce58\uc2a4\ucf54 \uad50\ud669 : \ub9e8 \uc624\ube0c \ud788\uc2a4 \uc6cc\ub4dc",
+    "code": "M000075691",
+    "image": ""
+  }
+},
+{
+  "model": "movies.nowplaying20",
+  "pk": 20,
+  "fields": {
+    "title": "\ubc8c\uc0c8",
+    "code": "M000073258",
+    "image": "https://image.tmdb.org/t/p/original//f67vlmQx6yjYoqj4Qsi1estJJWN.jpg"
+  }
+}
+]
