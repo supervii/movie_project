@@ -1,22 +1,17 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
-
+​
 {% block title %}DETAIL OF {{ movie.title }}{% endblock title %}
-
+​
 {% block style %}
   #utube {
     position: relative;
     width: 100%;
+    height: 0;
     padding-bottom: 56.25%;
   }
-
-  #utube #contentFrame {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
 {% endblock style %}
-
+​
 {% block content %}
 <div class="container">
   <div class="row">
@@ -72,8 +67,8 @@
       </div>
     </div>
     <!-- Youtube embed 부분 -->
-    <div id="utube" class="mx-auto">
-      <iframe src="{{ movie.youtube_url }}" id="contentFrame" scrolling="no"
+    <div id="utube" class="row mx-auto">
+      <iframe src="{{ movie.youtube_url }}" style="position: absolute; width:100%; height:100%;" id="contentFrame" scrolling="no" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <script>
         function init() {
@@ -90,7 +85,7 @@
     </div>
   </div>
 </div>
-
+​
 <!-- 리뷰 보이는 곳 -->
 <div class="mx-auto">
   <hr>
@@ -102,7 +97,7 @@
         <div class="media-body row">
           <div class="col-4">
           <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
-          평점 | {{ rating.score }}
+          평점:  {{ rating.score }}
           </div>
           <div class="col-8">
           {{ rating.comment }}
@@ -163,6 +158,6 @@
   {% endif %}
   <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
 </div>
-
+​
 {% include './_scripts.html' %}
 {% endblock  %}

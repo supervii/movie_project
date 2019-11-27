@@ -2,7 +2,7 @@
 {% load bootstrap4 %}
 <!DOCTYPE html>
 <html lang="ko">
-
+​
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,28 +20,7 @@
     body {
       padding-top: 30px;
     }
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
+
     .font1 {
       font-family: 'Francois One', sans-serif;
     }
@@ -65,7 +44,7 @@
     .font6 {
       font-family: 'Noto Serif KR', serif;
     }
-
+​
     .font7 {
       font-family: 'Noto Sans KR', sans-serif;
     }
@@ -77,18 +56,18 @@
     {% block style %}{% endblock style %}
   </style>
 </head>
-
+​
 <body>
-
+​
   {% include '_nav.html' %}
-
+​
   <div class="container mt-5 font7">
     {% block content %}
     {% endblock %}
   </div>
-
+​
   {% include '_foot.html' %}
-
+​
   {% bootstrap_javascript jquery='full' %}
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 </body>

@@ -3,22 +3,15 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST, require_http_methods
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
-from .models import NowPlaying20, Movie, Rating, RandYoutube
+from .models import NowPlaying20, Movie, Rating, RandYoutube, Genre
 from .forms import MovieForm, RatingForm
 
-import requests
+import requests, random
 import csv, io
 from bs4 import BeautifulSoup
 
 
 # Create your views here.
-def now_playing(request):
-    nowplays = NowPlaying20.objects.all()
-    utubes = RandYoutube.objects.all()
-    context = {'nowplays': nowplays, 'utubes': utubes,}
-    return render(request, 'movies/main.html', context)
-
-
 def index(request):
     movies = Movie.objects.all()
     context = {'movies': movies, }
@@ -27,7 +20,19 @@ def index(request):
 
 def main(request):
     movies = Movie.objects.all()
-    context = {'movies': movies, }
+    # 첫 번째 줄
+    nowplays = NowPlaying20.objects.all()
+    
+    # 세 번째 줄
+    utubes = RandYoutube.objects.all()
+    shows = []
+    i = 0
+    while i < 4:
+        shows.append(random.choice(utubes))
+        i += 1
+
+    # 넘기기
+    context = {'movies': movies, 'nowplays': nowplays,'show1': shows[0], 'show2': shows[1], 'show3': shows[2], 'show4': shows[3]}
     return render(request, 'movies/main.html', context)
 
 

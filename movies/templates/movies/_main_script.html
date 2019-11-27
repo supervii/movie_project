@@ -3,7 +3,7 @@
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 2500,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -13,6 +13,17 @@
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+  });
+  
+  var swiperU = new Swiper('.swiper-container-utube', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-utube',
+      prevEl: '.swiper-button-prev-utube',
     },
   });
 </script>
