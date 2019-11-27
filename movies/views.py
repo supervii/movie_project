@@ -19,20 +19,36 @@ def index(request):
 
 
 def main(request):
-    movies = Movie.objects.all()
     # 첫 번째 줄
     nowplays = NowPlaying20.objects.all()
     
+    # 두 번째 줄
+    # 전체 영화 불러오기
+    candidates = Movie.objects.all().order_by('-release_date')[:50]
+    tmp = []
+    for candidate in candidates:
+        tmp.append(candidate)
+    
+    recommends = []
+    i = 0
+    while i < 5:
+        rec = random.choice(tmp)
+        if rec not in recommends:
+            recommends.append(rec)
+        i += 1
+
     # 세 번째 줄
     utubes = RandYoutube.objects.all()
     shows = []
     i = 0
     while i < 4:
-        shows.append(random.choice(utubes))
+        utube = random.choice(utubes)
+        if utube not in shows:
+            shows.append(utube)
         i += 1
 
     # 넘기기
-    context = {'movies': movies, 'nowplays': nowplays,'show1': shows[0], 'show2': shows[1], 'show3': shows[2], 'show4': shows[3]}
+    context = {'nowplays': nowplays, 'recommends': recommends, 'show1': shows[0], 'show2': shows[1], 'show3': shows[2], 'show4': shows[3]}
     return render(request, 'movies/main.html', context)
 
 
