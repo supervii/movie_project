@@ -1,11 +1,11 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top font3">
   {% if user.is_superuser %}
   <!-- 관리자 -->
-  <a class="navbar-brand" href="{% url 'movies:index' %}">
-  <img style="height=30px; width:30px;" src="{% static 'accounts/images/logo.png' %}" alt="logo">
-      관리자
+  <a class="navbar-brand" href="{% url 'movies:main' %}">
+  <img style="height=35px; width:35px;" class="mr-1" src="{% static 'accounts/images/logo.png' %}" alt="logo">
   </a>
+  <h4 class="d-inline mt-2">MOVIE EIVOM | 관리자</h4>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,18 +13,18 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav font5">
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'movies:create' %}">영화 정보 생성</a>
+        <a class="nav-link" href="{% url 'accounts:logout' %}">로그아웃</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'accounts:logout' %}">로그아웃</a>
+        <a class="nav-link" href="{% url 'movies:create' %}">영화 정보 생성</a>
       </li>
     </ul>
     <i class="fas fa-search ml-2 mr-4" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></i>
     <div class="collapse" id="collapseExample">
   
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form class="form-inline" action="{% url 'movies:search' %}" method="GET">
+        <input name="search" class="form-control mr-sm-2" type="search" placeholder="검색어 입력" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
       </form>
       
     </div>
@@ -33,7 +33,7 @@
   {% elif user.is_authenticated %}
   <!-- 로그인 한 일반 사용자 -->
 
-  <a class="navbar-brand font3" href="{% url 'movies:index' %}"><img style="height=30px; width:30px;" src="{% static 'accounts/images/logo.png' %}" alt="logo">
+  <a class="navbar-brand font3" href="{% url 'movies:main' %}"><img style="height=30px; width:30px;" src="{% static 'accounts/images/logo.png' %}" alt="logo">
     MOVIE EIVOM | {{ user.nickname }}
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -43,12 +43,11 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav font5">
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'accounts:detail' user.pk %}">내 프로필</a>
-      </li>
-     
-      <li class="nav-item">
         <a class="nav-link" href="{% url 'accounts:logout' %}">로그아웃</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'accounts:detail' user.pk %}">내 프로필</a>
+      </li>     
     </ul>
     <i class="fas fa-search ml-2 mr-4" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></i>
     <div class="collapse" id="collapseExample">
@@ -63,9 +62,9 @@
 
   {% else %}
   <!-- 로그인하지 않은 사용자 -->
-  <a class="navbar-brand font3" href="{% url 'movies:index' %}">
+  <a class="navbar-brand font3" href="{% url 'movies:main' %}">
   <img style="height=30px; width:30px;" src="{% static 'accounts/images/logo.png' %}" alt="logo">
-    로그인 후 사용해 주세요.
+    MOVIE EIVOM | 로그인 후 사용해 주세요.
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">

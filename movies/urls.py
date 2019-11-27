@@ -4,7 +4,8 @@ from . import views
 app_name = 'movies'
 urlpatterns = [
     path('', views.main, name='main'),
-    path('search/', views.index, name='index'),
+    path('search/', views.search, name='search'),
+    path('search/<int:genre_pk>/', views.search_by_genre, name='search_by_genre'),
     path('create/', views.create, name='create'),
     path('<int:movie_pk>/', views.detail, name='detail'),
     path('<int:movie_pk>/delete/', views.delete, name='delete'),

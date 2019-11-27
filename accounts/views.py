@@ -33,13 +33,13 @@ def list(request):
 # 2-1. 회원가입
 def signup(request):
     if request.user.is_authenticated:
-        return redirect('movies:index')
+        return redirect('movies:main')
     if request.method == 'POST':
         form = UserCustomCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             auth_login(request, user)
-            return redirect('movies:index')
+            return redirect('movies:main')
     else:
         form = UserCustomCreationForm()
     context = {'form': form,}
@@ -52,7 +52,7 @@ def login(request):
         login_form = AuthenticationForm(request, request.POST)
         if login_form.is_valid():
             auth_login(request, login_form.get_user())
-            return redirect('movies:index')
+            return redirect('movies:main')
     else:
         login_form = AuthenticationForm()
     context = {'login_form': login_form}
@@ -72,7 +72,7 @@ def update(request):
         form = CustomProfileForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            return redirect('movies:index')
+            return redirect('movies:main')
     else:
         form = CustomProfileForm(instance=request.user)
     context = {'form': form}

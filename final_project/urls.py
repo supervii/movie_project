@@ -19,8 +19,8 @@ from movies import views as movies_views
 
 urlpatterns = [
     path('', movies_views.main),
-    path('upload-movie/', movies_views.get_movie_upload, name='movie_upload'),
-    path('upload-nowplaying/', movies_views.get_nowplaying, name='nowplaying'),
+    # path('upload-movie/', movies_views.get_movie_upload, name='movie_upload'),
+    # path('upload-nowplaying/', movies_views.get_nowplaying, name='nowplaying'),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('allauth.urls')),
     path('movies/', include('movies.urls')),
