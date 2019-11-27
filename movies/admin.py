@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Genre, NowPlaying20, Movie, Rating
+from .models import Genre, NowPlaying20, Movie, Rating, RandYoutube
 
 # Register your models here.
 @admin.register(Genre)
@@ -21,3 +21,8 @@ class MovieAdmin(admin.ModelAdmin):
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
     list_display = ('pk', 'score', 'movie_id', 'user_id',)
+
+
+@admin.register(RandYoutube)
+class RandYoutubeAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'code',)
