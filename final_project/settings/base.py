@@ -125,7 +125,7 @@ STATIC_ROOT = 'static'
 
 AUTH_USER_MODEL = 'accounts.User'
 
-LOGIN_REDIRECT_URL = 'movies:index'
+LOGIN_REDIRECT_URL = 'movies:main'
 
 SITE_ID = 1
 
