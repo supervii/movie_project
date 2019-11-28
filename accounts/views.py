@@ -48,15 +48,18 @@ def signup(request):
 
 # 2-2. 로그인
 def login(request):
-    if request.method == 'POST':
-        login_form = AuthenticationForm(request, request.POST)
-        if login_form.is_valid():
-            auth_login(request, login_form.get_user())
-            return redirect('movies:main')
+    if not request.user.is_authenticated:
+        if request.method == 'POST':
+            login_form = AuthenticationForm(request, request.POST)
+            if login_form.is_valid():
+                auth_login(request, login_form.get_user())
+                return redirect('movies:main')
+        else:
+            login_form = AuthenticationForm()
+        context = {'login_form': login_form}
+        return render(request, 'accounts/login.html', context)
     else:
-        login_form = AuthenticationForm()
-    context = {'login_form': login_form}
-    return render(request, 'accounts/login.html', context)
+        return redirect('movies:main')
 
 
 # 2-3. 로그아웃
