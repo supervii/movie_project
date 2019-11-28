@@ -12,7 +12,11 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+  <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/bars-reversed.css">
   
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <link
     href="https://fonts.googleapis.com/css?family=Archivo+Black|Francois+One|Hammersmith+One|Krona+One|Nanum+Gothic:700|Noto+Serif+KR:400,600,700|Noto+Sans+KR:400,500,700&display=swap&subset=korean"
     rel="stylesheet">
@@ -83,7 +87,7 @@
   {% include '_foot.html' %}
 ​
   {% bootstrap_javascript jquery='full' %}
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-</body>
 {% include 'movies/_main_script.html' %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
+</body>
 </html>

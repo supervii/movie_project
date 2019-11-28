@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'movies.apps.MoviesConfig',
     'bootstrap4',
+    'django_starfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',
@@ -127,3 +128,5 @@ AUTH_USER_MODEL = 'accounts.User'
 LOGIN_REDIRECT_URL = 'movies:index'
 
 SITE_ID = 1
+
+STARFIELD_STARS = 10

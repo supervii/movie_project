@@ -10,6 +10,20 @@
     height: 0;
     padding-bottom: 56.25%;
   }
+  .br-theme-bars-reversed .br-widget a {
+    background-color: grey;
+  }
+
+  .br-theme-bars-reversed .br-widget a.br-active,
+  .br-theme-bars-reversed .br-widget a.br-selected {
+    background-color: black;
+  }
+
+  .br-theme-bars-reversed .br-widget .br-current-rating {
+    color: black;
+    font-size: 20px;  
+  }
+  
 {% endblock style %}
 
 {% block content %}
@@ -23,7 +37,7 @@
           {% else %}
             <h5 class="d-inline"><i class="fas fa-heart fa-lg like-btn ml-2" style="color: black;" data-id="{{ movie.pk }}"></i></h5>
           {% endif %}
-          <h5 class="ml-2 d-inline"><span class="badge badge-info">{{ movie.genre }}</span></h5>
+          <h5 class="ml-2 d-inline"><span class="badge badge-info" onclick="location.href='{% url 'movies:search_by_genre' movie.genre.pk %}'">{{ movie.genre }}</span></h5>
         <h5 class="mt-2 m-0">
           <span id="like-count-{{ movie.pk }}">{{ movie.like_users.all|length }}</span> 명이 이 영화를 좋아합니다.
         </h5>
@@ -98,7 +112,7 @@
           <div class="media-body row">
             <div class="col-4">
             <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
-            평점:  {{ rating.score }}
+            평점: {{ rating.score }} 점
             </div>
             <div class="col-8">
             {{ rating.comment }}
@@ -116,7 +130,7 @@
                 <div class="media-body row">
                   <div class="col-4">
                   <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
-                  평점 | {{ rating.score }}
+                  평점: {{ rating.score }} 점
                   </div>
                   <div class="col-8">
                   {{ rating.comment }}
@@ -131,7 +145,7 @@
             <div class="media-body row">
               <div class="col-4">
               <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
-              평점 | {{ rating.score }}
+              평점: {{ rating.score }} 점
               </div>
               <div class="col-8">
               {{ rating.comment }}
@@ -143,15 +157,15 @@
       {% endif %}
       {% empty %}
       <p><b>입력된 리뷰가 없습니다.</b></p>
+      <hr>
     {% endfor %}
   </ul>
-
-    <!-- 댓글 작성 공간(form) -->
+    <!-- 리뷰 작성 공간(form) -->
     {% if user.is_authenticated  %}
     <form action="{% url 'movies:rating_create' movie.pk %}" method="POST">
       {% csrf_token %}
       {% bootstrap_form rating_form %}
-      <input class="btn btn-secondary" type="submit" value="리뷰 추가">
+      <input class="btn btn-secondary d-block" type="submit" value="리뷰 추가">
     </form>
     <hr>
     {% else %}

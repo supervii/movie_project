@@ -46,9 +46,12 @@ def search_by_genre(request, genre_pk):
     # 개별 장르로 검색하기
     message = '검색 내용이 없습니다.'
     genres = Genre.objects.all()
+    genre = Genre.objects.filter(pk=genre_pk)[0]
+    print(genre)
     movies_by_genre = Movie.objects.all().filter(genre_id=genre_pk)
     context = {
         'genres': genres,
+        'genre': genre,
         'movies_by_genre': movies_by_genre,
         'message': message,
     }
@@ -78,9 +81,9 @@ def search(request):
         }
         return render(request,'movies/search.html', context)
     else:
-        message = '검색 내용이 없습니다.'
+        movies = Movie.objects.all()
         # return redirect('movies:index')
-        context = {'message': message, 'genres': genres, }
+        context = {'results': movies, 'genres': genres, }
         return render(request,'movies/search.html', context)
 
 
