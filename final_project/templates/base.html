@@ -10,7 +10,9 @@
   <title>{% block title %}{% endblock title %}</title>
   <script src="https://kit.fontawesome.com/8fb1a5fc3b.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  
   <link
     href="https://fonts.googleapis.com/css?family=Archivo+Black|Francois+One|Hammersmith+One|Krona+One|Nanum+Gothic:700|Noto+Serif+KR:400,600,700|Noto+Sans+KR:400,500,700&display=swap&subset=korean"
     rel="stylesheet">
@@ -53,7 +55,7 @@
       color: black;
       text-decoration: none;
     }
-     .main_info_section {padding: 60px 0;}
+    .main_info_section {padding: 60px 0;}
     .main_info_section {padding: 40px 0;}
     .main_info_item {padding-bottom: 45px;}
     .main_info_title {font-size: 15px;}
@@ -64,6 +66,7 @@
     .main_info_swiper {max-width: 1000px;}
     .main_info_swiper .swiper-wrapper {justify-content: center;}
     .main_info_swiper .swiper-slide {width: 33.33%;}
+    }
     {% block style %}{% endblock style %}
   </style>
 </head>

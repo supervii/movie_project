@@ -14,28 +14,30 @@
 {% endblock style %}
 
 {% block content %}
-<h1 class="font1">Login</h1><hr>
-<div class="parent-login">
-    <div class="child-login text-center">
-        <form id="loginform" method="POST">
-            {% csrf_token %}
-            {% bootstrap_form login_form %}<br>
+<div class="container">
+    <h1 class="font1">Login</h1><hr>
+    <div class="parent-login">
+        <div class="child-login text-center">
+            <form id="loginform" method="POST">
+                {% csrf_token %}
+                {% bootstrap_form login_form %}<br>
+                <br>
+                <button class="btn btn-light" type="submit" name="action" style="width: 300px;">로그인   
+                </button>
+            </form>
+            
+            <a href="{% provider_login_url 'kakao' %}">
+            <img src="{% static 'accounts/images/kakao_btn.png' %}" class="login_btn" alt="kakao">
+            </a> <br>
+            <a href="{% provider_login_url 'naver' %}"> 
+            <img src="{% static 'accounts/images/naver_btn.png' %}" class="login_btn" alt="naver">
+            </a> <br>
+            <a href="{% provider_login_url 'google' %}">
+            <img src="{% static 'accounts/images/google_btn.png' %}" class="login_btn" style="width=302px; height=50px;" alt="google">
+            </a> <br>
             <br>
-            <button class="btn btn-light" type="submit" name="action" style="width: 300px;">로그인   
-            </button>
-        </form>
-        
-        <a href="{% provider_login_url 'kakao' %}">
-        <img src="{% static 'accounts/images/kakao_btn.png' %}" class="login_btn" alt="kakao">
-        </a> <br>
-        <a href="{% provider_login_url 'naver' %}"> 
-        <img src="{% static 'accounts/images/naver_btn.png' %}" class="login_btn" alt="naver">
-        </a> <br>
-        <a href="{% provider_login_url 'google' %}">
-        <img src="{% static 'accounts/images/google_btn.png' %}" class="login_btn" style="width=302px; height=50px;" alt="google">
-        </a> <br>
-        <br>
-        <p class="text-center">회원이 아니라면 <a id="a-signup" href="{% url 'accounts:signup' %}"><b>지금 가입하세요.</b></a></p>
+            <p class="text-center">회원이 아니라면 <a id="a-signup" href="{% url 'accounts:signup' %}"><b>지금 가입하세요.</b></a></p>
+        </div>
     </div>
 </div>
 
