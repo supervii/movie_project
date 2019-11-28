@@ -48,7 +48,7 @@ def signup(request):
 
 # 2-2. 로그인
 def login(request):
-    if request.user.is_authenticated:
+    if not request.user.is_authenticated:
         if request.method == 'POST':
             login_form = AuthenticationForm(request, request.POST)
             if login_form.is_valid():
