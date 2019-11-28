@@ -37,6 +37,7 @@
   }
 
   .swiper-slide .swiper2 {
+      
       background-position: center;
       background-size: cover;
       width: 300px;
@@ -127,7 +128,7 @@
 <!-- backdrop 아니고 poster 사용; 클릭하면 detail 페이지로 넘어갈 것임-->
 <hr>
   <div class="text-center mt-3">
-    <div id="recommend" class="swiper-container swiper2">
+    <div id="recommend" class="swiper-container swiper2" style="background:url('{% static 'accounts/images/back.jpg' %}') no-repeat; width:100%; background-size: cover;">
     <h1 class="mt-3 font5">당신을 위한 추천 영화</h1>
         <div class="swiper-wrapper swiper2">
             {% for recommend in recommends %}
@@ -324,5 +325,10 @@
       }
   }
 
+var touch = Modernizr.touch;
+$('.img-holder').imageScroll({
+  imageAttribute: (touch === true) ? 'image-mobile' : 'image',
+  touch: touch
+});
 </script>
 {% endblock %}

@@ -1,0 +1,24 @@
+{
+  "name": "movie_eivom",
+  "version": "1.0.0",
+  "description": "ssafy_project",
+  "main": "index.js",
+  "dependencies": {
+    "html-to-json": "^0.6.0",
+    "parallax-imagescroll": "^0.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supervii/movie_project.git"
+  },
+  "author": "supervii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supervii/movie_project/issues"
+  },
+  "homepage": "https://github.com/supervii/movie_project#readme"
+}
