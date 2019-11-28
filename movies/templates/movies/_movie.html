@@ -4,6 +4,7 @@
   <img src="{{ movie.poster_path }}" style="height: 25rem;" class="img-fluid" alt="{{ movie.title }}" onclick="location.href='{% url 'movies:detail' movie.pk %}'">
   <div class="card-body">
     <h5 class="card-title text-center">{{ movie.title }}</h5>
+    <p class="text-center">등급: {{ movie.grade }} | 평점: {{ movie.rate }}</p>
     <p class="text-center">
       {% if user in movie.like_users.all %}
         <i class="fas fa-heart fa-lg like-btn" style="color: crimson;" data-id="{{ movie.pk }}"></i>
@@ -15,16 +16,4 @@
   </div>
 </div>
 
-
-  {% comment %} <a href="{% url 'movies:detail' movie.pk %}">
-    <img src="{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}">
-  </a>
-    <p class="text-center">
-      {% if user in movie.like_users.all %}
-        <i class="fas fa-heart fa-lg like-btn" style="color: crimson;" data-id="{{ movie.pk }}"></i>
-      {% else %}
-        <i class="fas fa-heart fa-lg like-btn" style="color: black;" data-id="{{ movie.pk }}"></i>
-      {% endif %}
-      <span id="like-count-{{ movie.pk }}">{{ movie.like_users.all|length }}</span> 명이 이 영화를 좋아합니다.
-    </p> {% endcomment %}
 </div>

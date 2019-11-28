@@ -1,6 +1,6 @@
 from django import forms
 from .models import Movie, Genre, Rating, GRADE_CHOICES
-
+from django_starfield import Stars
 
 class MovieForm(forms.ModelForm):
     movieCode = forms.IntegerField()
@@ -118,9 +118,9 @@ class RatingForm(forms.ModelForm):
             }
         )
     )
-        
-    score = forms.IntegerField(max_value=10, min_value=0)
+
+    score = forms.IntegerField(widget=Stars)
 
     class Meta:
         model = Rating
-        fields = ('comment', 'score',)
+        fields = ('comment', 'score')
