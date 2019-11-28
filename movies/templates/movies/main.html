@@ -37,6 +37,7 @@
   }
 
   .swiper-slide .swiper2 {
+      
       background-position: center;
       background-size: cover;
       width: 300px;
@@ -84,8 +85,9 @@
 .main_info_icon .icon_g {margin-top: 5px; width: 35px; height: 35px;;}
 .main_info_title {margin: 4px 0 8px;}
 .main_info_text {font-size: 14px; line-height: 1.5em;}
-
-
+.bestseller_item {display: block; position: relative; border-radius: 8px 8px; overflow: hidden;}
+.bestseller_item:hover .bestseller_info {opacity: 1}
+.bestseller_item {padding-bottom: 0;}
 {% endblock style %}
 
 {% block content %}
@@ -127,11 +129,11 @@
 <!-- backdrop 아니고 poster 사용; 클릭하면 detail 페이지로 넘어갈 것임-->
 <hr>
   <div class="text-center mt-3">
-    <div id="recommend" class="swiper-container swiper2">
-    <h1 class="mt-3 font5">당신을 위한 추천 영화</h1>
+    <div id="recommend" class="swiper-container swiper2" style="background:url('{% static 'accounts/images/back.jpg' %}') no-repeat; width:100%; background-size: cover;">
+    <h1 class="text-center text-dark mt-5 font5"><a class="text-dark font5" href="#recommend" onMouseOver="this.innerHTML='EIVOM's 픽'" onMouseOut="this.innerHTML='아이봄 추천 영화'">EIVOM's 픽</a></h1>
         <div class="swiper-wrapper swiper2">
             {% for recommend in recommends %}
-            <div id="recommend" class="swiper-slide swiper2" style="width:300px; height:420px; background:
+            <div id="recommend" class="swiper-slide swiper2 bestseller_item" style="width:300px; height:420px; background:
                                 url('{{ recommend.poster_path }}') no-repeat; 
                     background-size: 100% 100%;"
                 onclick="location.href='{% url 'movies:detail' recommend.pk %}'">
@@ -149,7 +151,7 @@
 <!-- Swiper -->
 <!-- Carousel -->
 
-<h1 class="text-center text-dark mt-5 mb-5 font5"><a class="text-dark font5" href="#myCarousel" onMouseOver="this.innerHTML='EIVOMer의 추천영화'" onMouseOut="this.innerHTML='이봄러 추천 영화'">EIVOMer이봄러 추천 영화</a></h1>
+<h1 class="text-center text-dark mt-5 mb-5 font5"><a class="text-dark font5" href="#myCarousel" onMouseOver="this.innerHTML='EIVOMer의 추천영화'" onMouseOut="this.innerHTML='아이봄러 추천 영화'">EIVOMer아이봄러 추천 영화</a></h1>
 <div id="myCarousel" class="carousel slide w-75 mx-auto" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <!-- 02_carousel -->
@@ -315,7 +317,7 @@
   function onPlayerReady(event) {
       event.target.playVideo();
   }
-
+ 
   var done = false;
   function onPlayerStateChange(event) {
       if (event.data == YT.PlayerState.PLAYING && !done) {
@@ -324,5 +326,10 @@
       }
   }
 
+var touch = Modernizr.touch;
+$('.img-holder').imageScroll({
+  imageAttribute: (touch === true) ? 'image-mobile' : 'image',
+  touch: touch
+});
 </script>
 {% endblock %}
