@@ -5,7 +5,7 @@
   <a class="navbar-brand mt-2" href="{% url 'movies:main' %}">
   <img style="height=35px; width:35px;" class="mr-1" src="{% static 'accounts/images/logo.png' %}" alt="logo">
   </a>
-  <h4 class="d-inline mt-3 ">MOVIE EIVOM | 관리자</h4>
+  <h4 class="d-inline mt-3 ">| 관리자</h4>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
   
       <form class="form-inline" action="{% url 'movies:search' %}" method="GET">
         <input name="search" class="form-control mr-sm-2" type="search" placeholder="검색어 입력" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">검색</button>
       </form>
       
     </div>
@@ -54,7 +54,7 @@
   
       <form class="form-inline" action="{% url 'movies:search' %}" method="GET">
         <input name="search" class="form-control mr-sm-2" type="search" placeholder="검색어 입력" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">검색</button>
       </form>
       
     </div>
