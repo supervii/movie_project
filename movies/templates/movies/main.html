@@ -88,6 +88,21 @@
 .bestseller_item {display: block; position: relative; border-radius: 8px 8px; overflow: hidden;}
 .bestseller_item:hover .bestseller_info {opacity: 1}
 .bestseller_item {padding-bottom: 0;}
+
+@media (max-width: 500px) {
+  .tgt {
+    position: absolute;
+    top: 40%;
+    center;
+  }
+}
+@media (min-width: 500px) {
+  .tgt {
+    position: absolute;
+    top: 60%;
+    center;
+  }
+}
 {% endblock style %}
 
 {% block content %}
@@ -107,7 +122,7 @@
       <div class="main-img">
         <img src="{{ nowplay.image }}" alt="{{ nowplay.title }}" style="max-width: 100%; height: auto;">
       </div>
-      <div class="content" style="position: absolute; top: 60%; center;">
+      <div class="content tgt">
         <div class="container-np">
           <div class="neon">Now Showing! </div>
         </div>
@@ -130,7 +145,7 @@
 <hr>
   <div class="text-center mt-3">
     <div id="recommend" class="swiper-container swiper2" style="background:url('{% static 'accounts/images/back.jpg' %}') no-repeat; width:100%; background-size: cover;">
-    <h1 class="text-center text-dark mt-5 font5"><a class="text-dark font5" href="#recommend" onMouseOver="this.innerHTML='EIVOM's 픽'" onMouseOut="this.innerHTML='아이봄 추천 영화'">EIVOM's 픽</a></h1>
+    <h2 class="text-center text-dark mt-5 font5"><a class="text-dark font5" href="#recommend" onMouseOver="this.innerHTML='EIVOM's 픽'" onMouseOut="this.innerHTML='아이봄 추천 영화'">EIVOM's 픽</a></h2>
         <div class="swiper-wrapper swiper2">
             {% for recommend in recommends %}
             <div id="recommend" class="swiper-slide swiper2 bestseller_item" style="width:300px; height:420px; background:
@@ -151,7 +166,7 @@
 <!-- Swiper -->
 <!-- Carousel -->
 
-<h1 class="text-center text-dark mt-5 mb-5 font5"><a class="text-dark font5" href="#myCarousel" onMouseOver="this.innerHTML='EIVOMer의 추천영화'" onMouseOut="this.innerHTML='아이봄러 추천 영화'">EIVOMer아이봄러 추천 영화</a></h1>
+<h2 class="text-center text-dark mt-5 mb-5 font5"><a class="text-dark font5" href="#myCarousel" onMouseOver="this.innerHTML='EIVOMer의 추천영화'" onMouseOut="this.innerHTML='아이봄러 추천 영화'">EIVOMer아이봄러 추천 영화</a></h2>
 <div id="myCarousel" class="carousel slide w-75 mx-auto" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <!-- 02_carousel -->
