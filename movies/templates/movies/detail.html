@@ -11,153 +11,156 @@
     padding-bottom: 56.25%;
   }
 {% endblock style %}
-​
+
 {% block content %}
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1 class="d-inline">{{ movie.title }} <small>({{ movie.year }})</small></h1>
-        {% if user in movie.like_users.all %}
-          <h5 class="d-inline"><i class="fas fa-heart fa-lg like-btn ml-2" style="color: crimson;" data-id="{{ movie.pk }}"></i></h5>
-        {% else %}
-          <h5 class="d-inline"><i class="fas fa-heart fa-lg like-btn ml-2" style="color: black;" data-id="{{ movie.pk }}"></i></h5>
-        {% endif %}
-        <h5 class="ml-2 d-inline"><span class="badge badge-info">{{ movie.genre }}</span></h5>
-      <h5 class="mt-2 m-0">
-        <span id="like-count-{{ movie.pk }}">{{ movie.like_users.all|length }}</span> 명이 이 영화를 좋아합니다.
-      </h5>
-    </div>
-    {% if user.is_superuser %}
-    <div class="col-6">
-      <a href="{% url 'movies:update' movie.pk %}" class="btn btn-primary d-inline float-right">영화 정보 수정</a>
-    </div>
-    {% endif %}
-  </div>
-</div>
-<hr>
-<div class="container">
-  <div class="row">
-    <!-- 영화 포스터 -->
-    <div class="col-sm poster text-center mb-3">
-      <img src="{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}">
-    </div>
-    <!-- 영화 소개 등 -->
-    <div class="col-sm jumbotron bg-white">
-      <div class="row row-top">
-        <div class="grade col-6">
-          <h5>{{ movie.grade }}</h5>
-        </div>
-        <div class="rate col-6">
-          <h5>평점: {{ movie.rate }}</h5>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="d-inline">{{ movie.title }} <small>({{ movie.year }})</small></h1>
+          {% if user in movie.like_users.all %}
+            <h5 class="d-inline"><i class="fas fa-heart fa-lg like-btn ml-2" style="color: crimson;" data-id="{{ movie.pk }}"></i></h5>
+          {% else %}
+            <h5 class="d-inline"><i class="fas fa-heart fa-lg like-btn ml-2" style="color: black;" data-id="{{ movie.pk }}"></i></h5>
+          {% endif %}
+          <h5 class="ml-2 d-inline"><span class="badge badge-info">{{ movie.genre }}</span></h5>
+        <h5 class="mt-2 m-0">
+          <span id="like-count-{{ movie.pk }}">{{ movie.like_users.all|length }}</span> 명이 이 영화를 좋아합니다.
+        </h5>
       </div>
-      <hr>
-      <h4>개요</h4>
-      <p class="lead">{{ movie.description }}</p>
-      <hr class="my-4">
-      <div class="row">
-        <div class="row-6 col-6 director">
-          <h5>감독</h5>
-          <p>{{ movie.director }}</p>
-        </div>
-        <div class="row-6 col-6 actors">
-          <h5>출연</h5>
-          <p>{{ movie.actors }}</p>
-        </div>
+      {% if user.is_superuser %}
+      <div class="col-6">
+        <a href="{% url 'movies:update' movie.pk %}" class="btn btn-primary d-inline float-right">영화 정보 수정</a>
       </div>
-    </div>
-    <!-- Youtube embed 부분 -->
-    <div id="utube" class="row mx-auto">
-      <iframe src="{{ movie.youtube_url }}" style="position: absolute; width:100%; height:100%;" id="contentFrame" scrolling="no" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <script>
-        function init() {
-          const doc = document.getElementById('utube');
-          if (doc.offsetHeight == 0) {} else {
-            pageheight = doc.offsetHeight
-            parent.document.getElementById("contentFrame").height = pageheight + "px"
-          }
-        }
-        window.onload = function () {
-          init()
-        }
-      </script>
+      {% endif %}
     </div>
   </div>
-</div>
-​
-<!-- 리뷰 보이는 곳 -->
-<div class="mx-auto">
   <hr>
-  <ul class="list-unstyled">
-    {% for rating in ratings %}
-    {% if not user.is_authenticated %}
-    <!-- 로그인하지 않은 사용자의 경우 -->
-      <li class="media">
-        <div class="media-body row">
-          <div class="col-4">
-          <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
-          평점:  {{ rating.score }}
+  <div class="container">
+    <div class="row">
+      <!-- 영화 포스터 -->
+      <div class="col-sm poster text-center mb-3">
+        <img src="{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}">
+      </div>
+      <!-- 영화 소개 등 -->
+      <div class="col-sm jumbotron bg-white">
+        <div class="row row-top">
+          <div class="grade col-6">
+            <h5>{{ movie.grade }}</h5>
           </div>
-          <div class="col-8">
-          {{ rating.comment }}
+          <div class="rate col-6">
+            <h5>평점: {{ movie.rate }}</h5>
           </div>
         </div>
-      </li>
-    <hr>
-    {% else %}
-    <!-- 로그인한 사용자 -->
-      {% if request.user == rating.user %}
-        <!-- rating 작성자인 경우 -->
-          <form action="{% url 'movies:rating_delete' movie.pk rating.pk %}" method="POST">
-          {% csrf_token %}
-            <li class="media">
-              <div class="media-body row">
-                <div class="col-4">
-                <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
-                평점 | {{ rating.score }}
-                </div>
-                <div class="col-8">
-                {{ rating.comment }}
-                <button type="submit" class="btn float-right" style="margin: 0; padding: 0; background-color:transparent"><i class="far fa-lg fa-trash-alt"></i></button>
-                </div>
-              </div>
-            </li>
-          </form>
         <hr>
-      {% else %}
+        <h4>개요</h4>
+        <p class="lead">{{ movie.description }}</p>
+        <hr class="my-4">
+        <div class="row">
+          <div class="row-6 col-6 director">
+            <h5>감독</h5>
+            <p>{{ movie.director }}</p>
+          </div>
+          <div class="row-6 col-6 actors">
+            <h5>출연</h5>
+            <p>{{ movie.actors }}</p>
+          </div>
+        </div>
+      </div>
+      <!-- Youtube embed 부분 -->
+      <div id="utube" class="row mx-auto">
+        <iframe src="{{ movie.youtube_url }}" style="position: absolute; width:100%; height:100%;" id="contentFrame" scrolling="no" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <script>
+          function init() {
+            const doc = document.getElementById('utube');
+            if (doc.offsetHeight == 0) {} else {
+              pageheight = doc.offsetHeight
+              parent.document.getElementById("contentFrame").height = pageheight + "px"
+            }
+          }
+          window.onload = function () {
+            init()
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+  ​
+  <!-- 리뷰 보이는 곳 -->
+  <div class="mx-auto">
+    <hr>
+    <ul class="list-unstyled">
+      {% for rating in ratings %}
+      {% if not user.is_authenticated %}
+      <!-- 로그인하지 않은 사용자의 경우 -->
         <li class="media">
           <div class="media-body row">
             <div class="col-4">
             <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
-            평점 | {{ rating.score }}
+            평점:  {{ rating.score }}
             </div>
             <div class="col-8">
             {{ rating.comment }}
             </div>
           </div>
         </li>
-        <hr>
+      <hr>
+      {% else %}
+      <!-- 로그인한 사용자 -->
+        {% if request.user == rating.user %}
+          <!-- rating 작성자인 경우 -->
+            <form action="{% url 'movies:rating_delete' movie.pk rating.pk %}" method="POST">
+            {% csrf_token %}
+              <li class="media">
+                <div class="media-body row">
+                  <div class="col-4">
+                  <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
+                  평점 | {{ rating.score }}
+                  </div>
+                  <div class="col-8">
+                  {{ rating.comment }}
+                  <button type="submit" class="btn float-right" style="margin: 0; padding: 0; background-color:transparent"><i class="far fa-lg fa-trash-alt"></i></button>
+                  </div>
+                </div>
+              </li>
+            </form>
+          <hr>
+        {% else %}
+          <li class="media">
+            <div class="media-body row">
+              <div class="col-4">
+              <h6 class="mt-0 mb-1">{{ rating.user }}</h6>
+              평점 | {{ rating.score }}
+              </div>
+              <div class="col-8">
+              {{ rating.comment }}
+              </div>
+            </div>
+          </li>
+          <hr>
+        {% endif %}
       {% endif %}
+      {% empty %}
+      <p><b>입력된 리뷰가 없습니다.</b></p>
+    {% endfor %}
+  </ul>
+
+    <!-- 댓글 작성 공간(form) -->
+    {% if user.is_authenticated  %}
+    <form action="{% url 'movies:rating_create' movie.pk %}" method="POST">
+      {% csrf_token %}
+      {% bootstrap_form rating_form %}
+      <input class="btn btn-secondary" type="submit" value="리뷰 추가">
+    </form>
+    <hr>
+    {% else %}
+    <a class="btn btn-warning" href="{% url 'accounts:login' %}">리뷰를 작성하려면 로그인하세요.</a>
+    <hr>
     {% endif %}
-    {% empty %}
-    <p><b>입력된 리뷰가 없습니다.</b></p>
-  {% endfor %}
-</ul>
-  <!-- 댓글 작성 공간(form) -->
-  {% if user.is_authenticated  %}
-  <form action="{% url 'movies:rating_create' movie.pk %}" method="POST">
-    {% csrf_token %}
-    {% bootstrap_form rating_form %}
-    <input class="btn btn-secondary" type="submit" value="리뷰 추가">
-  </form>
-  <hr>
-  {% else %}
-  <a class="btn btn-warning" href="{% url 'accounts:login' %}">리뷰를 작성하려면 로그인하세요.</a>
-  <hr>
-  {% endif %}
-  <a class="btn btn-primary" href="{% url 'movies:index' %}">BACK</a>
+    <a class="btn btn-primary" href="{% url 'movies:main' %}">BACK</a>
+  </div>
 </div>
-​
+
 {% include './_scripts.html' %}
 {% endblock  %}

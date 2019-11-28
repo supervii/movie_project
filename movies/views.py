@@ -18,28 +18,24 @@ def main(request):
     
     # 두 번째 줄
     # 전체 영화 불러오기
-    candidates = Movie.objects.all().order_by('-release_date')[:50]
+    candidates = Movie.objects.all().order_by('-release_date').order_by('rate')[:25]
     tmp = []
     for candidate in candidates:
         tmp.append(candidate)
     
     recommends = []
-    i = 0
-    while i < 5:
+    while len(recommends) < 5:
         rec = random.choice(tmp)
         if rec not in recommends:
             recommends.append(rec)
-        i += 1
 
     # 세 번째 줄
     utubes = RandYoutube.objects.all()
     shows = []
-    i = 0
-    while i < 4:
+    while len(shows) < 4:
         utube = random.choice(utubes)
         if utube not in shows:
             shows.append(utube)
-        i += 1
 
     # 넘기기
     context = {'nowplays': nowplays, 'recommends': recommends, 'show1': shows[0], 'show2': shows[1], 'show3': shows[2], 'show4': shows[3]}
@@ -67,7 +63,6 @@ def search(request):
         title_movies = Movie.objects.filter(title__icontains=query)
         filtered_movies = Movie.objects.filter(description__icontains=query)
         message = '검색 내용이 없습니다.'
-        d_movies = filtered_movies.difference(title_movies)
         print(title_movies)
 
         results = set()
@@ -87,37 +82,6 @@ def search(request):
         # return redirect('movies:index')
         context = {'message': message, 'genres': genres, }
         return render(request,'movies/search.html', context)
-
-
-# def search(request):
-#     movies = Movie.objects.all()
-#     users = User.objects.all()
-#     genres = Genre.objects.all()
-#     movies_list = []
-#     users_list = []
-#     genres_list = []
-#     g_pk = 0
-#     search = request.GET.get("search")
-#     print(search)
-#     for genre in genres:
-#         if search in genre.name:
-#             g_pk = genre.pk
-#             break
-#     for movie in movies:
-#         if search in movie.title:
-#             movies_list.append(movie)
-#         if movie.genres.all().filter(pk=g_pk):
-#             genres_list.append(movie)
-#     for user in users:
-#         if search in user.username:
-#             users_list.append(user)
-#     context = {
-#         "movies" : movies_list,
-#         "users" : users_list,
-#         "genres" : genres_list 
-#     }
-#     # print("들어왔당")
-#     return render(request, 'movies/search.html', context)
 
 
 @login_required
@@ -148,8 +112,6 @@ def update(request, movie_pk):
                 return redirect('movies:detail', movie_pk)
         else:
             form = MovieForm(instance=movie)
-        # 1. POST 방식일 때 오는 FORM: 검증에 실패한 form - 오류메시지도 포함된 상태
-        # 2. GET 방식일 때 오는 FORM: 초기화된 form
         context = {'form': form, 'movie': movie,}
         return render(request, 'movies/form.html', context)
     else:
@@ -198,6 +160,7 @@ def rating_delete(request, movie_pk, rating_pk):
         if request.user == rating.user:
             rating.delete()
         return redirect('movies:detail', movie_pk)
+
 
 @login_required
 def rating_update(request, rating_pk, movie_pk):
